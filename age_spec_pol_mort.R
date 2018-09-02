@@ -170,6 +170,8 @@ ggplot(age_range,
   theme(legend.title = element_blank()) + 
   ggsave("./vis/age_spec_prob.pdf", width = 8, height = 6)
 
+write.csv(age_range, "./vis/age_range.csv")
+
 #### pooled years, cumulative prob (expected deaths per 100k through 85yrs)
 
 ggplot(data = cumulative_pooled,
@@ -194,6 +196,8 @@ ggplot(data = cumulative_pooled,
   coord_flip() + 
   theme_minimal()+
   ggsave("./vis/pooled_lifetime.pdf", width = 8, height = 6)
+
+write_csv(cumulative_pooled, "pooled_lifetime.csv")
 
 white<-cumulative_pooled%>%
   filter(race=="White")
@@ -224,6 +228,8 @@ ggplot(ineq,
   coord_flip()+
   theme_minimal()
   ggsave("./vis/lifetime_ineq.pdf", width = 8, height = 6)
+
+write_csv(ineq, "./vis/lifetime_ineq.csv")  
 
 # ggplot(ineq,
 #        aes(fill = race,
