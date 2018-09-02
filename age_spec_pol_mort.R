@@ -4,7 +4,7 @@ rm(list=ls()); gc()
 library(tidyverse)
 library(xtable)
 library(lubridate)
-library(ggthemes)
+
 theme_set(theme_minimal())
 
 ### read in child-level data with TPR variables
@@ -151,7 +151,8 @@ ggplot(cumulative_range,
   xlab("Synthetic cohort year") + 
   ylab("Persons killed by police per 100,000 births") + 
   facet_wrap(~gender) + 
-  ggsave("cumulative_risk_year.png", width = 5, height = 6)
+  theme(legend.title = element_blank()) + 
+  ggsave("./vis/cumulative_risk_year.png", width = 5, height = 6)
 
 ### age specific for 2016, with intervals
 
@@ -161,41 +162,38 @@ ggplot(age_range,
            color=race, 
            group = race))+
   geom_line()+
-  #geom_ribbon(aes(fill=race), alpha = 0.5)+
+  geom_ribbon(aes(fill=race, color = NULL), alpha = 0.4)+
   facet_wrap(~gender)+
   xlab("Age")+
-  ylab("Age-specific risk (per 100,000)") + 
-  ggsave("age_spec_prob.png", width = 5, height = 6)
-
-ggplot(age_range_ineq %>%
-         filter(d!=Inf),
-       aes(x=age, y=d, 
-           color=race, 
-           group = race))+
-  geom_line()+
-  facet_wrap(~gender)+
-  xlab("Age")+
-  ylab("Inequality") + 
-  ggsave("age_ineq.png", width = 5, height = 6)
-
+  ylab("Age-specific risk (per 100,000)") +  
+  theme_minimal() + 
+  theme(legend.title = element_blank()) + 
+  ggsave("./vis/age_spec_prob.pdf", width = 8, height = 6)
 
 #### pooled years, cumulative prob (expected deaths per 100k through 85yrs)
 
-ggplot(cumulative_pooled,
-       aes(fill = race,
-           x = race,
-           y = c * 1e5, 
-           ymax = cmax * 1e5, 
-           ymin = cmin * 1e5)) +
-  geom_col() + 
-  geom_errorbar() + 
-  facet_wrap(~gender) + 
-  theme(axis.text.x = element_blank(),
-        axis.ticks.x = element_blank(),
-        legend.title = element_blank()) + 
-  ylab("Persons killed by police per 100,000 births") + 
+ggplot(data = cumulative_pooled,
+       mapping =  aes(fill = gender,
+           x = reorder(race, cmax),
+           y = ifelse(gender=="Male",
+                      -c*1e5, 
+                      c*1e5),
+           ymax = ifelse(gender=="Male",
+                      -cmax*1e5, 
+                      cmax*1e5),
+           ymin = ifelse(gender=="Male",
+                         -cmin*1e5, 
+                         cmin*1e5))) + 
+  geom_bar(stat = "identity") + 
+  geom_linerange(size = 1) + 
+  scale_y_continuous(limits = max(cumulative_pooled$cmax) * 1e5 * c(-1,1), 
+                     labels = abs) +
+  labs(fill = "Gender") + 
+  ylab("People killed by police per 100,000 births") +
   xlab("") + 
-  ggsave("pooled_lifetime.png", width = 5, height = 6)
+  coord_flip() + 
+  theme_minimal()+
+  ggsave("./vis/pooled_lifetime.pdf", width = 8, height = 6)
 
 white<-cumulative_pooled%>%
   filter(race=="White")
@@ -208,39 +206,38 @@ ineq<-ineq%>%
          d = c  /white$c)
 
 ggplot(ineq,
-       aes(fill = race,
-           x = race,
-           y = d, 
-           ymax = dmax, 
-           ymin = dmin)) +
-  geom_col() + 
-  geom_errorbar() + 
-  facet_wrap(~gender) + 
-  theme(axis.text.x = element_blank(),
-        axis.ticks.x = element_blank(),
-        legend.title = element_blank()) + 
-  geom_hline(yintercept = 1, lty=2)+
+       aes(fill = gender,
+           x = reorder(race,dmax),
+           y = ifelse(gender == "Male",
+                      -d, d), 
+           ymax = ifelse(gender == "Male",
+                         -dmax, dmax), 
+           ymin = ifelse(gender == "Male",
+                         -dmin, dmin))) +
+  geom_bar(stat = "identity") + 
+  geom_linerange(size = 1) + 
+  scale_y_continuous(limits = max(ineq$dmax) *c(-1,1),
+                     labels = abs) + 
+  labs(fill = "Gender") + 
   ylab("Rate ratio (relative to white)") + 
   xlab("") + 
-  ggsave("lifetime_ineq.png", width = 5, height = 6)
+  coord_flip()+
+  theme_minimal()
+  ggsave("./vis/lifetime_ineq.pdf", width = 8, height = 6)
 
-ggplot(ineq,
-       aes(fill = race,
-           x = race,
-           y = d, 
-           ymax = dmax, 
-           ymin = dmin)) +
-  geom_col() + 
-  #geom_errorbar() + 
-  facet_wrap(~gender) + 
-  theme(axis.text.x = element_blank(),
-        axis.ticks.x = element_blank(),
-        legend.title = element_blank()) + 
-  geom_hline(yintercept = 1, lty=2)+
-  ylab("Rate ratio (relative to white)") + 
-  xlab("") + 
-  ggsave("lifetime_ineq_web.png")
-
-write_csv(ineq%>%
-            select(race, gender, d),
-          "ineq_gender_conversation.csv")
+# ggplot(ineq,
+#        aes(fill = race,
+#            x = race,
+#            y = d, 
+#            ymax = dmax, 
+#            ymin = dmin)) +
+#   geom_col() + 
+#   #geom_errorbar() + 
+#   facet_wrap(~gender) + 
+#   theme(axis.text.x = element_blank(),
+#         axis.ticks.x = element_blank(),
+#         legend.title = element_blank()) + 
+#   geom_hline(yintercept = 1, lty=2)+
+#   ylab("Rate ratio (relative to white)") + 
+#   xlab("") + 
+#   ggsave("./vis/lifetime_ineq_web.png")
