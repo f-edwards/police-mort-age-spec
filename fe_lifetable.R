@@ -22,13 +22,13 @@ dat<-dat%>%
 make_life_table<-function(nat_dat){
   nat_dat<-nat_dat%>%
     ungroup(nat_dat)
-  ### create proportions of pop with each TPR outcome by age/year
+  ### create proportions of pop with outcome by age/year
   nat_dat<-nat_dat%>%
     mutate(m = deaths / pop)
   
   ### convert to probability 
   ### age_period (n) = 1 for all cases
-  ### a = 0.5 (avg age of TPR for ppl in year, within-period survival)
+  ### a = 0.5  within-period survival
   nat_dat<-nat_dat%>%
     mutate(q = 1 * m / (1 + (1 - 0.5) * m),
            p = 1 - q)
@@ -42,7 +42,7 @@ make_life_table<-function(nat_dat){
   nat_dat<-nat_dat%>%
     mutate(L = (lx - d) * 1 + d * 0.5,
            t = sum(L)- cumsum(L) + L)
-  ## life expectancy (time to TPR)
+  ## life expectancy
   nat_dat<-nat_dat%>%
     mutate(e = t/lx)
   ### cum prevalence
@@ -53,33 +53,9 @@ make_life_table<-function(nat_dat){
 
 
 
-# ### loop over imputations, make life tables
-# imp_out<-list()
-# races<-unique(dat$race)
-# years<-unique(dat$year)
-# sexs<-unique(dat$sex)
-# k<-0
-# for(i in 1:length(unique(dat$.imp))){
-#   for(j in 1:length(races)){
-#     for(t in 1:length(years)){
-#       for(g in 1:length(sexs)){
-#         k<-k+1
-#         imp_out[[k]]<-make_life_table(dat%>%
-#                                         filter(.imp==i)%>%
-#                                         filter(year==years[t])%>%
-#                                         filter(race==races[j])%>%
-#                                         filter(sex==sexs[g]))
-#       }
-#     }
-#   }
-# }
-# 
-# imp_tab<-bind_rows(imp_out)
-
 ### make pooled cross-period tables for age specific risk
 imp_out<-list()
 races<-unique(dat$race)
-years<-unique(dat$year)
 sexs<-unique(dat$sex)
 k<-0
 for(i in 1:length(unique(dat$.imp))){

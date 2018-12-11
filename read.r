@@ -154,7 +154,7 @@ fe_imp<-mice(fe,
 fe_complete<-mice::complete(fe_imp, action = "long")
   
 ### check time series on FE to start where it appears to stabilize
-### looks like it levels out after 2005 - going to do 2006 - 2017
+### looks like it levels out after 2005 - going to do 2006 -  2017
 
 ### make fe national data by year, age, race, sex, ethnicity
 fe_nat<-fe_complete%>%

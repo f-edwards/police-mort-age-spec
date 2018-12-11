@@ -196,6 +196,16 @@ pol_rank<-pol_rank%>%
 ### write out table S3
 write_csv(pol_rank, "./vis/pol_rank.csv")
 
+print.xtable(
+  xtable(
+    pol_rank,
+    caption = "Table S3. Police homicide rates by race and sex. Age-specific risk and cumulative risk of death per 100,000 population derived from 2010 - 2016 US synthetic life tables. Police homicide as a cumulative and age-specific leading cause of death relative to NCHS defined 50 rankable leading causes of death. Uncertainty intervals derived from multiple imputation of missing data on race/ethnicity and age in Fatal Encounters."
+  ),
+  file = "./vis/pol_rank.tex",
+  include.rownames = FALSE,
+  caption.placement = "top"
+)
+
 ### join onto age specific
 tot_mort<-tot_mort%>%
   left_join(age_range)%>%
@@ -410,5 +420,86 @@ print.xtable(tab2,
              file = "./vis/tab2.tex",
              include.rownames = FALSE,
              caption.placement = "top")
+
+
+
+
+
+### new graphics
+
+
+# ... version w/ a little distinct ribbons
+age_range %>%
+  ggplot(
+    aes(
+      x = age,
+      y = q * 1e5, 
+      ymin = qmin * 1e5, 
+      ymax = qmax * 1e5,
+      color = race, 
+      group = race
+    )
+  ) +
+  geom_ribbon(aes(fill=race), color = 'grey100', alpha = 0.15, size = 1.25) +
+  geom_line(size = 1.25) + 
+  #geom_point(size = 2, alpha = .5) +
+  facet_wrap(~gender) +
+  xlab("Age") +
+  ylab("Age-specific risk (per 100,000)") + 
+  theme_minimal() + 
+  theme(legend.title = element_blank()) +
+  scale_color_brewer(palette = 'Set2') +
+  scale_fill_brewer(palette = 'Set2')
+
+# ... or w/ real estimates marked and implied line smoothed
+age_range %>%
+  ggplot(
+    aes(
+      x = age,
+      y = q * 1e5, 
+      ymin = qmin * 1e5, 
+      ymax = qmax * 1e5,
+      color = race, 
+      fill = race,
+      group = race
+    )
+  ) +
+  #geom_ribbon(aes(fill=race), color = 'grey100', alpha = 0.15, size = 1.25) +
+  geom_line(stat = 'smooth', se = FALSE, method = 'loess', span = .5, alpha = .35, size = 1.25) +
+  facet_wrap(~gender) +
+  xlab("Age") +
+  ylab("Age-specific risk (per 100,000)") + 
+  theme_minimal() + 
+  theme(legend.title = element_blank()) +
+  scale_color_brewer(palette = 'Set2') +
+  scale_fill_brewer(palette = 'Set2') +
+  geom_errorbar(width = 0) +
+  geom_point(size = 2.3, alpha = 1, pch = 21, color = 'grey10')
+
+
+# ... can dodge the error bars a bit to side, if really want to dispaly uncertinty
+age_range %>%
+  ggplot(
+    aes(
+      x = age,
+      y = q * 1e5, 
+      ymin = qmin * 1e5, 
+      ymax = qmax * 1e5,
+      color = race, 
+      fill = race,
+      group = race
+    )
+  ) +
+  #geom_ribbon(aes(fill=race), color = 'grey100', alpha = 0.15, size = 1.25) +
+  geom_line(stat = 'smooth', se = FALSE, method = 'loess', span = .5, alpha = .5, size = 1.25) +
+  facet_wrap(~gender) +
+  xlab("Age") +
+  ylab("Age-specific risk (per 100,000)") + 
+  theme_minimal() + 
+  theme(legend.title = element_blank()) +
+  scale_color_brewer(palette = 'Set2') +
+  scale_fill_brewer(palette = 'Set2') +
+  geom_errorbar(width = 0, position = position_dodge(width = 3), size = 1.15, alpha = .7) +
+  geom_point(size = 2.3, alpha = 1, pch = 21, color = 'grey100', position = position_dodge(width = 1.25))
 
   
