@@ -240,70 +240,6 @@ age_range_white<-age_range%>%
 
 ### age specific for 2016, with intervals
 
-ggplot(age_range,
-       aes(x=age, y=q * 1e5, ymin=qmin * 1e5, 
-           ymax=qmax * 1e5,
-           color=race, 
-           group = race))+
-  geom_line()+
-  geom_ribbon(aes(fill=race, color = NULL), alpha = 0.4)+
-  facet_wrap(~sex)+
-  xlab("Age")+
-  ylab("Age-specific risk (per 100,000)") +  
-  theme_minimal() + 
-  guides(color = guide_legend(ncol=3))+
-  theme(legend.title = element_blank(), legend.position = "bottom") + 
-  ggsave("./vis/age_spec_prob.pdf", width = 6, height = 6)
-
-ggplot(age_range%>%
-         filter(sex=="Female"),
-       aes(x=age, y=q * 1e5, ymin=qmin * 1e5, 
-           ymax=qmax * 1e5,
-           color=race, 
-           group = race))+
-  geom_line()+
-  geom_ribbon(aes(fill=race, color = NULL), alpha = 0.4)+
-  facet_wrap(~sex)+
-  xlab("Age")+
-  ylab("Age-specific risk (per 100,000)") +  
-  theme_minimal() + 
-  guides(color = guide_legend(ncol=3))+
-  theme(legend.title = element_blank(), legend.position = "bottom") + 
-  ggsave("./vis/age_spec_female.pdf", width = 6, height = 6)
-
-ggplot(age_range%>%
-         filter(sex=="Male"),
-       aes(x=age, y=q * 1e5, ymin=qmin * 1e5, 
-           ymax=qmax * 1e5,
-           color=race, 
-           group = race))+
-  geom_line()+
-  geom_ribbon(aes(fill=race, color = NULL), alpha = 0.4)+
-  facet_wrap(~sex)+
-  xlab("Age")+
-  ylab("Age-specific risk (per 100,000)") +  
-  theme_minimal() + 
-  guides(color = guide_legend(ncol=3))+
-  theme(legend.title = element_blank(), legend.position = "bottom") + 
-  ggsave("./vis/age_spec_male.pdf", width = 6, height = 6)
-
-write.csv(age_range, "./vis/age_range.csv")
-
-ggplot(tot_mort,
-       aes(x=age, y=ratio * 100, 
-           ymin = ratio_min * 100,
-           ymax = ratio_max * 100,
-           color=race, 
-           group = race))+
-  geom_line()+
-  geom_ribbon(aes(fill=race, color = NULL), alpha = 0.4)+
-  facet_wrap(~sex)+
-  xlab("Age")+
-  ylab("Police killings as percent of all deaths") +  
-  theme_minimal() + 
-  guides(color = guide_legend(ncol=3))+
-  theme(legend.title = element_blank(), legend.position = "bottom") + 
-  ggsave("./vis/age_pct.pdf", width = 6, height = 6)
 
 ggplot(tot_mort%>%
          filter(sex=="Female"),
@@ -353,7 +289,7 @@ ggplot(data = fe_cumul,
                          -cmin, 
                          cmin))) + 
   geom_bar(stat = "identity") + 
-  geom_linerange(size = 1) + 
+  geom_linerange(size = 1,  alpha = 0.5) + 
   scale_y_continuous(limits = max(fe_cumul$cmax) * c(-1,1), 
                      labels = abs) +
   labs(fill = "Sex") + 
@@ -361,7 +297,7 @@ ggplot(data = fe_cumul,
   xlab("") + 
   coord_flip() + 
   theme_minimal()+
-  ggsave("./vis/pooled_lifetime.pdf", width = 6, height = 6)
+  ggsave("./vis/pooled_lifetime.pdf", width = 6, height = 3.5)
 
 write_csv(fe_cumul, "./vis/pooled_lifetime.csv")
 
@@ -385,7 +321,7 @@ ggplot(ineq,
            ymin = ifelse(sex == "Male",
                          -dmin, dmin))) +
   geom_bar(stat = "identity") + 
-  geom_linerange(size = 1) + 
+  geom_linerange(size = 1, alpha = 0.5) + 
   scale_y_continuous(limits = max(ineq$dmax) *c(-1,1),
                      labels = abs) + 
   labs(fill = "Sex") + 
@@ -393,7 +329,7 @@ ggplot(ineq,
   xlab("") + 
   coord_flip()+
   theme_minimal() + 
-  ggsave("./vis/lifetime_ineq.pdf", width = 6, height = 6)
+  ggsave("./vis/lifetime_ineq.pdf", width = 6, height = 3.5)
 
 write_csv(ineq, "./vis/lifetime_ineq.csv")  
 
@@ -423,35 +359,6 @@ print.xtable(tab2,
 
 
 
-
-
-### new graphics
-
-
-# ... version w/ a little distinct ribbons
-age_range %>%
-  ggplot(
-    aes(
-      x = age,
-      y = q * 1e5, 
-      ymin = qmin * 1e5, 
-      ymax = qmax * 1e5,
-      color = race, 
-      group = race
-    )
-  ) +
-  geom_ribbon(aes(fill=race), color = 'grey100', alpha = 0.15, size = 1.25) +
-  geom_line(size = 1.25) + 
-  #geom_point(size = 2, alpha = .5) +
-  facet_wrap(~gender) +
-  xlab("Age") +
-  ylab("Age-specific risk (per 100,000)") + 
-  theme_minimal() + 
-  theme(legend.title = element_blank()) +
-  scale_color_brewer(palette = 'Set2') +
-  scale_fill_brewer(palette = 'Set2')
-
-# ... or w/ real estimates marked and implied line smoothed
 age_range %>%
   ggplot(
     aes(
@@ -465,41 +372,35 @@ age_range %>%
     )
   ) +
   #geom_ribbon(aes(fill=race), color = 'grey100', alpha = 0.15, size = 1.25) +
-  geom_line(stat = 'smooth', se = FALSE, method = 'loess', span = .5, alpha = .35, size = 1.25) +
-  facet_wrap(~gender) +
+  geom_line() +
+  facet_wrap(~sex) +
   xlab("Age") +
   ylab("Age-specific risk (per 100,000)") + 
   theme_minimal() + 
-  theme(legend.title = element_blank()) +
-  scale_color_brewer(palette = 'Set2') +
-  scale_fill_brewer(palette = 'Set2') +
-  geom_errorbar(width = 0) +
-  geom_point(size = 2.3, alpha = 1, pch = 21, color = 'grey10')
+  theme(legend.title = element_blank(),
+        legend.position = "bottom") +
+  geom_errorbar(width = 0, alpha = 0.3) +
+  geom_point(size = 0.4)+
+  guides(col = guide_legend(override.aes = list(shape = 15, size = 5)))+
+  ggsave("vis/age_spec_prob.pdf", width = 6, height = 3.5)
 
+write.csv(age_range, "./vis/age_range.csv")
 
-# ... can dodge the error bars a bit to side, if really want to dispaly uncertinty
-age_range %>%
-  ggplot(
-    aes(
-      x = age,
-      y = q * 1e5, 
-      ymin = qmin * 1e5, 
-      ymax = qmax * 1e5,
-      color = race, 
-      fill = race,
-      group = race
-    )
-  ) +
-  #geom_ribbon(aes(fill=race), color = 'grey100', alpha = 0.15, size = 1.25) +
-  geom_line(stat = 'smooth', se = FALSE, method = 'loess', span = .5, alpha = .5, size = 1.25) +
-  facet_wrap(~gender) +
-  xlab("Age") +
-  ylab("Age-specific risk (per 100,000)") + 
+ggplot(tot_mort,
+       aes(x=age, y=ratio * 100, 
+           ymin = ratio_min * 100,
+           ymax = ratio_max * 100,
+           color=race, 
+           group = race))+
+  geom_line() +
+  facet_wrap(~sex)+
+  xlab("Age")+
+  ylab("Police killings as percent of all deaths") +  
   theme_minimal() + 
-  theme(legend.title = element_blank()) +
-  scale_color_brewer(palette = 'Set2') +
-  scale_fill_brewer(palette = 'Set2') +
-  geom_errorbar(width = 0, position = position_dodge(width = 3), size = 1.15, alpha = .7) +
-  geom_point(size = 2.3, alpha = 1, pch = 21, color = 'grey100', position = position_dodge(width = 1.25))
-
+  theme(legend.title = element_blank(),
+        legend.position = "bottom") +
+  geom_errorbar(width = 0, alpha = 0.3) +
+  geom_point(size = 0.4)+
+  guides(col = guide_legend(override.aes = list(shape = 15, size = 5)))+
+  ggsave("vis/age_pct.pdf", width = 6, height = 3.5)
   
