@@ -1,3 +1,6 @@
+### make period lifetables 2010-2016 from NVSS data, sourced from main.r, files made from read.r
+## USES METHOD FROM http://data.princeton.edu/eco572/periodlt.html
+
 nvss_dat<-read.csv("./data/mort_cause.csv",
               stringsAsFactors = FALSE)
 
@@ -68,13 +71,9 @@ nvss_dat<-nvss_dat%>%
 make_life_table<-function(nat_nvss_dat){
   nat_nvss_dat<-nat_nvss_dat%>%
     ungroup(nat_nvss_dat)
-  ### create proportions of pop with each TPR outcome by age/year
   nat_nvss_dat<-nat_nvss_dat%>%
     mutate(m = deaths / pop)
   
-  ### convert to probability 
-  ### age_period (n) = 1 for all cases
-  ### a = 0.5 (avg age of TPR for ppl in year, within-period survival)
   nat_nvss_dat<-nat_nvss_dat%>%
     mutate(q = 1 * m / (1 + (1 - 0.5) * m),
            p = 1 - q)
@@ -88,7 +87,7 @@ make_life_table<-function(nat_nvss_dat){
   nat_nvss_dat<-nat_nvss_dat%>%
     mutate(L = (lx - d) * 1 + d * 0.5,
            t = sum(L)- cumsum(L) + L)
-  ## life expectancy (time to TPR)
+  ## life expectancy 
   nat_nvss_dat<-nat_nvss_dat%>%
     mutate(e = t/lx)
   ### cum prevalence

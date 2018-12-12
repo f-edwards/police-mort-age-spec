@@ -1,5 +1,5 @@
-### MAKE POLICE KILLINGS LIFE TABLE
-## USES METHOD FROM http://data.princeton.edu/eco572/periodlt.html
+### Risk of being killed by police in the U.S. by age, race/ethnicity, and sex
+### Frank Edwards, Hedwig Lee, Michael Esposito
 rm(list=ls()); gc()
 library(tidyverse)
 library(xtable)
@@ -184,7 +184,6 @@ pol_rank<-pol_rank%>%
     )%>%
   select(race, sex, age, q, c, rank_agespec, c, rank_cumul)
 
-#excluding cumulative leading cause rank, it's hard to interpret
 pol_rank<-pol_rank%>%
   rename(Age = age, Race = race, Sex = sex, `Age-specific police homicide rate` = q, 
          `Cumulative police homicide rate` = c, `Age-specific leading cause rank` = rank_agespec,
@@ -193,7 +192,7 @@ pol_rank<-pol_rank%>%
     Sex == "Female" ~ "F",
     Sex == "Male" ~ "M"
   ))
-### write out table S3
+### write out table S1
 write_csv(pol_rank, "./vis/pol_rank.csv")
 
 print.xtable(
@@ -356,7 +355,6 @@ print.xtable(tab2,
              file = "./vis/tab2.tex",
              include.rownames = FALSE,
              caption.placement = "top")
-
 
 
 age_range %>%

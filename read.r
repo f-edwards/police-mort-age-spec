@@ -1,3 +1,7 @@
+#### Risk of being killed by police in the U.S. by age, race/ethnicity, and sex
+#### Frank Edwards, Hedwig Lee, Michael Esposito
+#### read in FE, NVSS, and SEER data, conduct multiple imputation, ouput imputed files
+
 rm(list=ls())
 
 library(tidyverse)
@@ -268,8 +272,6 @@ mort<-mort%>%
       !(race%in%c("01", "02", "03")) ~ "asian"
     )
   )
-
-
 
 ### make age/gender/race total death rate, death by cause rate
 

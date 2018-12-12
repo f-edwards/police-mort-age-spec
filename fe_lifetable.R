@@ -1,4 +1,6 @@
-### read in child-level data with TPR variables
+### make period lifetables 2010-2016 from fatal encounters data, sourced from main.r
+## USES METHOD FROM http://data.princeton.edu/eco572/periodlt.html
+
 dat<-read_csv("./data/fe_pop_imputed.csv")
 
 dat<-dat%>%
