@@ -12,6 +12,10 @@ theme_set(theme_minimal())
 source("fe_lifetable.R")
 source("nvss_lifetable.R")
 
+### police deaths / total deaths
+temp<-dat%>%filter(.imp==1)
+pol_tot<-sum(temp$deaths)
+ratio_tot<-pol_tot / sum(nvss_dat$deaths) * 1e5
 
 ### make lifetime cumulative risk by race, year, sex
 fe_cumul<-fe_tables%>%
