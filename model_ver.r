@@ -223,16 +223,127 @@ m_gam = stan_gamm4(
 
 ### IN PROGRESS
 # ... what if treat year as just a fixed paramter?
-m_n0 = stan_glm(
-    deaths ~ race + sex + year + age_c,
-    data = df2,
+
+# ... what's the shape look like in the data?
+df2 %>% 
+    ggplot(., aes(x = year, y = deaths)) +
+    geom_smooth(method = 'loess', span = 1, se = TRUE, fill = 'grey1') 
+
+df2 %>% 
+    ggplot(., aes(x = year, y = deaths, group = race, color = race, fill = race)) +
+    geom_smooth(method = 'loess', span = 1, se = TRUE, alpha = .15) + 
+    facet_wrap(~sex, scale = 'free_y')
+
+# ... looks like increase mostly among whites?
+df2 %>% 
+    ggplot(., aes(x = year, y = deaths, group = race, color = race, fill = race)) +
+    geom_smooth(method = 'lm', span = 1, se = TRUE, alpha = .15) + 
+    facet_wrap(~sex, scale = 'free_y')
+
+# ... age patterns seem consistent acorss years; outsiide of small groups
+df2 %>% 
+    filter(sex == 'Male') %>%
+    ggplot(., aes(x = age_c, y = deaths, group = year, color = year)) +
+    geom_smooth(se = FALSE) +
+    facet_wrap(~race, scale = 'free_y')
+
+# ... female pop much more noisey
+df2 %>% 
+    filter(sex == 'Female') %>%
+    ggplot(., aes(x = age_c, y = deaths, group = year, color = year)) +
+    geom_smooth(se = FALSE) +
+    facet_wrap(~race, scale = 'free_y')
+
+
+# ... observed data look like 2rd degree term works well enough (can test this if really concened)
+# ... let's walk through the same modeling exercise 
+m0_y = stan_glmer(
+    deaths ~ race + sex + poly(year, 2) + (1 | age_group),
     offset = log(pop),
-    family = neg_binomial_2
+    data = df2,
+    family = 'neg_binomial_2'
+)    
+
+# ... m_1: race x gender interaction 
+# ... m_2: race x gender effects depends on age group
+# ... m_3: race x gender effects depends on year
+# ... m_4: race x age x gender x year effects all depedent on one another
+m1_y = update(m0_y, formula = deaths ~ race*sex + poly(year, 2) + (1 | age_group))
+m2_y = update(m0_y, formula = deaths ~ race*sex + poly(year, 2) + (race*sex | age_group))
+m3_y = update(m0_y, formula = deaths ~   race*sex*poly(year, 2) + (1 | age_group))
+m4_y = update(m0_y, formula = deaths ~   race*sex*poly(year, 2) + (race*sex*poly(year, 2) | age_group))
+
+# saveRDS(m0_y, 'm0_y.rds')
+# saveRDS(m1_y, 'm1_y.rds')
+# saveRDS(m2_y, 'm2_y.rds')
+# saveRDS(m3_y, 'm3_y.rds')
+# saveRDS(m4_y, 'm4_y.rds')
+
+df3 = df2 %>% mutate(year2 = year - 2015)
+
+m0_y2 = stan_glmer(
+    deaths ~ race + sex + year + I(year^2) + (1 | age_group),
+    offset = log(pop),
+    data = df2,
+    family = 'neg_binomial_2',
+    QR = TRUE
 )
 
-m_n1 = stan_glm(
-    deaths ~ race + sex + year + poly(age_c, 3),
-    data = df2,
-    offset = log(pop),
-    family = neg_binomial_2
-)
+# ... maybe could center as well? 
+
+
+
+
+
+
+
+# ... hmm, maybe orthogonal polynomials are slowing this down
+
+# ... and predicted age x sex x race risks across the models
+scens2 = df2 %>%
+    data_grid(
+        age_group,
+        sex,
+        race,
+        pop = 100000000,
+        year
+    ) 
+
+scens2 %>%
+    add_predicted_draws(m1_y) %>%
+    median_qi(.width = .5) %>%
+    filter(sex == 'Male') %>%
+    ggplot(.,
+        aes(
+            x = age_group,
+            y = .prediction/1000,
+            group = year,
+            color = year
+        )) + 
+    geom_line(size = .75) +
+    facet_wrap(~race) +
+    theme(
+        axis.text.x = element_text(angle = 90, vjust = 0.5),
+        legend.title = element_blank()
+    )
+
+scens2 %>%
+    filter(year == 2016) %>%
+        add_predicted_draws(m1_y) %>%
+        median_qi(.width = .5) %>%
+        ggplot(., 
+           aes(x = age_group, 
+               y = .prediction/1000,
+               ymin = .lower/1000, ymax = .upper/1000,
+               group = race, color = race, fill = race
+           )
+    ) + 
+    geom_ribbon(color = 'grey100', alpha = .25) +
+    geom_line(size = 1.45) +
+    facet_wrap(~sex, scale = 'free_y') +
+    scale_color_manual(values = cols[c(9, 12, 3, 8, 16)]) + 
+    scale_fill_manual(values  = cols[c(9, 12, 3, 8, 16)]) +
+    theme(
+        axis.text.x = element_text(angle = 90, vjust = 0.5),
+        legend.title = element_blank()
+    )
