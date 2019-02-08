@@ -1,12 +1,10 @@
 #### Risk of being killed by police in the U.S. by age, race/ethnicity, and sex
 #### Frank Edwards, Hedwig Lee, Michael Esposito
-#### read in FE, NVSS, and SEER data, conduct multiple imputation, ouput imputed files
-
-rm(list=ls())
-
+#### read in FE
 library(tidyverse)
 library(lubridate)
 library(mice)
+
 set.seed(1)
 ######## read in police mort data
 setwd("~/Dropbox/data_analysis/police-mort-age-spec")
@@ -33,8 +31,8 @@ fe<-fe%>%
          age = ifelse(age=="30s", 35, age),
          age = ifelse(age=="40s", 45, age),
          age = ifelse(age=="50s", 55, age),
-         age = ifelse(age=="60s", 55, age),
-         age = ifelse(age=="70s", 55, age),
+         age = ifelse(age=="60s", 65, age),
+         age = ifelse(age=="70s", 75, age),
          age = ifelse(age=="55.", 55, age),
          age = ifelse(age=="20s-30s", 30, age),
          age = ifelse(age=="40-50", 45, age),
@@ -104,3 +102,6 @@ fe<-fe%>%
                                       "Drug overdose", "Fell from a height",
                                       "Other", "Stabbed", "Undetermined") ~
                   "other"))
+
+#### prep FE for FCC API county fips crosswalk
+
