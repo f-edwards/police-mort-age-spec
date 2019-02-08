@@ -308,13 +308,13 @@ stratR = function(.sim_data){
 # save_rds(sim_df, 'sims.rds')       
 
 # ... if just want to re-run individually 
-bm = df2 %>% filter(race == 'black',  sex == 'Male') %>% stratR(.); saveRDS(bm, 'bm.rds')
-wm = df2 %>% filter(race == 'white',  sex == 'Male') %>% stratR(.); saveRDS(wm, 'wm.rds')
-lm = df2 %>% filter(race == 'latino', sex == 'Male') %>% stratR(.); saveRDS(lm, 'lm.rds')
-am = df2 %>% filter(race == 'asian',  sex == 'Male') %>% stratR(.); saveRDS(am, 'am.rds')
-nm = df2 %>% filter(race == 'amind',  sex == 'Male') %>% stratR(.); saveRDS(nm, 'nm.rds')
+bm = df2 %>% filter(race == 'black',  sex == 'Male') %>% stratR(.)
+wm = df2 %>% filter(race == 'white',  sex == 'Male') %>% stratR(.)
+lm = df2 %>% filter(race == 'latino', sex == 'Male') %>% stratR(.)
+am = df2 %>% filter(race == 'asian',  sex == 'Male') %>% stratR(.)
+nm = df2 %>% filter(race == 'amind',  sex == 'Male') %>% stratR(.)
 
-bf = df2 %>% filter(race == 'black',  sex == 'Female') %>% stratR(.); saveRDS(bf, 'bf.rds')
+bf = df2 %>% filter(race == 'black',  sex == 'Female') %>% stratR(.)
 wf = df2 %>% filter(race == 'white',  sex == 'Female') %>% stratR(.)
 lf = df2 %>% filter(race == 'latino', sex == 'Female') %>% stratR(.)
 af = df2 %>% filter(race == 'asian',  sex == 'Female') %>% stratR(.)
