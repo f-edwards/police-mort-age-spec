@@ -103,3 +103,5 @@ fe<-fe%>%
                                       "Other", "Stabbed", "Undetermined") ~
                   "other"))
 
+fe<-fe%>%
+  filter(year<2019)

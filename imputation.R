@@ -2,81 +2,16 @@
 #### Frank Edwards, Hedwig Lee, Michael Esposito
 #### impute missing race/ethnicity data from fatal encounters
 ### based on surname and county population
-rm(list=ls())
+# rm(list=ls())
 library(tidyverse)
 library(mice)
 library(wru)
 library(jsonlite)
 
 source("read_fe.r")
-#### Risk of being killed by police in the U.S. by age, race/ethnicity, and sex
-#### Frank Edwards, Hedwig Lee, Michael Esposito
-library(tidyverse)
+source("read_pop.r")
 
-#### read in pop data, lagged 3 years to fully cover
-#### FE data, just using for imputation
-#### full analysis uses one year lagged data
-#### imputation is covering through 2019, built with
-#### 2016 data. Could re-run with 17 data, but doubt it 
-#### would affect results, only input is racial pop 
-#### composition for impuation models
-
-pop<-read_fwf("./data/us.1990_2016.19ages.adjusted.txt",
-              fwf_widths(c(4, 2, 2, 3, 2, 1, 1, 1, 2, 8),
-                         c("year", "state", "st_fips", "cnty_fips", "reg", "race", 
-                           "hisp", "sex", "age", "pop")))
-
-pop<-pop%>%
-  mutate(pop = as.integer(pop))%>%
-  mutate(race_ethn = 
-           case_when(
-             race==1 & hisp ==0 ~ "white",
-             race==2 ~ "black",
-             race==3 ~ "amind",
-             race==4 ~ "asian",
-             hisp==1 ~ "latino")
-  )
-
-pop_cnty<-pop%>%
-  group_by(year, st_fips, cnty_fips, race_ethn, sex, age)%>%
-  summarise(pop = sum(pop))%>%
-  ungroup()
-
-### recode variables
-
-pop_cnty<-pop_cnty%>%
-  mutate(sex = case_when(
-    sex=="1" ~ "Male", 
-    sex=="2" ~"Female"),
-    age = case_when(
-      age=="00" ~ "0", 
-      age=="01" ~ "1-4",
-      age=="02" ~ "5-9",
-      age=="03" ~ "10-14",
-      age=="04" ~ "15-19",
-      age=="05" ~ "20-24",
-      age=="06" ~ "25-29",
-      age=="07" ~ "30-34",
-      age=="08" ~ "35-39",
-      age=="09" ~ "40-44",
-      age=="10" ~ "45-49",
-      age=="11" ~ "50-54",
-      age=="12" ~ "55-59",
-      age=="13" ~ "60-64",
-      age=="14" ~ "65-69",
-      age=="15" ~ "70-74",
-      age=="16" ~ "75-79",
-      age=="17" ~ "80-84",
-      age=="18" ~ "85+"))%>%
-  rename(race = race_ethn)
-
-pop_cnty$year <- pop_cnty$year + 3
-
-#### impute missing age, gender, race_ethn data
-#### bind state population data (by year, 2017/18 not in SEER or mortality files)
-
-
-#### CODE FROM police-mort repo
+### FIX geocoding mistakes in the data
 
 fe_new<-fe%>%
   mutate(Latitude = ifelse((id==11840)&(Latitude<1), 
@@ -91,46 +26,37 @@ fe_new<-fe%>%
          Latitude = ifelse(id==20157, 32.7398191, Latitude),
          Longitude = ifelse(id==20157, -97.4412267, Longitude))
 
-####### run script to link lat/long -> FIPS block
-####### first check to see if crosswalk file is in directory, only run on new FE data
-### API LIMIT requires file split
-# 
-# files<-list.files("./data")
-# if(!("block_map.csv"%in%files)){
-#   coords<-fe_new%>%
-#     select(Latitude, Longitude)%>%
-#     mutate("FIPS_block" = NA,
-#            "FIPS_county" = NA,
-#            "FIPS_state" = NA,
-#            "STname" = NA,
-#            "API_status" = NA)
-#   if("block_map1.csv"%in%files){
-#     completed<-read_csv("./data/block_map1.csv")
-#     coords<-coords[nrow(completed):nrow(coords),]
-#   }
-#   for(i in 1:nrow(coords)){
-#     url<-paste("https://geo.fcc.gov/api/census/block/find?latitude=",
-#                coords[i, 1], 
-#                "&longitude=", 
-#                coords[i, 2], 
-#                "&showall=true&format=json",
-#                sep="")
-#     
-#     temp<-fromJSON(url)
-#     print(i)
-#     print(temp$status)
-#     
-#     coords[i, 3:7]<-c(temp$Block$FIPS,
-#                       temp$County$FIPS,
-#                       temp$State$FIPS,
-#                       temp$State$code,
-#                       temp$status)
-#     
-#   }
-#   write.csv(coords, "./data/block_map2.csv", row.names=FALSE)
-#   write.csv(rbind(completed, coords[2:nrow(coords),]), 
-# "./data/block_map.csv", row.names = FALSE)
+###### run script to link lat/long -> FIPS block# 
+# coords<-fe_new%>%
+#   select(Latitude, Longitude)%>%
+#   mutate("FIPS_block" = NA,
+#          "FIPS_county" = NA,
+#          "FIPS_state" = NA,
+#          "STname" = NA,
+#          "API_status" = NA)
+# for(i in 1:nrow(coords)){
+#   url<-paste("https://geo.fcc.gov/api/census/block/find?latitude=",
+#              coords[i, 1],
+#              "&longitude=",
+#              coords[i, 2],
+#              "&showall=true&format=json",
+#              sep="")
+#   
+#   temp<-fromJSON(url)
+#   print(i)
+#   print(temp$status)
+#   
+#   coords[i, 3:7]<-c(temp$Block$FIPS,
+#                     temp$County$FIPS,
+#                     temp$State$FIPS,
+#                     temp$State$code,
+#                     temp$status)
+#   
 # }
+
+write.csv(coords,
+          "./data/block_map.csv", row.names = FALSE)
+
 
 block_map<-read_csv("./data/block_map.csv",
                     col_types = "ddccccc")
@@ -189,7 +115,8 @@ pct_cnty_pop<-pop_cnty%>%
               summarise(tot_pop = sum(pop)))%>%
   ungroup()%>%
   mutate(pct_pop = pop / tot_pop)%>%
-  select(year, FIPS_county, race, pct_pop)
+  select(year, FIPS_county, race, pct_pop)%>%
+  mutate(year = year + 1)
 
 pct_cnty_wide<-pct_cnty_pop%>%
   group_by(FIPS_county, year)%>%
@@ -198,7 +125,7 @@ pct_cnty_wide<-pct_cnty_pop%>%
 ## fix problem counties - 
 ## HI has no county dat for prior to 2000 (+3 in recode)
 fe_imp_dat<-fe_imp_dat%>%
-  mutate(FIPS_county = ifelse(substr(FIPS_county,1,2)=="15" & year < 2003, 
+  mutate(FIPS_county = ifelse(substr(FIPS_county,1,2)=="15" & year < 2001, 
                               "15900", FIPS_county))
 # >% 
 #   mutate(FIPS_county = ifelse(FIPS_county%in%
@@ -437,3 +364,69 @@ ggplot(ts_dat,
   theme(legend.title = element_blank()) + 
   ggsave("./vis/internet_use_ts.pdf")
 
+#### OUTPUT IMPUTED
+
+### read in imputed data and format for merge
+dat<-mice::complete(read_rds("imputations.rds"),
+                    action = "long")%>%
+  select(.imp, id, year, age, sex, race, fe_cause_of_death)%>%
+  mutate(year = as.numeric(as.character(year)),
+         sex = as.numeric(sex),
+         race = as.character(race),
+         fe_cause_of_death = as.character(fe_cause_of_death))%>%
+  mutate(sex = ifelse(sex==1, "Male", "Female"))%>%
+  mutate(age = case_when(
+    age<1 ~ "0",
+    age>=1 & age<=4 ~ "1-4",
+    age>=5 & age<=9 ~ "5-9",
+    age>=10 & age<=14 ~ "10-14",
+    age>=15 & age<=19 ~ "15-19",
+    age>=20 & age<=24 ~ "20-24",
+    age>=25 & age<=29 ~ "25-29",
+    age>=30 & age<=34 ~ "30-34",
+    age>=35 & age<=39 ~ "35-39",
+    age>=40 & age<=44 ~ "40-44",
+    age>=45 & age<=49 ~ "45-49",
+    age>=50 & age<=54 ~ "50-54",
+    age>=55 & age<=59 ~ "55-59",
+    age>=60 & age<=64 ~ "60-64",
+    age>=65 & age<=69 ~ "65-69",
+    age>=70 & age<=74 ~ "70-74",
+    age>=75 & age<=79 ~ "75-79",
+    age>=80 & age<=84 ~ "80-84",
+    age>=85  ~ "85+"))
+
+### create age/sex/race/year/causeofdeath data
+
+dat<-dat%>%
+  group_by(.imp, year, age, sex, race, fe_cause_of_death)%>%
+  summarise(deaths = n())%>%
+  group_by(.imp, year, age, sex, race)%>%
+  spread(fe_cause_of_death, deaths, fill = 0)%>%
+  ungroup()
+
+### join with national pop data
+
+pop_nat<-read_csv("./data/pop_nat.csv")
+
+dat<-left_join(dat, pop_nat)
+
+dat<-dat%>%
+  mutate(race=
+           case_when(
+             race=="amind" ~ "American Indian/AK Native",
+             race=="asian" ~ "Asian/Pacific Islander",
+             race=="black" ~ "African American",
+             race=="latino"~ "Latinx",
+             race=="white" ~ "White"
+           )
+  )%>%
+  mutate(age = factor(age, levels = c(
+    "0", "1-4", "5-9", "10-14", "15-19",
+    "20-24", "25-29", "30-34", "35-39",  
+    "40-44", "45-49", "50-54", "55-59",
+    "60-64", "65-69", "70-74", "75-79",
+    "80-84", "85+")))%>%
+  arrange(.imp, year, sex, race, age)
+
+write_csv(dat, "./data/fe_pop_imputed_00_18.csv")

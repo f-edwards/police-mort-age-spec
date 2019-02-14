@@ -22,6 +22,7 @@ cols = c(
 )
 
 # ... attach imputed data 
+# ... update with fe_pop_imputed_00_18.csv on OSF
 dat = read_csv('./data/fe_pop_imputed.csv') 
 
 # .... let's just go for first imputation for now (will stack)
