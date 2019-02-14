@@ -2,7 +2,7 @@
 #### Frank Edwards, Hedwig Lee, Michael Esposito
 library(tidyverse)
 
-pop<-read_fwf("./data/us.1990_2016.19ages.adjusted.txt",
+pop<-read_fwf("./data/us.1990_2017.19ages.adjusted.txt",
               fwf_widths(c(4, 2, 2, 3, 2, 1, 1, 1, 2, 8),
                          c("year", "state", "st_fips", "cnty_fips", "reg", "race", 
                            "hisp", "sex", "age", "pop")))
@@ -51,4 +51,10 @@ pop_cnty<-pop_cnty%>%
       age=="18" ~ "85+"))%>%
   rename(race = race_ethn)
 
-pop_cnty$year <- pop_cnty$year + 3
+### lag by one year to allow for 2000 - 2018 coverage
+pop_nat<-pop_cnty%>%
+  group_by(year, race, sex, age)%>%
+  summarise(pop = sum(pop)) + 
+  mutate(year = year + 1)
+
+write_csv(pop_nat, "./data/pop_nat.csv")

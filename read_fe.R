@@ -103,5 +103,3 @@ fe<-fe%>%
                                       "Other", "Stabbed", "Undetermined") ~
                   "other"))
 
-#### prep FE for FCC API county fips crosswalk
-
