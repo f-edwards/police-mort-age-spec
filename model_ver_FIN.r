@@ -12,7 +12,7 @@ library(RColorBrewer)
 library(modelr)
 library(gridExtra)
 
-setwd("~/Projects/pnas")
+#setwd("~/Projects/pnas")
 theme_set(theme_tidybayes())
 options(mc.cores = parallel::detectCores())
 
@@ -23,7 +23,10 @@ cols = c(
 )
 
 # ... attach imputed data 
-dat = read_csv('./data/fe_pop_imputed.csv') 
+dat = read_csv('./data/fe_pop_imputed_08_18.csv') 
+
+dat <- dat%>%
+  rename(deaths = officer_force)
 
 # .... let's just go for first imputation for now (will stack)
 df2 = dat %>%

@@ -21,7 +21,8 @@ pop<-pop%>%
 pop_cnty<-pop%>%
   group_by(year, st_fips, cnty_fips, race_ethn, sex, age)%>%
   summarise(pop = sum(pop))%>%
-  ungroup()
+  ungroup()%>%
+  mutate(year = year + 1)
 
 ### recode variables
 
@@ -54,7 +55,8 @@ pop_cnty<-pop_cnty%>%
 ### lag by one year to allow for 2000 - 2018 coverage
 pop_nat<-pop_cnty%>%
   group_by(year, race, sex, age)%>%
-  summarise(pop = sum(pop)) + 
+  summarise(pop = sum(pop)) %>%
+  ungroup()%>%
   mutate(year = year + 1)
 
 write_csv(pop_nat, "./data/pop_nat.csv")

@@ -23,7 +23,13 @@ files<-list(
   "./data/VS11MORT.DUSMCPUB",
   "./data/VS10MORT.DUSMCPUB",
   "./data/VS09MORT.DUSMCPUB",
-  "./data/Mort2008us.dat")
+  "./data/Mort2008us.dat",
+  "./data/VS07MORT.DUSMCPUB",
+  "./data/MORT06.DUSMCPUB",
+  "./data/Mort05uspb.dat",
+  "./data/Mort04us.dat",
+  "./data/Mort03us.dat"
+  )
 
 mort<-lapply(
   files, 
@@ -31,14 +37,77 @@ mort<-lapply(
     read_fwf(x, pos)
   }
 )
-years<-2017:2008
+years<-2017:2003
 for(i in 1:length(mort)){
   mort[[i]]$year<-years[[i]]
 }
 
 mort<-bind_rows(mort)
 
+### 2000 - 2002 have different file structures
+
 ### convert 27 cat age into character
+
+### convert race into character, compress race/hispanic ethnicity
+
+mort<-mort%>%
+  mutate(
+    race= ifelse(
+      race == "01" & hisorgin <200, "white",
+      ifelse(race == "02", "black",
+             ifelse(race == "03", "amind",
+                    ifelse(hisorgin >200 & hisorgin<996, "latino",
+                           "asian")))))
+
+
+### read in and process 00 - 02
+pos<-
+  fwf_positions(
+    c(59, 69, 151, 60, 80), #begin
+    c(59, 70, 153, 61, 81), #end
+    c("sex",
+      "age_27",
+      "cause_113",
+      "race",
+      "hisorgin") #colname
+  )
+
+files<-list(
+  "./data/Mort02us.dat",
+  "./data/Mort01us.dat",
+  "./data/Mort00us.dat"
+)
+
+mort_00_02<-lapply(
+  files, 
+  function(x){
+    read_fwf(x, pos)
+  }
+)
+years<-2002:2000
+for(i in 1:length(mort_00_02)){
+  mort_00_02[[i]]$year<-years[[i]]
+}
+
+mort_00_02<-bind_rows(mort_00_02)
+
+mort_00_02<-mort_00_02%>%
+  mutate(
+    race= ifelse(
+      race == "01" & hisorgin =="00", "white",
+      ifelse(race == "02", "black",
+             ifelse(race == "03", "amind",
+                    ifelse(hisorgin%in%c("01", "02", "03", "04", "05"), "latino",
+                           "asian")))))%>%
+  mutate(sex = case_when(
+    sex==1 ~ "M",
+    sex==2 ~ "F"
+  ))
+
+mort<-mort%>%
+  select(-hisorgin)%>%
+  bind_rows(mort_00_02%>%
+              select(-hisorgin))
 
 mort<-mort%>%
   mutate(
@@ -66,18 +135,7 @@ mort<-mort%>%
         age_27 == "27" ~ "Missing")
   )
 
-### convert race into character, compress race/hispanic ethnicity
-
-mort<-mort%>%
-  mutate(
-    race= ifelse(
-      race == "01" & hisorgin <200, "white",
-      ifelse(race == "02", "black",
-             ifelse(race == "03", "amind",
-                    ifelse(hisorgin >200 & hisorgin<996, "latino",
-                           "asian")))))
-
-### make sex and race more verbose for presentation
+## MAKE VARIABLES VERBOSE FOR VISUALS
 
 mort<-mort%>%
   mutate(
