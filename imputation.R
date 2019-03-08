@@ -25,9 +25,6 @@ tab.out<-xtable(fe_imp_dat_join%>%
 print(tab.out, include.rownames = FALSE,
       file = "./vis/pct_var.tex")
 
-#white pct pop colinear with others, remove it and p_oth from imputation model
-# these are constrained to sum to 1
-
 ####################################################
 #### impute!
 ####################################################
@@ -109,7 +106,7 @@ ggplot(imp_dat,
 ### read in imputed data and format for merge
 dat<-mice::complete(read_rds("imputations.rds"),
                     action = "long", 
-                    include = TRUE)%>%
+                    include = FALSE)%>%
   select(.imp, id, year, age, sex, race, fe_cause_of_death)%>%
   mutate(year = as.numeric(as.character(year)),
          sex = as.numeric(sex),
@@ -173,8 +170,4 @@ dat<-dat%>%
     "80-84", "85+")))%>%
   arrange(.imp, year, sex, race, age)
 
-write_csv(dat%>%
-            filter(.imp!=0), "./data/fe_pop_imputed_08_18.csv")
-
-write_csv(dat,
-          "./data/fe_pop_imputed_08_18_with_orig.csv")
+write_csv(dat, "./data/fe_pop_imputed_08_18.csv")

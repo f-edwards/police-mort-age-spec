@@ -7,9 +7,61 @@ library(lubridate)
 
 theme_set(theme_minimal())
 
-### pull in fatal encounters derived life tables
-### nvss derived life tables
+### read and format data
+nvss_dat<-read_csv("./data/mort_cause.csv")
+pop<-read_csv("./data/pop_nat.csv")
+fe<-read_csv("./data/fe_pop_imputed_08_18.csv")
+
+pop<-pop%>%
+  mutate(race=
+           case_when(
+             race=="amind" ~ "American Indian/AK Native",
+             race=="asian" ~ "Asian/Pacific Islander",
+             race=="black" ~ "African American",
+             race=="latino"~ "Latinx",
+             race=="white" ~ "White"
+           ))
+
+nvss_dat<-nvss_dat%>%
+  filter(age!="Missing")%>%
+  left_join(pop)
+
+##########################################
+### Make life tables
+##########################################
+### note that lifetable scripts want a data.frame
+### called dat with .imp, race, sex, age, deaths, and pop
+######### For use of force deaths
+dat<-fe%>%
+  rename(deaths = officer_force)
 source("fe_lifetable.R")
+
+force_tables<-fe_tables
+
+### for + vehicle
+dat<-fe%>%
+  mutate(deaths = officer_force + vehicle)
+source("fe_lifetable.R")
+
+force_vehicle_tables<-fe_tables
+
+### for + other
+dat<-fe%>%
+  mutate(deaths = officer_force + vehicle + other)
+
+source("fe_lifetable.R")
+
+force_vehicle_other_tables<-fe_tables
+
+### for + suicide
+dat<-dat%>%
+  mutate(deaths = officer_force + vehicle + other + suicide)
+
+source("fe_lifetable.R")
+
+fe_all_tables<-fe_tables
+
+### nvss lifetables
 source("nvss_lifetable.R")
 
 ### police deaths / total deaths
@@ -18,45 +70,72 @@ pol_tot<-sum(temp$deaths)
 ratio_tot<-pol_tot / sum(nvss_dat$deaths) * 1e5
 
 ### make lifetime cumulative risk by race, year, sex
-fe_cumul<-fe_tables%>%
+
+fe_cumul_force<-force_tables%>%
   filter(age=="85+")%>%
   group_by(race, sex)%>%
-  summarise(cmin=min(c)*1e5, cmax=max(c)*1e5, c=mean(c)*1e5)%>%
+  summarise(cmin=quantile(c, 0.05)*1e5, 
+            cmax=quantile(c, 0.95)*1e5, 
+            c=mean(c)*1e5)%>%
+  ungroup()
+
+fe_cumul_force_vehicle<-force_vehicle_tables%>%
+  filter(age=="85+")%>%
+  group_by(race, sex)%>%
+  summarise(cmin=quantile(c, 0.05)*1e5, 
+            cmax=quantile(c, 0.95)*1e5, 
+            c=mean(c)*1e5)%>%
+  ungroup()
+
+fe_cumul_force_vehicle_other<-force_vehicle_other_tables%>%
+  filter(age=="85+")%>%
+  group_by(race, sex)%>%
+  summarise(cmin=quantile(c, 0.05)*1e5, 
+            cmax=quantile(c, 0.95)*1e5, 
+            c=mean(c)*1e5)%>%
+  ungroup()
+
+fe_cumul_all<-fe_all_tables%>%
+  filter(age=="85+")%>%
+  group_by(race, sex)%>%
+  summarise(cmin=quantile(c, 0.05)*1e5, 
+            cmax=quantile(c, 0.95)*1e5, 
+            c=mean(c)*1e5)%>%
   ungroup()
 
 ### merged
-compare<-fe_tables%>%
-  group_by(.imp, race, sex)%>%
-  summarise(fe_deaths = sum(deaths))%>%
-  ungroup()%>%
-  group_by(race, sex)%>%
-  summarise(fe_min = min(fe_deaths),
-            fe_max = max(fe_deaths))%>%
-  left_join(nvss_tables%>%
-              group_by(race, sex)%>%
-              filter(cause_50 == "Legal intervention")%>% #select only legal intervention
-              summarise(nvss_deaths = sum(deaths)))%>%
-  mutate(ratio_min = fe_min / nvss_deaths,
-         ratio_max = fe_max / nvss_deaths)
-
-write_csv(compare, "./vis/compare.csv")
-
-comp_tab<-compare%>%
-  mutate(FE = paste("[",fe_min,", ",fe_max,"]", sep=""),
-         ratio = paste("[",round(ratio_min,2),", ",round(ratio_max,2),"]", sep=""))%>%
-  select(race, sex, FE, nvss_deaths, ratio)%>%
-  arrange(sex, race)%>%
-  mutate(sex = case_when(sex=="Male" ~ "M",
-                         sex=="Female" ~ "F"))%>%
-  rename(`Race / Ethnicity` = race, `Sex` = sex, `NVSS` = nvss_deaths,
-         `FE / NVSS` = ratio)
-
-comp_tab<-xtable(comp_tab,
-                 caption = "People killed by police in the US by race and sex as recorded in Fatal Encounters and people killed by police as recorded in the National Vital Statistics System, 2010 - 2016. Uncertainty intervals calculated from multiple imputation of missing race/ethnicity in Fatal Encounters.")
-print.xtable(comp_tab, 
-             file = "./vis/comp_tab.tex",
-             include.rownames = FALSE,
-             caption.placement = "top")
+# compare<-fe_tables%>%
+#   group_by(.imp, race, sex)%>%
+#   summarise(fe_deaths = sum(deaths))%>%
+#   ungroup()%>%
+#   group_by(race, sex)%>%
+#   summarise(fe_min = min(fe_deaths),
+#             fe_max = max(fe_deaths))%>%
+#   left_join(nvss_tables%>%
+#               group_by(race, sex)%>%
+#               filter(cause_50 == "Legal intervention")%>% #select only legal intervention
+#               summarise(nvss_deaths = sum(deaths)))%>%
+#   mutate(ratio_min = fe_min / nvss_deaths,
+#          ratio_max = fe_max / nvss_deaths)
+# 
+# write_csv(compare, "./vis/compare.csv")
+# 
+# comp_tab<-compare%>%
+#   mutate(FE = paste("[",fe_min,", ",fe_max,"]", sep=""),
+#          ratio = paste("[",round(ratio_min,2),", ",round(ratio_max,2),"]", sep=""))%>%
+#   select(race, sex, FE, nvss_deaths, ratio)%>%
+#   arrange(sex, race)%>%
+#   mutate(sex = case_when(sex=="Male" ~ "M",
+#                          sex=="Female" ~ "F"))%>%
+#   rename(`Race / Ethnicity` = race, `Sex` = sex, `NVSS` = nvss_deaths,
+#          `FE / NVSS` = ratio)
+# 
+# comp_tab<-xtable(comp_tab,
+#                  caption = "People killed by police in the US by race and sex as recorded in Fatal Encounters and people killed by police as recorded in the National Vital Statistics System, 2010 - 2016. Uncertainty intervals calculated from multiple imputation of missing race/ethnicity in Fatal Encounters.")
+# print.xtable(comp_tab, 
+#              file = "./vis/comp_tab.tex",
+#              include.rownames = FALSE,
+#              caption.placement = "top")
 
 ### make pooled age-specific risk across imputations
 age_range<-fe_tables%>%

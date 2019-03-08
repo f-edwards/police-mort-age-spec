@@ -1,9 +1,7 @@
 ### make period lifetables 2010-2016 from fatal encounters data, sourced from main.r
 ## USES METHOD FROM http://data.princeton.edu/eco572/periodlt.html
-rm(list=ls())
 library(tidyverse)
 library(mice)
-
 
 #### adapt life table
 #### get cumulative probability by year/age/sex/race
@@ -39,8 +37,6 @@ make_life_table<-function(nat_dat){
     mutate(c = 1-lx/1e5)
   return(nat_dat)
 }
-
-
 
 ### make pooled cross-period tables for age specific risk
 imp_out<-list()
