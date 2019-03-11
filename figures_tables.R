@@ -289,3 +289,29 @@ ggplot(ineq,
   ggsave("./vis/lifetime_ineq.pdf", width = 6, height = 3.5)
 
 write_csv(ineq, "./vis/lifetime_ineq.csv")  
+
+#################################################
+### FOR LEADING CAUSE COMPARISONS
+#################################################
+
+cause<-nvss_dat%>%
+  group_by(age, race, sex, cause_50)%>%
+  summarise(q = sum(deaths)/sum(pop))%>%
+  ungroup()%>%
+  select(age, race, sex, cause_50, q)
+
+#### CHECK RANKING METHOD FROM LAST PAPER
+
+fe_cause<-age_range%>%
+  mutate(cause_50 = "Police homicide")%>%
+  select(age, race, sex, cause_50, q)
+
+### makes age-specific cause of death rank order 
+cause_rank<-cause%>%
+  bind_rows(fe_cause)%>%
+  group_by(age, race, sex)%>%
+  arrange(age, race, sex, desc(q))%>%
+  mutate(rank = rank(-q))
+
+fe_rank<-cause_rank%>%
+  filter(cause_50=="Police homicide")
