@@ -65,6 +65,14 @@ This relatively steep increase in the prevalence of police-involved killings may
 
 INCLUDE MIKE'S PLOTS. SAY THAT WE'RE MODELING AND SIMULATING TO NET OUT TIME TRENDS FOR NEW TABLES. SHOULD BE MORE ROBUST TO WITHIN-PERIOD CHANGES
 
+THIS IS A PROBLEM - 
+
+1. Do a 13-18 table
+2. Do a 08-18 table
+3. Show the model-predicted table
+
+Be exceptionally clear about AT CURRENT RATES throughout paper, tamp down lifetime risk. 
+
 \section{Race/ethnicity data in Fatal Encounters}
 
 Fatal Encounters codes decedent race with the mutually exclusive values: African American/Black; Asian/Pacific Islander; European-American / White; Hispanic / Latino; Middle Easter; Native American / Alaskan; and Race unspecified. Ethnicity is not coded separately from race, so no distinctions among ethnic groups (i.e. Black and non-Black Latinx people) are possible using these data. We preserve these categories in all analyses, with the exception of Middle Eastern, which we recode to "White" based on census racial classifications to match population data. 
@@ -136,7 +144,7 @@ Figure \ref{fig:traceplot} shows the estimated mean and standard deviation of ea
 \begin{figure}
 	\centering
 	\includegraphics[width = \linewidth]{vis/race_impute_pct.pdf}
-	\caption{Proportion of cases in observed Fatal Encounters data (point) and range of imputed data (bar), 2008 - 2018}
+	\caption{Proportion of cases in observed Fatal Encounters and NVSS data (point) and range of imputed data (bar), 2008 - 2018}
 	\label{fig:race_impute_pct}
 \end{figure}
 
@@ -149,6 +157,13 @@ This gap between imputed and observed proportions in Fatal Encounters is a funct
 \input{vis/missing_reg}
 
 We evaluate the relationship between the probability that a case is missing and imputation model predictors with a logistic regression model. Selected parameter estimates from this model are displayed in Table \ref{tab:missing_reg}. Cases are less likely to be missing data when they are in counties with large Hispanic populations than when they occur in counties with smaller Hispanic populations. A surname with a high conditional probability of being Hispanic based on census records is also associated with a a lower probability of being missing than is a surname with a high conditional probability of being white. These relationships suggest that names and locations of death are associated with a higher likelihood of positive ethnic identification in Fatal Encounters, either through identifying features in initial reports, or through coder inference based on surname or other contextual information available to coders. Because Latinx victims are less likely to be missing in the observed data, their share of total reports in imputed data is somewhat lower. 
+
+\section{Inclusion criteria and mortality estimates}
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{vis/death_type_c.pdf}
+	\label{fig:death_type}
+\end{figure}
 
 \subsection{Multilevel models of mortality risk and posterior simulation}
 

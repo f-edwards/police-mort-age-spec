@@ -58,37 +58,6 @@ pdf("./vis/imp_density_age.pdf")
 densityplot(fe_imp, ~age)
 dev.off()
 
-### make better race plot
-imp_dat<-fe_imp%>%
-  mice::complete(action="long",include = TRUE)%>%
- group_by(.imp, race)%>%
-  filter(!(is.na(race)))%>%
-  summarise(n = n())%>%
-  left_join(fe_imp%>%
-              mice::complete(action="long",include = TRUE)%>%
-              group_by(.imp)%>%
-              filter(!(is.na(race)))%>%
-              summarise(n_total = n()))%>%
-  mutate(pct_race = n/n_total)
-### make imputation range
-imp_range<-imp_dat%>%
-  filter(.imp!=0)%>%
-  group_by(race)%>%
-  summarise(ymin = min(pct_race),
-            ymax = max(pct_race))
-
-imp_dat<-imp_dat%>%
-  filter(.imp==0)%>%
-  left_join(imp_range)
-
-ggplot(imp_dat,
-       aes(x = race, y = pct_race,
-           ymin = ymin, ymax = ymax)) + 
-  geom_point(size = 2.5) + 
-  geom_errorbar(color = 1, alpha = 0.8, width = 0.3) + 
-  xlab("Race") + 
-  ylab("Proportion of cases, excluding missing") + 
-  ggsave("./vis/race_impute_pct.pdf")
 
 ### latinos see a dip in pct, amind and asian slight dip, 
 ### black incarease, white increase

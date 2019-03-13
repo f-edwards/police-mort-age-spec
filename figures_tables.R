@@ -43,59 +43,72 @@ dat<-fe%>%
   rename(deaths = officer_force)
 source("fe_lifetable.R")
 
-force_tables<-fe_tables
+force_tables<-fe_tables%>%
+  mutate(Type = "Force")
 
 ### for + vehicle
 dat<-fe%>%
   mutate(deaths = officer_force + vehicle)
 source("fe_lifetable.R")
 
-force_vehicle_tables<-fe_tables
+force_vehicle_tables<-fe_tables%>%
+  mutate(Type = "Force+Vehicles")
 
-### for + other
-dat<-fe%>%
-  mutate(deaths = officer_force + vehicle + other)
+### for force + suicide deaths
+dat<-dat%>%
+  mutate(deaths = officer_force + suicide)
 
 source("fe_lifetable.R")
 
-force_vehicle_other_tables<-fe_tables
+suicide_tables<-fe_tables%>%
+  mutate(Type = "Force+Suicide")
 
-### for + suicide
+### for all deaths
 dat<-dat%>%
   mutate(deaths = officer_force + vehicle + other + suicide)
 
 source("fe_lifetable.R")
 
-fe_all_tables<-fe_tables
+all_tables<-fe_tables%>%
+  mutate(Type = "All Deaths")
+
+fe_all_tables<-bind_rows(force_tables, 
+                         force_vehicle_tables,
+                         suicide_tables, 
+                         all_tables)
+
+fe_all_tables_c<-fe_all_tables%>%
+  filter(age=="85+")%>%
+  group_by(race, sex, Type)%>%
+  summarise(cmin=quantile(c, 0.05)*1e5, 
+            cmax=quantile(c, 0.95)*1e5, 
+            c=mean(c)*1e5)%>%
+  ungroup()
+
+fe_all_tables_c$Type<-factor(fe_all_tables_c$Type,
+                             levels = c("Force", "Force+Suicide",
+                                        "Force+Vehicles",
+                                        "All Deaths"))
+
+ggplot(data = fe_all_tables_c,
+       mapping =  aes(x = reorder(race, c),
+                      y = c,
+                      fill = Type,
+                      group = Type)) + 
+  geom_bar(stat = "identity", position = "dodge", color = 1) + 
+  # scale_y_continuous(limits = max(fe_all_tables_c$c) * c(-1,1),
+  #                   labels = abs) +
+  ylab("Estimated lifetime risk") +
+  xlab("") + 
+  coord_flip() + 
+  theme_minimal()+
+  facet_wrap(~sex, ncol = 1, scales = "free") + 
+  ggsave("./vis/death_type_c.pdf", width = 6, height = 6)
 
 ### make lifetime cumulative risk by race, year, sex
 ### for each fe data frame
 
 fe_cumul_force<-force_tables%>%
-  filter(age=="85+")%>%
-  group_by(race, sex)%>%
-  summarise(cmin=quantile(c, 0.05)*1e5, 
-            cmax=quantile(c, 0.95)*1e5, 
-            c=mean(c)*1e5)%>%
-  ungroup()
-
-fe_cumul_force_vehicle<-force_vehicle_tables%>%
-  filter(age=="85+")%>%
-  group_by(race, sex)%>%
-  summarise(cmin=quantile(c, 0.05)*1e5, 
-            cmax=quantile(c, 0.95)*1e5, 
-            c=mean(c)*1e5)%>%
-  ungroup()
-
-fe_cumul_force_vehicle_other<-force_vehicle_other_tables%>%
-  filter(age=="85+")%>%
-  group_by(race, sex)%>%
-  summarise(cmin=quantile(c, 0.05)*1e5, 
-            cmax=quantile(c, 0.95)*1e5, 
-            c=mean(c)*1e5)%>%
-  ungroup()
-
-fe_cumul_all<-fe_all_tables%>%
   filter(age=="85+")%>%
   group_by(race, sex)%>%
   summarise(cmin=quantile(c, 0.05)*1e5, 
