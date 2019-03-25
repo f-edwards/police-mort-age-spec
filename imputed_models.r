@@ -1,7 +1,7 @@
 #####################################
 # deaths ~ f(age; race; gender)
 # imputed models, .R
-# last edit: 3/6 (M.E)
+# last edit: 3/25 (M.E)
 #####################################
 
 library(tidyverse)
@@ -9,9 +9,8 @@ library(brms)
 library(tidybayes)
 library(RColorBrewer)
 library(modelr)
-library(tictoc)
 
-setwd("~/Projects/pnas")
+setwd("~/projects/pnas")
 theme_set(theme_tidybayes())
 options(mc.cores = parallel::detectCores())
 
@@ -25,17 +24,8 @@ c_pal = scale_color_manual(values = cols[c(9, 11, 12:16)])
 f_pal = scale_fill_manual( values = cols[c(9, 11, 12:16)])
 
 # ... hmm, some errors in age cats; assumming that those are just mislabel;ed
-dat = read_csv('./data/fe_pop_imputed_00_18.csv') %>%
-	mutate(
-		age_group = case_when(
-			age == '4-Jan'  ~ '1-4',
-			age == '9-May'  ~ '5-9',
-			age == '14-Oct' ~ '10-14',
-			TRUE ~ age
-		),
-		age_group = fct_relevel(age_group, "5-9", after = 2)
-	) %>%
-	filter(year %in% (2008:2018))
+dat = read_csv('./data/fe_pop_imputed_13_18.csv') %>% 
+	mutate(age_group = age) 
 
 # ... fit via brms' built in imputation stuff
 dfs = dat %>%
@@ -45,9 +35,11 @@ dfs = dat %>%
 fit = brm_multiple(
 	officer_force ~ race*sex + (race*sex | age_group) + (1 | year) + offset(I(log(pop))),
 	data = dfs,
-	family = 'negbinomial'
+	family = 'negbinomial',
+	control = list(adapt_delta = 0.999,max_treedepth = 15)
 )
 
+# write_rds(fit, 'fit.rds')
 # fit = read_rds('fit.rds')
 
 # ... check it out
