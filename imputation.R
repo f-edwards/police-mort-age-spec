@@ -11,7 +11,7 @@ source("imputation_pre_process.R")
 ### based on EDA with NVSS, 2008-18 
 ### higher quality than 00-07 (possible censorship)
 fe_imp_dat_join<-fe_imp_dat_join%>%
-  filter(as.numeric(as.character(year))>2007)
+  filter(as.numeric(as.character(year))>2012)
 
 ### make table of missing values by variable
 tab.out<-xtable(fe_imp_dat_join%>%
@@ -40,7 +40,7 @@ preds[,1]<-0
 
 fe_imp<-mice(fe_imp_dat_join,
              maxit =20,
-             m=50,
+             m=10,
              seed = 1,
              predictorMatrix = preds)
 
@@ -139,4 +139,4 @@ dat<-dat%>%
     "80-84", "85+")))%>%
   arrange(.imp, year, sex, race, age)
 
-write_csv(dat, "./data/fe_pop_imputed_08_18.csv")
+write_csv(dat, "./data/fe_pop_imputed_13_18.csv")

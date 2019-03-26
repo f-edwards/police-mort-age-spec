@@ -14,20 +14,35 @@ make_life_table<-function(nat_dat){
     mutate(m = deaths / pop)
   
   ### convert to probability 
-  ### age_period (n) = 1 for all cases
-  ### a = 0.5  within-period survival
+  ### age_period (n) != 1 for all cases
+  ### assume mid-point average time of death for within-period deaths
+  ### n = 1 if age == "0", 
+  ### n = 10 (arbitrary, assumes death by 95) if age == "85+",
+  ### n = 4 if age == "1-4"
+  ### else n = 5 for all other age groups
   nat_dat<-nat_dat%>%
-    mutate(q = 1 * m / (1 + (1 - 0.5) * m),
+    mutate(n = case_when(
+      age=="0" ~ 1,
+      age=="1-4" ~ 4,
+      age=="85+" ~ 10,
+      ! age %in% c("0", "1-4", "85+") ~ 5
+    ))
+  ### assume deaths occur at age + 0.5 * n for all groups to obtain years lived
+  nat_dat$nax<- nat_dat$n * 0.5
+  
+  nat_dat<-nat_dat%>%
+    mutate(q = n * m / (1 + (n - nax) * m),
            p = 1 - q)
   ### make cumulative survival
   nat_dat<-nat_dat%>%
-    mutate(lx = 1e5 * cumprod(c(1, p))[-nrow(nat_dat)])
+    mutate(lx = 1e5 * cumprod(c(1, p[-nrow(nat_dat)])))
+  
   ### deaths
   nat_dat<-nat_dat%>%
-    mutate(d = -c(diff(lx),0))
+    mutate(d = c(-diff(lx),lx[nrow(nat_dat)]))
   ## person-years in each group
   nat_dat<-nat_dat%>%
-    mutate(L = (lx - d) * 1 + d * 0.5,
+    mutate(L = (lx - d) * n + d * nax,
            t = sum(L)- cumsum(L) + L)
   ## life expectancy
   nat_dat<-nat_dat%>%

@@ -10,7 +10,7 @@ theme_set(theme_minimal())
 ### read and format data
 nvss_dat<-read_csv("./data/mort_cause.csv")
 pop<-read_csv("./data/pop_nat.csv")
-fe<-read_csv("./data/fe_pop_imputed_08_18.csv")
+fe<-read_csv("./data/fe_pop_imputed_13_18.csv")
 tot_mort<-read_csv("./data/total_mort.csv")### filter for matching years 
 
 pop<-pop%>%
@@ -33,6 +33,66 @@ nvss_dat<-nvss_dat%>%
 tot_mort<-tot_mort%>%
   left_join(pop)
 
+#################################################
+## Model predictions
+#################################################
+fe_postpred<-readRDS("./data/post_pred_90.rds")
+fe_fit<-readRDS("./data/post_fit_90.rds")
+### format for lifetable
+fe_postpred<-fe_postpred%>%
+  rename(median = .prediction,
+         lower = .lower,
+         upper = .upper,
+         age = age_group)%>%
+  select(year, age, race, sex, pop, 
+         median, lower, upper)%>%
+  mutate(.imp=1)
+
+#### make posterior predictive lifetables
+dat<-fe_postpred%>%
+  rename(deaths = median)
+source("fe_lifetable.R")
+post_tab<-fe_tables%>%
+  select(race, sex, age, m, q, c)
+
+dat<-fe_postpred%>%
+  rename(deaths = upper)
+source("fe_lifetable.R")
+post_tab<-post_tab%>%
+  left_join(fe_tables%>%
+  select(race, sex, age, m, q, c)%>%
+  rename(m_upper = m, q_upper = q, c_upper = c))
+
+dat<-fe_postpred%>%
+  rename(deaths = lower)
+source("fe_lifetable.R")
+post_tab<-post_tab%>%
+  left_join(fe_tables%>%
+              select(race, sex, age, m, q, c)%>%
+              rename(m_lower = m, q_lower = q, c_lower = c))
+
+#################################################
+## Visuals
+#################################################
+
+
+
+######### mortality comparisons by age
+deaths_age<-fe%>%
+  filter(.imp==1)%>%
+  group_by(age)%>%
+  summarise(deaths = sum(officer_force + other + suicide + vehicle) / 
+              length(unique(fe$year)))
+
+nvss_age<-nvss_dat%>%
+  group_by(age)%>%
+  summarise(nvss_deaths = sum(deaths)/length(unique(nvss_dat$year)))
+
+ratio<-left_join(deaths_age, nvss_age)%>%
+  mutate(ratio = deaths / nvss_deaths * 1e2)
+
+### total deaths ratio
+ratio%>%summarise(ratio = sum(deaths) / sum(nvss_deaths) * 1e2)
 ##########################################
 ### Make life tables
 ##########################################
@@ -103,7 +163,7 @@ ggplot(data = fe_all_tables_c,
   coord_flip() + 
   theme_minimal()+
   facet_wrap(~sex, ncol = 1, scales = "free") + 
-  ggsave("./vis/death_type_c.pdf", width = 6, height = 6)
+  ggsave("./vis/death_type_c_new.pdf", width = 6, height = 6)
 
 ### make lifetime cumulative risk by race, year, sex
 ### for each fe data frame
@@ -224,7 +284,7 @@ age_period %>%
   geom_errorbar(width = 0, alpha = 0.5) +
   geom_point(size = 0.4)+
   guides(col = guide_legend(override.aes = list(shape = 15, size = 5)))+
-  ggsave("vis/age_spec_prob.pdf", width = 6, height = 3.5)
+  ggsave("vis/age_spec_prob_new.pdf", width = 6, height = 3.5)
 
 
 ggplot(age_period_pct,
@@ -244,7 +304,7 @@ ggplot(age_period_pct,
   geom_errorbar(width = 0, alpha = 0.5) +
   geom_point(size = 0.4)+
   guides(col = guide_legend(override.aes = list(shape = 15, size = 5)))+
-  ggsave("vis/age_pct.pdf", width = 6, height = 3.5)
+  ggsave("vis/age_pct_new.pdf", width = 6, height = 3.5)
 
 #### pooled years, cumulative prob (expected deaths per 100k through 85yrs)
 
@@ -269,7 +329,7 @@ ggplot(data = fe_cumul_force,
   xlab("") + 
   coord_flip() + 
   theme_minimal()+
-  ggsave("./vis/pooled_lifetime.pdf", width = 6, height = 3.5)
+  ggsave("./vis/pooled_lifetime_new.pdf", width = 6, height = 3.5)
 
 white<-fe_cumul_force%>%
   filter(race=="White")
@@ -299,7 +359,7 @@ ggplot(ineq,
   xlab("") + 
   coord_flip()+
   theme_minimal() + 
-  ggsave("./vis/lifetime_ineq.pdf", width = 6, height = 3.5)
+  ggsave("./vis/lifetime_ineq_new.pdf", width = 6, height = 3.5)
 
 write_csv(ineq, "./vis/lifetime_ineq.csv")  
 
