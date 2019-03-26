@@ -5,6 +5,8 @@ library(tidyverse)
 library(xtable)
 library(lubridate)
 
+source("lifetable.r")
+
 theme_set(theme_minimal())
 
 ### read and format data
@@ -49,6 +51,31 @@ fe_postpred<-fe_postpred%>%
   mutate(.imp=1)
 
 #### make posterior predictive lifetables
+
+
+### make pooled cross-period tables for age specific risk
+# imp_out<-list()
+# races<-unique(dat$race)
+# sexs<-unique(dat$sex)
+# k<-0
+# for(i in 1:length(unique(dat$.imp))){
+#   for(j in 1:length(races)){
+#     for(g in 1:length(sexs)){
+#       k<-k+1
+#       imp_out[[k]]<-make_life_table(dat%>%
+#                                       filter(.imp==i)%>%
+#                                       filter(race==races[j])%>%
+#                                       filter(sex==sexs[g])%>%
+#                                       group_by(.imp, race, sex, age)%>%
+#                                       summarise(pop = sum(pop), deaths=sum(deaths)))
+#     }
+#   }
+# }
+# 
+# 
+# fe_tables<-bind_rows(imp_out)
+
+
 dat<-fe_postpred%>%
   rename(deaths = median)
 source("fe_lifetable.R")
