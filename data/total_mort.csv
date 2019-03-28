@@ -1,0 +1,3594 @@
+year,age,race,sex,deaths
+2000,0,African American,Female,3872
+2000,0,African American,Male,4911
+2000,0,American Indian/AK Native,Female,130
+2000,0,American Indian/AK Native,Male,193
+2000,0,Asian/Pacific Islander,Female,442
+2000,0,Asian/Pacific Islander,Male,551
+2000,0,Latinx,Female,2030
+2000,0,Latinx,Male,2427
+2000,0,White,Female,5866
+2000,0,White,Male,7668
+2000,1-4,African American,Female,561
+2000,1-4,African American,Male,694
+2000,1-4,American Indian/AK Native,Female,42
+2000,1-4,American Indian/AK Native,Male,49
+2000,1-4,Asian/Pacific Islander,Female,77
+2000,1-4,Asian/Pacific Islander,Male,83
+2000,1-4,Latinx,Female,391
+2000,1-4,Latinx,Male,468
+2000,1-4,White,Female,1109
+2000,1-4,White,Male,1547
+2000,10-14,African American,Female,344
+2000,10-14,African American,Male,546
+2000,10-14,American Indian/AK Native,Female,30
+2000,10-14,American Indian/AK Native,Male,33
+2000,10-14,Asian/Pacific Islander,Female,58
+2000,10-14,Asian/Pacific Islander,Male,65
+2000,10-14,Latinx,Female,217
+2000,10-14,Latinx,Male,344
+2000,10-14,White,Female,978
+2000,10-14,White,Male,1575
+2000,15-19,African American,Female,673
+2000,15-19,African American,Male,2048
+2000,15-19,American Indian/AK Native,Female,73
+2000,15-19,American Indian/AK Native,Male,178
+2000,15-19,Asian/Pacific Islander,Female,109
+2000,15-19,Asian/Pacific Islander,Male,255
+2000,15-19,Latinx,Female,429
+2000,15-19,Latinx,Male,1542
+2000,15-19,White,Female,2610
+2000,15-19,White,Male,5745
+2000,20-24,African American,Female,1061
+2000,20-24,African American,Male,3286
+2000,20-24,American Indian/AK Native,Female,77
+2000,20-24,American Indian/AK Native,Male,192
+2000,20-24,Asian/Pacific Islander,Female,128
+2000,20-24,Asian/Pacific Islander,Male,312
+2000,20-24,Latinx,Female,538
+2000,20-24,Latinx,Male,2362
+2000,20-24,White,Female,2604
+2000,20-24,White,Male,7374
+2000,25-29,African American,Female,1380
+2000,25-29,African American,Male,3166
+2000,25-29,American Indian/AK Native,Female,80
+2000,25-29,American Indian/AK Native,Male,192
+2000,25-29,Asian/Pacific Islander,Female,133
+2000,25-29,Asian/Pacific Islander,Male,369
+2000,25-29,Latinx,Female,590
+2000,25-29,Latinx,Male,2073
+2000,25-29,White,Female,2914
+2000,25-29,White,Male,6954
+2000,30-34,African American,Female,2115
+2000,30-34,African American,Male,3594
+2000,30-34,American Indian/AK Native,Female,106
+2000,30-34,American Indian/AK Native,Male,218
+2000,30-34,Asian/Pacific Islander,Female,217
+2000,30-34,Asian/Pacific Islander,Male,323
+2000,30-34,Latinx,Female,738
+2000,30-34,Latinx,Male,2215
+2000,30-34,White,Female,4363
+2000,30-34,White,Male,9042
+2000,35-39,African American,Female,3342
+2000,35-39,African American,Male,5020
+2000,35-39,American Indian/AK Native,Female,188
+2000,35-39,American Indian/AK Native,Male,284
+2000,35-39,Asian/Pacific Islander,Female,289
+2000,35-39,Asian/Pacific Islander,Male,542
+2000,35-39,Latinx,Female,1105
+2000,35-39,Latinx,Male,2575
+2000,35-39,White,Female,8013
+2000,35-39,White,Male,14957
+2000,40-44,African American,Female,4971
+2000,40-44,African American,Male,7248
+2000,40-44,American Indian/AK Native,Female,218
+2000,40-44,American Indian/AK Native,Male,391
+2000,40-44,Asian/Pacific Islander,Female,468
+2000,40-44,Asian/Pacific Islander,Male,744
+2000,40-44,Latinx,Female,1371
+2000,40-44,Latinx,Male,3062
+2000,40-44,White,Female,12635
+2000,40-44,White,Male,22753
+2000,45-49,African American,Female,6398
+2000,45-49,African American,Male,9359
+2000,45-49,American Indian/AK Native,Female,222
+2000,45-49,American Indian/AK Native,Male,391
+2000,45-49,Asian/Pacific Islander,Female,646
+2000,45-49,Asian/Pacific Islander,Male,978
+2000,45-49,Latinx,Female,1611
+2000,45-49,Latinx,Male,3336
+2000,45-49,White,Female,16892
+2000,45-49,White,Male,31198
+2000,5-9,African American,Female,327
+2000,5-9,African American,Male,432
+2000,5-9,American Indian/AK Native,Female,23
+2000,5-9,American Indian/AK Native,Male,28
+2000,5-9,Asian/Pacific Islander,Female,56
+2000,5-9,Asian/Pacific Islander,Male,49
+2000,5-9,Latinx,Female,234
+2000,5-9,Latinx,Male,271
+2000,5-9,White,Female,780
+2000,5-9,White,Male,1084
+2000,50-54,African American,Female,7002
+2000,50-54,African American,Male,10572
+2000,50-54,American Indian/AK Native,Female,277
+2000,50-54,American Indian/AK Native,Male,470
+2000,50-54,Asian/Pacific Islander,Female,780
+2000,50-54,Asian/Pacific Islander,Male,1228
+2000,50-54,Latinx,Female,1909
+2000,50-54,Latinx,Male,3432
+2000,50-54,White,Female,24334
+2000,50-54,White,Male,39721
+2000,55-59,African American,Female,7387
+2000,55-59,African American,Male,10802
+2000,55-59,American Indian/AK Native,Female,355
+2000,55-59,American Indian/AK Native,Male,459
+2000,55-59,Asian/Pacific Islander,Female,918
+2000,55-59,Asian/Pacific Islander,Male,1361
+2000,55-59,Latinx,Female,2206
+2000,55-59,Latinx,Male,3641
+2000,55-59,White,Female,31556
+2000,55-59,White,Male,48347
+2000,60-64,African American,Female,9246
+2000,60-64,African American,Male,11903
+2000,60-64,American Indian/AK Native,Female,380
+2000,60-64,American Indian/AK Native,Male,507
+2000,60-64,Asian/Pacific Islander,Female,1108
+2000,60-64,Asian/Pacific Islander,Male,1730
+2000,60-64,Latinx,Female,2750
+2000,60-64,Latinx,Male,4075
+2000,60-64,White,Female,41850
+2000,60-64,White,Male,60896
+2000,65-69,African American,Female,11583
+2000,65-69,African American,Male,13514
+2000,65-69,American Indian/AK Native,Female,495
+2000,65-69,American Indian/AK Native,Male,558
+2000,65-69,Asian/Pacific Islander,Female,1487
+2000,65-69,Asian/Pacific Islander,Male,2024
+2000,65-69,Latinx,Female,3694
+2000,65-69,Latinx,Male,4827
+2000,65-69,White,Female,60696
+2000,65-69,White,Male,83277
+2000,70-74,African American,Female,14573
+2000,70-74,African American,Male,15574
+2000,70-74,American Indian/AK Native,Female,536
+2000,70-74,American Indian/AK Native,Male,562
+2000,70-74,Asian/Pacific Islander,Female,1937
+2000,70-74,Asian/Pacific Islander,Male,2555
+2000,70-74,Latinx,Female,4856
+2000,70-74,Latinx,Male,5974
+2000,70-74,White,Female,94255
+2000,70-74,White,Male,119051
+2000,75-79,African American,Female,16863
+2000,75-79,African American,Male,15689
+2000,75-79,American Indian/AK Native,Female,563
+2000,75-79,American Indian/AK Native,Male,568
+2000,75-79,Asian/Pacific Islander,Female,2488
+2000,75-79,Asian/Pacific Islander,Male,3062
+2000,75-79,Latinx,Female,5485
+2000,75-79,Latinx,Male,6014
+2000,75-79,White,Female,139113
+2000,75-79,White,Male,148195
+2000,80-84,African American,Female,16567
+2000,80-84,African American,Male,12351
+2000,80-84,American Indian/AK Native,Female,510
+2000,80-84,American Indian/AK Native,Male,422
+2000,80-84,Asian/Pacific Islander,Female,2638
+2000,80-84,Asian/Pacific Islander,Male,2537
+2000,80-84,Latinx,Female,5417
+2000,80-84,Latinx,Male,4868
+2000,80-84,White,Female,170836
+2000,80-84,White,Male,146851
+2000,85+,African American,Female,32482
+2000,85+,African American,Male,14564
+2000,85+,American Indian/AK Native,Female,881
+2000,85+,American Indian/AK Native,Male,501
+2000,85+,Asian/Pacific Islander,Female,4668
+2000,85+,Asian/Pacific Islander,Male,3730
+2000,85+,Latinx,Female,11223
+2000,85+,Latinx,Male,6453
+2000,85+,White,Female,394295
+2000,85+,White,Male,189596
+2000,Missing,African American,Female,22
+2000,Missing,African American,Male,50
+2000,Missing,American Indian/AK Native,Male,3
+2000,Missing,Asian/Pacific Islander,Female,24
+2000,Missing,Asian/Pacific Islander,Male,116
+2000,Missing,Latinx,Female,3
+2000,Missing,Latinx,Male,55
+2000,Missing,White,Female,19
+2000,Missing,White,Male,71
+2001,0,African American,Female,3739
+2001,0,African American,Male,4765
+2001,0,American Indian/AK Native,Female,162
+2001,0,American Indian/AK Native,Male,211
+2001,0,Asian/Pacific Islander,Female,408
+2001,0,Asian/Pacific Islander,Male,480
+2001,0,Latinx,Female,2006
+2001,0,Latinx,Male,2531
+2001,0,White,Female,5809
+2001,0,White,Male,7519
+2001,1-4,African American,Female,510
+2001,1-4,African American,Male,672
+2001,1-4,American Indian/AK Native,Female,51
+2001,1-4,American Indian/AK Native,Male,52
+2001,1-4,Asian/Pacific Islander,Female,79
+2001,1-4,Asian/Pacific Islander,Male,87
+2001,1-4,Latinx,Female,402
+2001,1-4,Latinx,Male,516
+2001,1-4,White,Female,1187
+2001,1-4,White,Male,1600
+2001,10-14,African American,Female,338
+2001,10-14,African American,Male,552
+2001,10-14,American Indian/AK Native,Female,39
+2001,10-14,American Indian/AK Native,Male,46
+2001,10-14,Asian/Pacific Islander,Female,54
+2001,10-14,Asian/Pacific Islander,Male,69
+2001,10-14,Latinx,Female,240
+2001,10-14,Latinx,Male,315
+2001,10-14,White,Female,903
+2001,10-14,White,Male,1479
+2001,15-19,African American,Female,632
+2001,15-19,African American,Male,2082
+2001,15-19,American Indian/AK Native,Female,87
+2001,15-19,American Indian/AK Native,Male,187
+2001,15-19,Asian/Pacific Islander,Female,107
+2001,15-19,Asian/Pacific Islander,Male,256
+2001,15-19,Latinx,Female,473
+2001,15-19,Latinx,Male,1533
+2001,15-19,White,Female,2513
+2001,15-19,White,Male,5761
+2001,20-24,African American,Female,1038
+2001,20-24,African American,Male,3405
+2001,20-24,American Indian/AK Native,Female,70
+2001,20-24,American Indian/AK Native,Male,214
+2001,20-24,Asian/Pacific Islander,Female,153
+2001,20-24,Asian/Pacific Islander,Male,359
+2001,20-24,Latinx,Female,577
+2001,20-24,Latinx,Male,2533
+2001,20-24,White,Female,2693
+2001,20-24,White,Male,7815
+2001,25-29,African American,Female,1352
+2001,25-29,African American,Male,3124
+2001,25-29,American Indian/AK Native,Female,71
+2001,25-29,American Indian/AK Native,Male,194
+2001,25-29,Asian/Pacific Islander,Female,214
+2001,25-29,Asian/Pacific Islander,Male,361
+2001,25-29,Latinx,Female,643
+2001,25-29,Latinx,Male,2256
+2001,25-29,White,Female,2976
+2001,25-29,White,Male,7205
+2001,30-34,African American,Female,2014
+2001,30-34,African American,Male,3558
+2001,30-34,American Indian/AK Native,Female,108
+2001,30-34,American Indian/AK Native,Male,223
+2001,30-34,Asian/Pacific Islander,Female,220
+2001,30-34,Asian/Pacific Islander,Male,437
+2001,30-34,Latinx,Female,799
+2001,30-34,Latinx,Male,2179
+2001,30-34,White,Female,4624
+2001,30-34,White,Male,9465
+2001,35-39,African American,Female,3371
+2001,35-39,African American,Male,5027
+2001,35-39,American Indian/AK Native,Female,176
+2001,35-39,American Indian/AK Native,Male,355
+2001,35-39,Asian/Pacific Islander,Female,303
+2001,35-39,Asian/Pacific Islander,Male,565
+2001,35-39,Latinx,Female,1115
+2001,35-39,Latinx,Male,2754
+2001,35-39,White,Female,8244
+2001,35-39,White,Male,15140
+2001,40-44,African American,Female,5205
+2001,40-44,African American,Male,7120
+2001,40-44,American Indian/AK Native,Female,234
+2001,40-44,American Indian/AK Native,Male,367
+2001,40-44,Asian/Pacific Islander,Female,427
+2001,40-44,Asian/Pacific Islander,Male,751
+2001,40-44,Latinx,Female,1413
+2001,40-44,Latinx,Male,3146
+2001,40-44,White,Female,13112
+2001,40-44,White,Male,23150
+2001,45-49,African American,Female,6380
+2001,45-49,African American,Male,9505
+2001,45-49,American Indian/AK Native,Female,310
+2001,45-49,American Indian/AK Native,Male,437
+2001,45-49,Asian/Pacific Islander,Female,641
+2001,45-49,Asian/Pacific Islander,Male,1036
+2001,45-49,Latinx,Female,1719
+2001,45-49,Latinx,Male,3611
+2001,45-49,White,Female,18126
+2001,45-49,White,Male,32096
+2001,5-9,African American,Female,291
+2001,5-9,African American,Male,411
+2001,5-9,American Indian/AK Native,Female,15
+2001,5-9,American Indian/AK Native,Male,29
+2001,5-9,Asian/Pacific Islander,Female,45
+2001,5-9,Asian/Pacific Islander,Male,58
+2001,5-9,Latinx,Female,201
+2001,5-9,Latinx,Male,287
+2001,5-9,White,Female,824
+2001,5-9,White,Male,964
+2001,50-54,African American,Female,7555
+2001,50-54,African American,Male,11101
+2001,50-54,American Indian/AK Native,Female,309
+2001,50-54,American Indian/AK Native,Male,504
+2001,50-54,Asian/Pacific Islander,Female,890
+2001,50-54,Asian/Pacific Islander,Male,1258
+2001,50-54,Latinx,Female,2133
+2001,50-54,Latinx,Male,3793
+2001,50-54,White,Female,25284
+2001,50-54,White,Male,41767
+2001,55-59,African American,Female,7879
+2001,55-59,African American,Male,10994
+2001,55-59,American Indian/AK Native,Female,346
+2001,55-59,American Indian/AK Native,Male,478
+2001,55-59,Asian/Pacific Islander,Female,910
+2001,55-59,Asian/Pacific Islander,Male,1462
+2001,55-59,Latinx,Female,2347
+2001,55-59,Latinx,Male,3744
+2001,55-59,White,Female,32334
+2001,55-59,White,Male,49290
+2001,60-64,African American,Female,9216
+2001,60-64,African American,Male,11932
+2001,60-64,American Indian/AK Native,Female,419
+2001,60-64,American Indian/AK Native,Male,531
+2001,60-64,Asian/Pacific Islander,Female,1129
+2001,60-64,Asian/Pacific Islander,Male,1774
+2001,60-64,Latinx,Female,2946
+2001,60-64,Latinx,Male,4219
+2001,60-64,White,Female,41873
+2001,60-64,White,Male,60886
+2001,65-69,African American,Female,11628
+2001,65-69,African American,Male,13779
+2001,65-69,American Indian/AK Native,Female,515
+2001,65-69,American Indian/AK Native,Male,547
+2001,65-69,Asian/Pacific Islander,Female,1614
+2001,65-69,Asian/Pacific Islander,Male,1988
+2001,65-69,Latinx,Female,3752
+2001,65-69,Latinx,Male,5102
+2001,65-69,White,Female,58748
+2001,65-69,White,Male,80926
+2001,70-74,African American,Female,14018
+2001,70-74,African American,Male,15021
+2001,70-74,American Indian/AK Native,Female,528
+2001,70-74,American Indian/AK Native,Male,623
+2001,70-74,Asian/Pacific Islander,Female,2130
+2001,70-74,Asian/Pacific Islander,Male,2506
+2001,70-74,Latinx,Female,5139
+2001,70-74,Latinx,Male,6079
+2001,70-74,White,Female,91586
+2001,70-74,White,Male,115476
+2001,75-79,African American,Female,16986
+2001,75-79,African American,Male,15621
+2001,75-79,American Indian/AK Native,Female,601
+2001,75-79,American Indian/AK Native,Male,548
+2001,75-79,Asian/Pacific Islander,Female,2573
+2001,75-79,Asian/Pacific Islander,Male,3008
+2001,75-79,Latinx,Female,5986
+2001,75-79,Latinx,Male,6485
+2001,75-79,White,Female,136357
+2001,75-79,White,Male,145845
+2001,80-84,African American,Female,16871
+2001,80-84,African American,Male,12787
+2001,80-84,American Indian/AK Native,Female,562
+2001,80-84,American Indian/AK Native,Male,437
+2001,80-84,Asian/Pacific Islander,Female,2822
+2001,80-84,Asian/Pacific Islander,Male,2786
+2001,80-84,Latinx,Female,5791
+2001,80-84,Latinx,Male,5178
+2001,80-84,White,Female,172895
+2001,80-84,White,Male,148350
+2001,85+,African American,Female,32902
+2001,85+,African American,Male,14493
+2001,85+,American Indian/AK Native,Female,911
+2001,85+,American Indian/AK Native,Male,493
+2001,85+,Asian/Pacific Islander,Female,5030
+2001,85+,Asian/Pacific Islander,Male,3782
+2001,85+,Latinx,Female,12030
+2001,85+,Latinx,Male,6720
+2001,85+,White,Female,397250
+2001,85+,White,Male,192128
+2001,Missing,African American,Female,21
+2001,Missing,African American,Male,67
+2001,Missing,American Indian/AK Native,Female,1
+2001,Missing,American Indian/AK Native,Male,5
+2001,Missing,Asian/Pacific Islander,Female,40
+2001,Missing,Asian/Pacific Islander,Male,113
+2001,Missing,Latinx,Female,8
+2001,Missing,Latinx,Male,62
+2001,Missing,White,Female,21
+2001,Missing,White,Male,93
+2002,0,African American,Female,3876
+2002,0,African American,Male,4656
+2002,0,American Indian/AK Native,Female,152
+2002,0,American Indian/AK Native,Male,191
+2002,0,Asian/Pacific Islander,Female,411
+2002,0,Asian/Pacific Islander,Male,522
+2002,0,Latinx,Female,2140
+2002,0,Latinx,Male,2663
+2002,0,White,Female,5763
+2002,0,White,Male,7713
+2002,1-4,African American,Female,494
+2002,1-4,African American,Male,705
+2002,1-4,American Indian/AK Native,Female,41
+2002,1-4,American Indian/AK Native,Male,49
+2002,1-4,Asian/Pacific Islander,Female,75
+2002,1-4,Asian/Pacific Islander,Male,106
+2002,1-4,Latinx,Female,385
+2002,1-4,Latinx,Male,538
+2002,1-4,White,Female,1075
+2002,1-4,White,Male,1435
+2002,10-14,African American,Female,370
+2002,10-14,African American,Male,597
+2002,10-14,American Indian/AK Native,Female,34
+2002,10-14,American Indian/AK Native,Male,44
+2002,10-14,Asian/Pacific Islander,Female,53
+2002,10-14,Asian/Pacific Islander,Male,79
+2002,10-14,Latinx,Female,245
+2002,10-14,Latinx,Male,349
+2002,10-14,White,Female,951
+2002,10-14,White,Male,1445
+2002,15-19,African American,Female,641
+2002,15-19,African American,Male,1965
+2002,15-19,American Indian/AK Native,Female,89
+2002,15-19,American Indian/AK Native,Male,179
+2002,15-19,Asian/Pacific Islander,Female,114
+2002,15-19,Asian/Pacific Islander,Male,248
+2002,15-19,Latinx,Female,474
+2002,15-19,Latinx,Male,1627
+2002,15-19,White,Female,2673
+2002,15-19,White,Male,5905
+2002,20-24,African American,Female,1043
+2002,20-24,African American,Male,3402
+2002,20-24,American Indian/AK Native,Female,79
+2002,20-24,American Indian/AK Native,Male,239
+2002,20-24,Asian/Pacific Islander,Female,127
+2002,20-24,Asian/Pacific Islander,Male,354
+2002,20-24,Latinx,Female,604
+2002,20-24,Latinx,Male,2598
+2002,20-24,White,Female,2842
+2002,20-24,White,Male,8101
+2002,25-29,African American,Female,1325
+2002,25-29,African American,Male,3238
+2002,25-29,American Indian/AK Native,Female,72
+2002,25-29,American Indian/AK Native,Male,220
+2002,25-29,Asian/Pacific Islander,Female,146
+2002,25-29,Asian/Pacific Islander,Male,319
+2002,25-29,Latinx,Female,577
+2002,25-29,Latinx,Male,2285
+2002,25-29,White,Female,2931
+2002,25-29,White,Male,7010
+2002,30-34,African American,Female,2005
+2002,30-34,African American,Male,3623
+2002,30-34,American Indian/AK Native,Female,123
+2002,30-34,American Indian/AK Native,Male,240
+2002,30-34,Asian/Pacific Islander,Female,225
+2002,30-34,Asian/Pacific Islander,Male,394
+2002,30-34,Latinx,Female,780
+2002,30-34,Latinx,Male,2259
+2002,30-34,White,Female,4514
+2002,30-34,White,Male,9375
+2002,35-39,African American,Female,3236
+2002,35-39,African American,Male,5012
+2002,35-39,American Indian/AK Native,Female,177
+2002,35-39,American Indian/AK Native,Male,336
+2002,35-39,Asian/Pacific Islander,Female,280
+2002,35-39,Asian/Pacific Islander,Male,553
+2002,35-39,Latinx,Female,1125
+2002,35-39,Latinx,Male,2505
+2002,35-39,White,Female,7941
+2002,35-39,White,Male,14317
+2002,40-44,African American,Female,5159
+2002,40-44,African American,Male,6862
+2002,40-44,American Indian/AK Native,Female,243
+2002,40-44,American Indian/AK Native,Male,414
+2002,40-44,Asian/Pacific Islander,Female,414
+2002,40-44,Asian/Pacific Islander,Male,707
+2002,40-44,Latinx,Female,1489
+2002,40-44,Latinx,Male,3300
+2002,40-44,White,Female,13563
+2002,40-44,White,Male,23795
+2002,45-49,African American,Female,6688
+2002,45-49,African American,Male,9511
+2002,45-49,American Indian/AK Native,Female,296
+2002,45-49,American Indian/AK Native,Male,455
+2002,45-49,Asian/Pacific Islander,Female,653
+2002,45-49,Asian/Pacific Islander,Male,1024
+2002,45-49,Latinx,Female,1812
+2002,45-49,Latinx,Male,3683
+2002,45-49,White,Female,18963
+2002,45-49,White,Male,33160
+2002,5-9,African American,Female,300
+2002,5-9,African American,Male,404
+2002,5-9,American Indian/AK Native,Female,27
+2002,5-9,American Indian/AK Native,Male,21
+2002,5-9,Asian/Pacific Islander,Female,43
+2002,5-9,Asian/Pacific Islander,Male,63
+2002,5-9,Latinx,Female,234
+2002,5-9,Latinx,Male,299
+2002,5-9,White,Female,723
+2002,5-9,White,Male,933
+2002,50-54,African American,Female,7831
+2002,50-54,African American,Male,11629
+2002,50-54,American Indian/AK Native,Female,328
+2002,50-54,American Indian/AK Native,Male,523
+2002,50-54,Asian/Pacific Islander,Female,864
+2002,50-54,Asian/Pacific Islander,Male,1324
+2002,50-54,Latinx,Female,2181
+2002,50-54,Latinx,Male,3992
+2002,50-54,White,Female,25165
+2002,50-54,White,Male,42684
+2002,55-59,African American,Female,8159
+2002,55-59,African American,Male,11562
+2002,55-59,American Indian/AK Native,Female,380
+2002,55-59,American Indian/AK Native,Male,515
+2002,55-59,Asian/Pacific Islander,Female,1022
+2002,55-59,Asian/Pacific Islander,Male,1457
+2002,55-59,Latinx,Female,2364
+2002,55-59,Latinx,Male,4200
+2002,55-59,White,Female,33779
+2002,55-59,White,Male,52232
+2002,60-64,African American,Female,9207
+2002,60-64,African American,Male,12464
+2002,60-64,American Indian/AK Native,Female,433
+2002,60-64,American Indian/AK Native,Male,560
+2002,60-64,Asian/Pacific Islander,Female,1199
+2002,60-64,Asian/Pacific Islander,Male,1744
+2002,60-64,Latinx,Female,3037
+2002,60-64,Latinx,Male,4491
+2002,60-64,White,Female,42595
+2002,60-64,White,Male,62464
+2002,65-69,African American,Female,11333
+2002,65-69,African American,Male,13476
+2002,65-69,American Indian/AK Native,Female,505
+2002,65-69,American Indian/AK Native,Male,590
+2002,65-69,Asian/Pacific Islander,Female,1586
+2002,65-69,Asian/Pacific Islander,Male,2092
+2002,65-69,Latinx,Female,3834
+2002,65-69,Latinx,Male,5162
+2002,65-69,White,Female,57903
+2002,65-69,White,Male,79461
+2002,70-74,African American,Female,13818
+2002,70-74,African American,Male,14754
+2002,70-74,American Indian/AK Native,Female,585
+2002,70-74,American Indian/AK Native,Male,612
+2002,70-74,Asian/Pacific Islander,Female,2234
+2002,70-74,Asian/Pacific Islander,Male,2466
+2002,70-74,Latinx,Female,5137
+2002,70-74,Latinx,Male,6238
+2002,70-74,White,Female,89342
+2002,70-74,White,Male,112600
+2002,75-79,African American,Female,17013
+2002,75-79,African American,Male,15445
+2002,75-79,American Indian/AK Native,Female,574
+2002,75-79,American Indian/AK Native,Male,586
+2002,75-79,Asian/Pacific Islander,Female,2683
+2002,75-79,Asian/Pacific Islander,Male,3173
+2002,75-79,Latinx,Female,6087
+2002,75-79,Latinx,Male,6614
+2002,75-79,White,Female,134289
+2002,75-79,White,Male,144025
+2002,80-84,African American,Female,17392
+2002,80-84,African American,Male,13046
+2002,80-84,American Indian/AK Native,Female,594
+2002,80-84,American Indian/AK Native,Male,462
+2002,80-84,Asian/Pacific Islander,Female,2947
+2002,80-84,Asian/Pacific Islander,Male,2991
+2002,80-84,Latinx,Female,6323
+2002,80-84,Latinx,Male,5583
+2002,80-84,White,Female,176478
+2002,80-84,White,Male,151914
+2002,85+,African American,Female,33444
+2002,85+,African American,Male,14588
+2002,85+,American Indian/AK Native,Female,935
+2002,85+,American Indian/AK Native,Male,516
+2002,85+,Asian/Pacific Islander,Female,5450
+2002,85+,Asian/Pacific Islander,Male,4107
+2002,85+,Latinx,Female,12161
+2002,85+,Latinx,Male,6893
+2002,85+,White,Female,403288
+2002,85+,White,Male,199883
+2002,Missing,African American,Female,17
+2002,Missing,African American,Male,40
+2002,Missing,American Indian/AK Native,Female,1
+2002,Missing,American Indian/AK Native,Male,6
+2002,Missing,Asian/Pacific Islander,Female,30
+2002,Missing,Asian/Pacific Islander,Male,83
+2002,Missing,Latinx,Female,3
+2002,Missing,Latinx,Male,55
+2002,Missing,White,Female,24
+2002,Missing,White,Male,98
+2003,0,African American,Female,3666
+2003,0,African American,Male,4743
+2003,0,American Indian/AK Native,Female,140
+2003,0,American Indian/AK Native,Male,195
+2003,0,Asian/Pacific Islander,Female,427
+2003,0,Asian/Pacific Islander,Male,535
+2003,0,Latinx,Female,2271
+2003,0,Latinx,Male,2853
+2003,0,White,Female,5638
+2003,0,White,Male,7610
+2003,1-4,African American,Female,506
+2003,1-4,African American,Male,702
+2003,1-4,American Indian/AK Native,Female,40
+2003,1-4,American Indian/AK Native,Male,55
+2003,1-4,Asian/Pacific Islander,Female,77
+2003,1-4,Asian/Pacific Islander,Male,96
+2003,1-4,Latinx,Female,412
+2003,1-4,Latinx,Male,561
+2003,1-4,White,Female,1119
+2003,1-4,White,Male,1431
+2003,10-14,African American,Female,349
+2003,10-14,African American,Male,569
+2003,10-14,American Indian/AK Native,Female,26
+2003,10-14,American Indian/AK Native,Male,56
+2003,10-14,Asian/Pacific Islander,Female,57
+2003,10-14,Asian/Pacific Islander,Male,85
+2003,10-14,Latinx,Female,244
+2003,10-14,Latinx,Male,389
+2003,10-14,White,Female,888
+2003,10-14,White,Male,1431
+2003,15-19,African American,Female,601
+2003,15-19,African American,Male,1979
+2003,15-19,American Indian/AK Native,Female,92
+2003,15-19,American Indian/AK Native,Male,195
+2003,15-19,Asian/Pacific Islander,Female,119
+2003,15-19,Asian/Pacific Islander,Male,246
+2003,15-19,Latinx,Female,529
+2003,15-19,Latinx,Male,1685
+2003,15-19,White,Female,2580
+2003,15-19,White,Male,5672
+2003,20-24,African American,Female,1100
+2003,20-24,African American,Male,3479
+2003,20-24,American Indian/AK Native,Female,80
+2003,20-24,American Indian/AK Native,Male,255
+2003,20-24,Asian/Pacific Islander,Female,180
+2003,20-24,Asian/Pacific Islander,Male,350
+2003,20-24,Latinx,Female,637
+2003,20-24,Latinx,Male,2605
+2003,20-24,White,Female,3058
+2003,20-24,White,Male,8382
+2003,25-29,African American,Female,1309
+2003,25-29,African American,Male,3225
+2003,25-29,American Indian/AK Native,Female,95
+2003,25-29,American Indian/AK Native,Male,195
+2003,25-29,Asian/Pacific Islander,Female,169
+2003,25-29,Asian/Pacific Islander,Male,326
+2003,25-29,Latinx,Female,669
+2003,25-29,Latinx,Male,2464
+2003,25-29,White,Female,3003
+2003,25-29,White,Male,6964
+2003,30-34,African American,Female,1951
+2003,30-34,African American,Male,3487
+2003,30-34,American Indian/AK Native,Female,104
+2003,30-34,American Indian/AK Native,Male,252
+2003,30-34,Asian/Pacific Islander,Female,223
+2003,30-34,Asian/Pacific Islander,Male,418
+2003,30-34,Latinx,Female,775
+2003,30-34,Latinx,Male,2354
+2003,30-34,White,Female,4477
+2003,30-34,White,Male,9178
+2003,35-39,African American,Female,3218
+2003,35-39,African American,Male,4633
+2003,35-39,American Indian/AK Native,Female,188
+2003,35-39,American Indian/AK Native,Male,351
+2003,35-39,Asian/Pacific Islander,Female,290
+2003,35-39,Asian/Pacific Islander,Male,508
+2003,35-39,Latinx,Female,1105
+2003,35-39,Latinx,Male,2614
+2003,35-39,White,Female,7569
+2003,35-39,White,Male,13747
+2003,40-44,African American,Female,5044
+2003,40-44,African American,Male,6946
+2003,40-44,American Indian/AK Native,Female,272
+2003,40-44,American Indian/AK Native,Male,433
+2003,40-44,Asian/Pacific Islander,Female,441
+2003,40-44,Asian/Pacific Islander,Male,719
+2003,40-44,Latinx,Female,1566
+2003,40-44,Latinx,Male,3292
+2003,40-44,White,Female,13434
+2003,40-44,White,Male,23447
+2003,45-49,African American,Female,6864
+2003,45-49,African American,Male,9843
+2003,45-49,American Indian/AK Native,Female,326
+2003,45-49,American Indian/AK Native,Male,517
+2003,45-49,Asian/Pacific Islander,Female,669
+2003,45-49,Asian/Pacific Islander,Male,1060
+2003,45-49,Latinx,Female,1879
+2003,45-49,Latinx,Male,3984
+2003,45-49,White,Female,19349
+2003,45-49,White,Male,33878
+2003,5-9,African American,Female,282
+2003,5-9,African American,Male,358
+2003,5-9,American Indian/AK Native,Female,25
+2003,5-9,American Indian/AK Native,Male,30
+2003,5-9,Asian/Pacific Islander,Female,48
+2003,5-9,Asian/Pacific Islander,Male,57
+2003,5-9,Latinx,Female,224
+2003,5-9,Latinx,Male,310
+2003,5-9,White,Female,690
+2003,5-9,White,Male,899
+2003,50-54,African American,Female,8176
+2003,50-54,African American,Male,12176
+2003,50-54,American Indian/AK Native,Female,396
+2003,50-54,American Indian/AK Native,Male,574
+2003,50-54,Asian/Pacific Islander,Female,905
+2003,50-54,Asian/Pacific Islander,Male,1320
+2003,50-54,Latinx,Female,2241
+2003,50-54,Latinx,Male,4286
+2003,50-54,White,Female,25421
+2003,50-54,White,Male,43366
+2003,55-59,African American,Female,8427
+2003,55-59,African American,Male,12064
+2003,55-59,American Indian/AK Native,Female,410
+2003,55-59,American Indian/AK Native,Male,543
+2003,55-59,Asian/Pacific Islander,Female,1058
+2003,55-59,Asian/Pacific Islander,Male,1494
+2003,55-59,Latinx,Female,2700
+2003,55-59,Latinx,Male,4427
+2003,55-59,White,Female,34653
+2003,55-59,White,Male,53851
+2003,60-64,African American,Female,9653
+2003,60-64,African American,Male,12746
+2003,60-64,American Indian/AK Native,Female,498
+2003,60-64,American Indian/AK Native,Male,594
+2003,60-64,Asian/Pacific Islander,Female,1183
+2003,60-64,Asian/Pacific Islander,Male,1798
+2003,60-64,Latinx,Female,3048
+2003,60-64,Latinx,Male,4632
+2003,60-64,White,Female,44637
+2003,60-64,White,Male,64706
+2003,65-69,African American,Female,11221
+2003,65-69,African American,Male,13562
+2003,65-69,American Indian/AK Native,Female,529
+2003,65-69,American Indian/AK Native,Male,584
+2003,65-69,Asian/Pacific Islander,Female,1558
+2003,65-69,Asian/Pacific Islander,Male,2135
+2003,65-69,Latinx,Female,3975
+2003,65-69,Latinx,Male,5210
+2003,65-69,White,Female,57348
+2003,65-69,White,Male,79051
+2003,70-74,African American,Female,13655
+2003,70-74,African American,Male,14773
+2003,70-74,American Indian/AK Native,Female,537
+2003,70-74,American Indian/AK Native,Male,610
+2003,70-74,Asian/Pacific Islander,Female,2215
+2003,70-74,Asian/Pacific Islander,Male,2498
+2003,70-74,Latinx,Female,5115
+2003,70-74,Latinx,Male,6178
+2003,70-74,White,Female,86196
+2003,70-74,White,Male,107310
+2003,75-79,African American,Female,16584
+2003,75-79,African American,Male,15307
+2003,75-79,American Indian/AK Native,Female,638
+2003,75-79,American Indian/AK Native,Male,596
+2003,75-79,Asian/Pacific Islander,Female,2740
+2003,75-79,Asian/Pacific Islander,Male,3077
+2003,75-79,Latinx,Female,6560
+2003,75-79,Latinx,Male,6735
+2003,75-79,White,Female,131479
+2003,75-79,White,Male,141856
+2003,80-84,African American,Female,17212
+2003,80-84,African American,Male,13329
+2003,80-84,American Indian/AK Native,Female,633
+2003,80-84,American Indian/AK Native,Male,497
+2003,80-84,Asian/Pacific Islander,Female,3040
+2003,80-84,Asian/Pacific Islander,Male,3113
+2003,80-84,Latinx,Female,6651
+2003,80-84,Latinx,Male,6081
+2003,80-84,White,Female,175461
+2003,80-84,White,Male,152104
+2003,85+,African American,Female,33625
+2003,85+,African American,Male,14299
+2003,85+,American Indian/AK Native,Female,1016
+2003,85+,American Indian/AK Native,Male,578
+2003,85+,Asian/Pacific Islander,Female,5569
+2003,85+,Asian/Pacific Islander,Male,4136
+2003,85+,Latinx,Female,12795
+2003,85+,Latinx,Male,7110
+2003,85+,White,Female,406779
+2003,85+,White,Male,202210
+2003,Missing,African American,Female,5
+2003,Missing,African American,Male,38
+2003,Missing,American Indian/AK Native,Male,5
+2003,Missing,Asian/Pacific Islander,Female,33
+2003,Missing,Asian/Pacific Islander,Male,99
+2003,Missing,Latinx,Female,8
+2003,Missing,Latinx,Male,39
+2003,Missing,White,Female,27
+2003,Missing,White,Male,105
+2004,0,African American,Female,3732
+2004,0,African American,Male,4771
+2004,0,American Indian/AK Native,Female,152
+2004,0,American Indian/AK Native,Male,237
+2004,0,Asian/Pacific Islander,Female,405
+2004,0,Asian/Pacific Islander,Male,494
+2004,0,Latinx,Female,2300
+2004,0,Latinx,Male,2834
+2004,0,White,Female,5655
+2004,0,White,Male,7412
+2004,1-4,African American,Female,524
+2004,1-4,African American,Male,642
+2004,1-4,American Indian/AK Native,Female,47
+2004,1-4,American Indian/AK Native,Male,50
+2004,1-4,Asian/Pacific Islander,Female,80
+2004,1-4,Asian/Pacific Islander,Male,82
+2004,1-4,Latinx,Female,401
+2004,1-4,Latinx,Male,520
+2004,1-4,White,Female,1096
+2004,1-4,White,Male,1366
+2004,10-14,African American,Female,384
+2004,10-14,African American,Male,519
+2004,10-14,American Indian/AK Native,Female,32
+2004,10-14,American Indian/AK Native,Male,42
+2004,10-14,Asian/Pacific Islander,Female,50
+2004,10-14,Asian/Pacific Islander,Male,74
+2004,10-14,Latinx,Female,235
+2004,10-14,Latinx,Male,383
+2004,10-14,White,Female,902
+2004,10-14,White,Male,1355
+2004,15-19,African American,Female,663
+2004,15-19,African American,Male,2022
+2004,15-19,American Indian/AK Native,Female,89
+2004,15-19,American Indian/AK Native,Male,171
+2004,15-19,Asian/Pacific Islander,Female,102
+2004,15-19,Asian/Pacific Islander,Male,228
+2004,15-19,Latinx,Female,479
+2004,15-19,Latinx,Male,1662
+2004,15-19,White,Female,2718
+2004,15-19,White,Male,5649
+2004,20-24,African American,Female,1054
+2004,20-24,African American,Male,3324
+2004,20-24,American Indian/AK Native,Female,96
+2004,20-24,American Indian/AK Native,Male,238
+2004,20-24,Asian/Pacific Islander,Female,147
+2004,20-24,Asian/Pacific Islander,Male,329
+2004,20-24,Latinx,Female,582
+2004,20-24,Latinx,Male,2737
+2004,20-24,White,Female,2965
+2004,20-24,White,Male,8404
+2004,25-29,African American,Female,1354
+2004,25-29,African American,Male,3269
+2004,25-29,American Indian/AK Native,Female,93
+2004,25-29,American Indian/AK Native,Male,224
+2004,25-29,Asian/Pacific Islander,Female,156
+2004,25-29,Asian/Pacific Islander,Male,298
+2004,25-29,Latinx,Female,664
+2004,25-29,Latinx,Male,2383
+2004,25-29,White,Female,2986
+2004,25-29,White,Male,7495
+2004,30-34,African American,Female,1894
+2004,30-34,African American,Male,3428
+2004,30-34,American Indian/AK Native,Female,142
+2004,30-34,American Indian/AK Native,Male,239
+2004,30-34,Asian/Pacific Islander,Female,208
+2004,30-34,Asian/Pacific Islander,Male,393
+2004,30-34,Latinx,Female,760
+2004,30-34,Latinx,Male,2195
+2004,30-34,White,Female,4322
+2004,30-34,White,Male,8639
+2004,35-39,African American,Female,2845
+2004,35-39,African American,Male,4280
+2004,35-39,American Indian/AK Native,Female,178
+2004,35-39,American Indian/AK Native,Male,340
+2004,35-39,Asian/Pacific Islander,Female,252
+2004,35-39,Asian/Pacific Islander,Male,455
+2004,35-39,Latinx,Female,1045
+2004,35-39,Latinx,Male,2651
+2004,35-39,White,Female,7179
+2004,35-39,White,Male,12895
+2004,40-44,African American,Female,4946
+2004,40-44,African American,Male,6457
+2004,40-44,American Indian/AK Native,Female,269
+2004,40-44,American Indian/AK Native,Male,409
+2004,40-44,Asian/Pacific Islander,Female,424
+2004,40-44,Asian/Pacific Islander,Male,708
+2004,40-44,Latinx,Female,1499
+2004,40-44,Latinx,Male,3327
+2004,40-44,White,Female,13133
+2004,40-44,White,Male,22441
+2004,45-49,African American,Female,6792
+2004,45-49,African American,Male,9672
+2004,45-49,American Indian/AK Native,Female,325
+2004,45-49,American Indian/AK Native,Male,508
+2004,45-49,Asian/Pacific Islander,Female,636
+2004,45-49,Asian/Pacific Islander,Male,1029
+2004,45-49,Latinx,Female,1896
+2004,45-49,Latinx,Male,3938
+2004,45-49,White,Female,19813
+2004,45-49,White,Male,33544
+2004,5-9,African American,Female,313
+2004,5-9,African American,Male,374
+2004,5-9,American Indian/AK Native,Female,25
+2004,5-9,American Indian/AK Native,Male,28
+2004,5-9,Asian/Pacific Islander,Female,43
+2004,5-9,Asian/Pacific Islander,Male,68
+2004,5-9,Latinx,Female,207
+2004,5-9,Latinx,Male,270
+2004,5-9,White,Female,666
+2004,5-9,White,Male,916
+2004,50-54,African American,Female,8184
+2004,50-54,African American,Male,12148
+2004,50-54,American Indian/AK Native,Female,369
+2004,50-54,American Indian/AK Native,Male,538
+2004,50-54,Asian/Pacific Islander,Female,906
+2004,50-54,Asian/Pacific Islander,Male,1372
+2004,50-54,Latinx,Female,2202
+2004,50-54,Latinx,Male,4425
+2004,50-54,White,Female,25529
+2004,50-54,White,Male,44354
+2004,55-59,African American,Female,8703
+2004,55-59,African American,Male,12671
+2004,55-59,American Indian/AK Native,Female,409
+2004,55-59,American Indian/AK Native,Male,598
+2004,55-59,Asian/Pacific Islander,Female,1077
+2004,55-59,Asian/Pacific Islander,Male,1591
+2004,55-59,Latinx,Female,2777
+2004,55-59,Latinx,Male,4391
+2004,55-59,White,Female,34893
+2004,55-59,White,Male,54344
+2004,60-64,African American,Female,9467
+2004,60-64,African American,Male,12730
+2004,60-64,American Indian/AK Native,Female,452
+2004,60-64,American Indian/AK Native,Male,617
+2004,60-64,Asian/Pacific Islander,Female,1130
+2004,60-64,Asian/Pacific Islander,Male,1698
+2004,60-64,Latinx,Female,3107
+2004,60-64,Latinx,Male,4760
+2004,60-64,White,Female,44854
+2004,60-64,White,Male,65029
+2004,65-69,African American,Female,10947
+2004,65-69,African American,Male,13409
+2004,65-69,American Indian/AK Native,Female,532
+2004,65-69,American Indian/AK Native,Male,648
+2004,65-69,Asian/Pacific Islander,Female,1533
+2004,65-69,Asian/Pacific Islander,Male,2046
+2004,65-69,Latinx,Female,4015
+2004,65-69,Latinx,Male,5173
+2004,65-69,White,Female,56662
+2004,65-69,White,Male,77419
+2004,70-74,African American,Female,13219
+2004,70-74,African American,Male,14194
+2004,70-74,American Indian/AK Native,Female,574
+2004,70-74,American Indian/AK Native,Male,578
+2004,70-74,Asian/Pacific Islander,Female,2103
+2004,70-74,Asian/Pacific Islander,Male,2423
+2004,70-74,Latinx,Female,5079
+2004,70-74,Latinx,Male,6014
+2004,70-74,White,Female,82416
+2004,70-74,White,Male,101461
+2004,75-79,African American,Female,16293
+2004,75-79,African American,Male,14846
+2004,75-79,American Indian/AK Native,Female,572
+2004,75-79,American Indian/AK Native,Male,633
+2004,75-79,Asian/Pacific Islander,Female,2623
+2004,75-79,Asian/Pacific Islander,Male,2898
+2004,75-79,Latinx,Female,6462
+2004,75-79,Latinx,Male,6866
+2004,75-79,White,Female,124626
+2004,75-79,White,Male,135257
+2004,80-84,African American,Female,17416
+2004,80-84,African American,Male,12878
+2004,80-84,American Indian/AK Native,Female,657
+2004,80-84,American Indian/AK Native,Male,514
+2004,80-84,Asian/Pacific Islander,Female,3090
+2004,80-84,Asian/Pacific Islander,Male,3022
+2004,80-84,Latinx,Female,6875
+2004,80-84,Latinx,Male,6417
+2004,80-84,White,Female,172212
+2004,80-84,White,Male,150682
+2004,85+,African American,Female,32761
+2004,85+,African American,Male,14557
+2004,85+,American Indian/AK Native,Female,980
+2004,85+,American Indian/AK Native,Male,524
+2004,85+,Asian/Pacific Islander,Female,5726
+2004,85+,Asian/Pacific Islander,Male,4229
+2004,85+,Latinx,Female,12688
+2004,85+,Latinx,Male,7033
+2004,85+,White,Female,393131
+2004,85+,White,Male,200423
+2004,Missing,African American,Female,20
+2004,Missing,African American,Male,50
+2004,Missing,American Indian/AK Native,Female,2
+2004,Missing,American Indian/AK Native,Male,8
+2004,Missing,Asian/Pacific Islander,Female,22
+2004,Missing,Asian/Pacific Islander,Male,92
+2004,Missing,Latinx,Female,2
+2004,Missing,Latinx,Male,47
+2004,Missing,White,Female,33
+2004,Missing,White,Male,90
+2005,0,African American,Female,3832
+2005,0,African American,Male,4875
+2005,0,American Indian/AK Native,Female,161
+2005,0,American Indian/AK Native,Male,196
+2005,0,Asian/Pacific Islander,Female,433
+2005,0,Asian/Pacific Islander,Male,523
+2005,0,Latinx,Female,2403
+2005,0,Latinx,Male,3033
+2005,0,White,Female,5617
+2005,0,White,Male,7430
+2005,1-4,African American,Female,478
+2005,1-4,African American,Male,626
+2005,1-4,American Indian/AK Native,Female,38
+2005,1-4,American Indian/AK Native,Male,62
+2005,1-4,Asian/Pacific Islander,Female,71
+2005,1-4,Asian/Pacific Islander,Male,85
+2005,1-4,Latinx,Female,419
+2005,1-4,Latinx,Male,597
+2005,1-4,White,Female,999
+2005,1-4,White,Male,1412
+2005,10-14,African American,Female,332
+2005,10-14,African American,Male,549
+2005,10-14,American Indian/AK Native,Female,27
+2005,10-14,American Indian/AK Native,Male,37
+2005,10-14,Asian/Pacific Islander,Female,58
+2005,10-14,Asian/Pacific Islander,Male,72
+2005,10-14,Latinx,Female,239
+2005,10-14,Latinx,Male,352
+2005,10-14,White,Female,819
+2005,10-14,White,Male,1308
+2005,15-19,African American,Female,653
+2005,15-19,African American,Male,2190
+2005,15-19,American Indian/AK Native,Female,102
+2005,15-19,American Indian/AK Native,Male,181
+2005,15-19,Asian/Pacific Islander,Female,102
+2005,15-19,Asian/Pacific Islander,Male,230
+2005,15-19,Latinx,Female,563
+2005,15-19,Latinx,Male,1775
+2005,15-19,White,Female,2426
+2005,15-19,White,Male,5577
+2005,20-24,African American,Female,1016
+2005,20-24,African American,Male,3529
+2005,20-24,American Indian/AK Native,Female,95
+2005,20-24,American Indian/AK Native,Male,259
+2005,20-24,Asian/Pacific Islander,Female,161
+2005,20-24,Asian/Pacific Islander,Male,368
+2005,20-24,Latinx,Female,680
+2005,20-24,Latinx,Male,2877
+2005,20-24,White,Female,3004
+2005,20-24,White,Male,8735
+2005,25-29,African American,Female,1317
+2005,25-29,African American,Male,3343
+2005,25-29,American Indian/AK Native,Female,100
+2005,25-29,American Indian/AK Native,Male,264
+2005,25-29,Asian/Pacific Islander,Female,158
+2005,25-29,Asian/Pacific Islander,Male,357
+2005,25-29,Latinx,Female,655
+2005,25-29,Latinx,Male,2632
+2005,25-29,White,Female,3129
+2005,25-29,White,Male,7787
+2005,30-34,African American,Female,1888
+2005,30-34,African American,Male,3524
+2005,30-34,American Indian/AK Native,Female,108
+2005,30-34,American Indian/AK Native,Male,248
+2005,30-34,Asian/Pacific Islander,Female,222
+2005,30-34,Asian/Pacific Islander,Male,394
+2005,30-34,Latinx,Female,798
+2005,30-34,Latinx,Male,2380
+2005,30-34,White,Female,4352
+2005,30-34,White,Male,8626
+2005,35-39,African American,Female,2812
+2005,35-39,African American,Male,4271
+2005,35-39,American Indian/AK Native,Female,192
+2005,35-39,American Indian/AK Native,Male,307
+2005,35-39,Asian/Pacific Islander,Female,284
+2005,35-39,Asian/Pacific Islander,Male,467
+2005,35-39,Latinx,Female,1097
+2005,35-39,Latinx,Male,2642
+2005,35-39,White,Female,7076
+2005,35-39,White,Male,12478
+2005,40-44,African American,Female,4781
+2005,40-44,African American,Male,6407
+2005,40-44,American Indian/AK Native,Female,255
+2005,40-44,American Indian/AK Native,Male,471
+2005,40-44,Asian/Pacific Islander,Female,467
+2005,40-44,Asian/Pacific Islander,Male,759
+2005,40-44,Latinx,Female,1606
+2005,40-44,Latinx,Male,3497
+2005,40-44,White,Female,13026
+2005,40-44,White,Male,22320
+2005,45-49,African American,Female,6964
+2005,45-49,African American,Male,9798
+2005,45-49,American Indian/AK Native,Female,350
+2005,45-49,American Indian/AK Native,Male,524
+2005,45-49,Asian/Pacific Islander,Female,680
+2005,45-49,Asian/Pacific Islander,Male,990
+2005,45-49,Latinx,Female,1972
+2005,45-49,Latinx,Male,4153
+2005,45-49,White,Female,20209
+2005,45-49,White,Male,34002
+2005,5-9,African American,Female,302
+2005,5-9,African American,Male,363
+2005,5-9,American Indian/AK Native,Female,20
+2005,5-9,American Indian/AK Native,Male,27
+2005,5-9,Asian/Pacific Islander,Female,51
+2005,5-9,Asian/Pacific Islander,Male,61
+2005,5-9,Latinx,Female,215
+2005,5-9,Latinx,Male,251
+2005,5-9,White,Female,704
+2005,5-9,White,Male,864
+2005,50-54,African American,Female,8569
+2005,50-54,African American,Male,12518
+2005,50-54,American Indian/AK Native,Female,417
+2005,50-54,American Indian/AK Native,Male,637
+2005,50-54,Asian/Pacific Islander,Female,879
+2005,50-54,Asian/Pacific Islander,Male,1494
+2005,50-54,Latinx,Female,2517
+2005,50-54,Latinx,Male,4724
+2005,50-54,White,Female,26663
+2005,50-54,White,Male,46027
+2005,55-59,African American,Female,9062
+2005,55-59,African American,Male,13657
+2005,55-59,American Indian/AK Native,Female,398
+2005,55-59,American Indian/AK Native,Male,678
+2005,55-59,Asian/Pacific Islander,Female,1122
+2005,55-59,Asian/Pacific Islander,Male,1703
+2005,55-59,Latinx,Female,2842
+2005,55-59,Latinx,Male,4779
+2005,55-59,White,Female,36186
+2005,55-59,White,Male,57432
+2005,60-64,African American,Female,9681
+2005,60-64,African American,Male,13134
+2005,60-64,American Indian/AK Native,Female,503
+2005,60-64,American Indian/AK Native,Male,663
+2005,60-64,Asian/Pacific Islander,Female,1342
+2005,60-64,Asian/Pacific Islander,Male,1826
+2005,60-64,Latinx,Female,3227
+2005,60-64,Latinx,Male,5035
+2005,60-64,White,Female,45750
+2005,60-64,White,Male,67056
+2005,65-69,African American,Female,11029
+2005,65-69,African American,Male,13388
+2005,65-69,American Indian/AK Native,Female,579
+2005,65-69,American Indian/AK Native,Male,624
+2005,65-69,Asian/Pacific Islander,Female,1539
+2005,65-69,Asian/Pacific Islander,Male,2220
+2005,65-69,Latinx,Female,4055
+2005,65-69,Latinx,Male,5343
+2005,65-69,White,Female,56770
+2005,65-69,White,Male,77119
+2005,70-74,African American,Female,13111
+2005,70-74,African American,Male,14290
+2005,70-74,American Indian/AK Native,Female,612
+2005,70-74,American Indian/AK Native,Male,673
+2005,70-74,Asian/Pacific Islander,Female,2099
+2005,70-74,Asian/Pacific Islander,Male,2529
+2005,70-74,Latinx,Female,5283
+2005,70-74,Latinx,Male,6501
+2005,70-74,White,Female,80805
+2005,70-74,White,Male,100666
+2005,75-79,African American,Female,16204
+2005,75-79,African American,Male,14735
+2005,75-79,American Indian/AK Native,Female,653
+2005,75-79,American Indian/AK Native,Male,613
+2005,75-79,Asian/Pacific Islander,Female,2808
+2005,75-79,Asian/Pacific Islander,Male,2972
+2005,75-79,Latinx,Female,6680
+2005,75-79,Latinx,Male,7250
+2005,75-79,White,Female,122598
+2005,75-79,White,Male,133757
+2005,80-84,African American,Female,17767
+2005,80-84,African American,Male,13356
+2005,80-84,American Indian/AK Native,Female,637
+2005,80-84,American Indian/AK Native,Male,533
+2005,80-84,Asian/Pacific Islander,Female,3173
+2005,80-84,Asian/Pacific Islander,Male,3308
+2005,80-84,Latinx,Female,7558
+2005,80-84,Latinx,Male,7015
+2005,80-84,White,Female,173653
+2005,80-84,White,Male,152067
+2005,85+,African American,Female,34114
+2005,85+,African American,Male,14865
+2005,85+,American Indian/AK Native,Female,1070
+2005,85+,American Indian/AK Native,Male,614
+2005,85+,Asian/Pacific Islander,Female,6248
+2005,85+,Asian/Pacific Islander,Male,4623
+2005,85+,Latinx,Female,13573
+2005,85+,Latinx,Male,7962
+2005,85+,White,Female,409539
+2005,85+,White,Male,210882
+2005,Missing,African American,Female,19
+2005,Missing,African American,Male,40
+2005,Missing,American Indian/AK Native,Female,1
+2005,Missing,American Indian/AK Native,Male,1
+2005,Missing,Asian/Pacific Islander,Female,14
+2005,Missing,Asian/Pacific Islander,Male,92
+2005,Missing,Latinx,Female,4
+2005,Missing,Latinx,Male,54
+2005,Missing,White,Female,25
+2005,Missing,White,Male,70
+2006,0,African American,Female,3973
+2006,0,African American,Male,4900
+2006,0,American Indian/AK Native,Female,151
+2006,0,American Indian/AK Native,Male,242
+2006,0,Asian/Pacific Islander,Female,397
+2006,0,Asian/Pacific Islander,Male,551
+2006,0,Latinx,Female,2421
+2006,0,Latinx,Male,3038
+2006,0,White,Female,5627
+2006,0,White,Male,7292
+2006,1-4,African American,Female,516
+2006,1-4,African American,Male,636
+2006,1-4,American Indian/AK Native,Female,43
+2006,1-4,American Indian/AK Native,Male,51
+2006,1-4,Asian/Pacific Islander,Female,85
+2006,1-4,Asian/Pacific Islander,Male,87
+2006,1-4,Latinx,Female,425
+2006,1-4,Latinx,Male,533
+2006,1-4,White,Female,1036
+2006,1-4,White,Male,1251
+2006,10-14,African American,Female,302
+2006,10-14,African American,Male,463
+2006,10-14,American Indian/AK Native,Female,25
+2006,10-14,American Indian/AK Native,Male,27
+2006,10-14,Asian/Pacific Islander,Female,49
+2006,10-14,Asian/Pacific Islander,Male,61
+2006,10-14,Latinx,Female,263
+2006,10-14,Latinx,Male,386
+2006,10-14,White,Female,716
+2006,10-14,White,Male,1147
+2006,15-19,African American,Female,643
+2006,15-19,African American,Male,2314
+2006,15-19,American Indian/AK Native,Female,96
+2006,15-19,American Indian/AK Native,Male,195
+2006,15-19,Asian/Pacific Islander,Female,114
+2006,15-19,Asian/Pacific Islander,Male,258
+2006,15-19,Latinx,Female,529
+2006,15-19,Latinx,Male,1826
+2006,15-19,White,Female,2471
+2006,15-19,White,Male,5389
+2006,20-24,African American,Female,1047
+2006,20-24,African American,Male,3490
+2006,20-24,American Indian/AK Native,Female,90
+2006,20-24,American Indian/AK Native,Male,283
+2006,20-24,Asian/Pacific Islander,Female,150
+2006,20-24,Asian/Pacific Islander,Male,404
+2006,20-24,Latinx,Female,694
+2006,20-24,Latinx,Male,2890
+2006,20-24,White,Female,3050
+2006,20-24,White,Male,9195
+2006,25-29,African American,Female,1370
+2006,25-29,African American,Male,3509
+2006,25-29,American Indian/AK Native,Female,85
+2006,25-29,American Indian/AK Native,Male,242
+2006,25-29,Asian/Pacific Islander,Female,171
+2006,25-29,Asian/Pacific Islander,Male,356
+2006,25-29,Latinx,Female,714
+2006,25-29,Latinx,Male,2620
+2006,25-29,White,Female,3412
+2006,25-29,White,Male,8567
+2006,30-34,African American,Female,1759
+2006,30-34,African American,Male,3422
+2006,30-34,American Indian/AK Native,Female,131
+2006,30-34,American Indian/AK Native,Male,251
+2006,30-34,Asian/Pacific Islander,Female,232
+2006,30-34,Asian/Pacific Islander,Male,397
+2006,30-34,Latinx,Female,862
+2006,30-34,Latinx,Male,2470
+2006,30-34,White,Female,4104
+2006,30-34,White,Male,8610
+2006,35-39,African American,Female,2778
+2006,35-39,African American,Male,4281
+2006,35-39,American Indian/AK Native,Female,173
+2006,35-39,American Indian/AK Native,Male,325
+2006,35-39,Asian/Pacific Islander,Female,310
+2006,35-39,Asian/Pacific Islander,Male,460
+2006,35-39,Latinx,Female,1133
+2006,35-39,Latinx,Male,2688
+2006,35-39,White,Female,7013
+2006,35-39,White,Male,12505
+2006,40-44,African American,Female,4652
+2006,40-44,African American,Male,6280
+2006,40-44,American Indian/AK Native,Female,297
+2006,40-44,American Indian/AK Native,Male,461
+2006,40-44,Asian/Pacific Islander,Female,454
+2006,40-44,Asian/Pacific Islander,Male,725
+2006,40-44,Latinx,Female,1579
+2006,40-44,Latinx,Male,3522
+2006,40-44,White,Female,12603
+2006,40-44,White,Male,21212
+2006,45-49,African American,Female,6875
+2006,45-49,African American,Male,9423
+2006,45-49,American Indian/AK Native,Female,342
+2006,45-49,American Indian/AK Native,Male,564
+2006,45-49,Asian/Pacific Islander,Female,682
+2006,45-49,Asian/Pacific Islander,Male,1084
+2006,45-49,Latinx,Female,2174
+2006,45-49,Latinx,Male,4243
+2006,45-49,White,Female,20250
+2006,45-49,White,Male,33918
+2006,5-9,African American,Female,264
+2006,5-9,African American,Male,371
+2006,5-9,American Indian/AK Native,Female,19
+2006,5-9,American Indian/AK Native,Male,20
+2006,5-9,Asian/Pacific Islander,Female,53
+2006,5-9,Asian/Pacific Islander,Male,50
+2006,5-9,Latinx,Female,196
+2006,5-9,Latinx,Male,277
+2006,5-9,White,Female,659
+2006,5-9,White,Male,842
+2006,50-54,African American,Female,8460
+2006,50-54,African American,Male,12756
+2006,50-54,American Indian/AK Native,Female,397
+2006,50-54,American Indian/AK Native,Male,639
+2006,50-54,Asian/Pacific Islander,Female,938
+2006,50-54,Asian/Pacific Islander,Male,1388
+2006,50-54,Latinx,Female,2542
+2006,50-54,Latinx,Male,4885
+2006,50-54,White,Female,27360
+2006,50-54,White,Male,46726
+2006,55-59,African American,Female,9632
+2006,55-59,African American,Male,14208
+2006,55-59,American Indian/AK Native,Female,433
+2006,55-59,American Indian/AK Native,Male,661
+2006,55-59,Asian/Pacific Islander,Female,1178
+2006,55-59,Asian/Pacific Islander,Male,1824
+2006,55-59,Latinx,Female,2960
+2006,55-59,Latinx,Male,5177
+2006,55-59,White,Female,37576
+2006,55-59,White,Male,59797
+2006,60-64,African American,Female,9606
+2006,60-64,African American,Male,13057
+2006,60-64,American Indian/AK Native,Female,501
+2006,60-64,American Indian/AK Native,Male,636
+2006,60-64,Asian/Pacific Islander,Female,1309
+2006,60-64,Asian/Pacific Islander,Male,1934
+2006,60-64,Latinx,Female,3394
+2006,60-64,Latinx,Male,4985
+2006,60-64,White,Female,46056
+2006,60-64,White,Male,67279
+2006,65-69,African American,Female,10858
+2006,65-69,African American,Male,13384
+2006,65-69,American Indian/AK Native,Female,571
+2006,65-69,American Indian/AK Native,Male,689
+2006,65-69,Asian/Pacific Islander,Female,1634
+2006,65-69,Asian/Pacific Islander,Male,2280
+2006,65-69,Latinx,Female,3973
+2006,65-69,Latinx,Male,5418
+2006,65-69,White,Female,56259
+2006,65-69,White,Male,77199
+2006,70-74,African American,Female,12712
+2006,70-74,African American,Male,14250
+2006,70-74,American Indian/AK Native,Female,587
+2006,70-74,American Indian/AK Native,Male,609
+2006,70-74,Asian/Pacific Islander,Female,2155
+2006,70-74,Asian/Pacific Islander,Male,2523
+2006,70-74,Latinx,Female,5166
+2006,70-74,Latinx,Male,6207
+2006,70-74,White,Female,78288
+2006,70-74,White,Male,96126
+2006,75-79,African American,Female,15130
+2006,75-79,African American,Male,14157
+2006,75-79,American Indian/AK Native,Female,638
+2006,75-79,American Indian/AK Native,Male,608
+2006,75-79,Asian/Pacific Islander,Female,2920
+2006,75-79,Asian/Pacific Islander,Male,3022
+2006,75-79,Latinx,Female,6803
+2006,75-79,Latinx,Male,7109
+2006,75-79,White,Female,118145
+2006,75-79,White,Male,129550
+2006,80-84,African American,Female,17583
+2006,80-84,African American,Male,13185
+2006,80-84,American Indian/AK Native,Female,748
+2006,80-84,American Indian/AK Native,Male,549
+2006,80-84,Asian/Pacific Islander,Female,3386
+2006,80-84,Asian/Pacific Islander,Male,3260
+2006,80-84,Latinx,Female,7531
+2006,80-84,Latinx,Male,6890
+2006,80-84,White,Female,167416
+2006,80-84,White,Male,149384
+2006,85+,African American,Female,33383
+2006,85+,African American,Male,14788
+2006,85+,American Indian/AK Native,Female,1085
+2006,85+,American Indian/AK Native,Male,591
+2006,85+,Asian/Pacific Islander,Female,6585
+2006,85+,Asian/Pacific Islander,Male,4916
+2006,85+,Latinx,Female,14341
+2006,85+,Latinx,Male,8177
+2006,85+,White,Female,405226
+2006,85+,White,Male,213242
+2006,Missing,African American,Female,11
+2006,Missing,African American,Male,33
+2006,Missing,American Indian/AK Native,Female,1
+2006,Missing,American Indian/AK Native,Male,2
+2006,Missing,Asian/Pacific Islander,Female,24
+2006,Missing,Asian/Pacific Islander,Male,94
+2006,Missing,Latinx,Female,10
+2006,Missing,Latinx,Male,49
+2006,Missing,White,Female,24
+2006,Missing,White,Male,84
+2007,0,African American,Female,3978
+2007,0,African American,Male,4982
+2007,0,American Indian/AK Native,Female,191
+2007,0,American Indian/AK Native,Male,242
+2007,0,Asian/Pacific Islander,Female,426
+2007,0,Asian/Pacific Islander,Male,575
+2007,0,Latinx,Female,2611
+2007,0,Latinx,Male,3186
+2007,0,White,Female,5673
+2007,0,White,Male,7361
+2007,1-4,African American,Female,518
+2007,1-4,African American,Male,624
+2007,1-4,American Indian/AK Native,Female,40
+2007,1-4,American Indian/AK Native,Male,57
+2007,1-4,Asian/Pacific Islander,Female,77
+2007,1-4,Asian/Pacific Islander,Male,105
+2007,1-4,Latinx,Female,434
+2007,1-4,Latinx,Male,543
+2007,1-4,White,Female,1012
+2007,1-4,White,Male,1320
+2007,10-14,African American,Female,302
+2007,10-14,African American,Male,486
+2007,10-14,American Indian/AK Native,Female,18
+2007,10-14,American Indian/AK Native,Male,36
+2007,10-14,Asian/Pacific Islander,Female,50
+2007,10-14,Asian/Pacific Islander,Male,69
+2007,10-14,Latinx,Female,243
+2007,10-14,Latinx,Male,347
+2007,10-14,White,Female,769
+2007,10-14,White,Male,1137
+2007,15-19,African American,Female,656
+2007,15-19,African American,Male,2306
+2007,15-19,American Indian/AK Native,Female,83
+2007,15-19,American Indian/AK Native,Male,182
+2007,15-19,Asian/Pacific Islander,Female,98
+2007,15-19,Asian/Pacific Islander,Male,228
+2007,15-19,Latinx,Female,496
+2007,15-19,Latinx,Male,1641
+2007,15-19,White,Female,2435
+2007,15-19,White,Male,5249
+2007,20-24,African American,Female,975
+2007,20-24,African American,Male,3458
+2007,20-24,American Indian/AK Native,Female,98
+2007,20-24,American Indian/AK Native,Male,259
+2007,20-24,Asian/Pacific Islander,Female,148
+2007,20-24,Asian/Pacific Islander,Male,400
+2007,20-24,Latinx,Female,682
+2007,20-24,Latinx,Male,2841
+2007,20-24,White,Female,3057
+2007,20-24,White,Male,8924
+2007,25-29,African American,Female,1348
+2007,25-29,African American,Male,3402
+2007,25-29,American Indian/AK Native,Female,99
+2007,25-29,American Indian/AK Native,Male,251
+2007,25-29,Asian/Pacific Islander,Female,174
+2007,25-29,Asian/Pacific Islander,Male,315
+2007,25-29,Latinx,Female,738
+2007,25-29,Latinx,Male,2583
+2007,25-29,White,Female,3506
+2007,25-29,White,Male,8670
+2007,30-34,African American,Female,1673
+2007,30-34,African American,Male,3262
+2007,30-34,American Indian/AK Native,Female,119
+2007,30-34,American Indian/AK Native,Male,265
+2007,30-34,Asian/Pacific Islander,Female,214
+2007,30-34,Asian/Pacific Islander,Male,367
+2007,30-34,Latinx,Female,850
+2007,30-34,Latinx,Male,2398
+2007,30-34,White,Female,4144
+2007,30-34,White,Male,8522
+2007,35-39,African American,Female,2696
+2007,35-39,African American,Male,4159
+2007,35-39,American Indian/AK Native,Female,182
+2007,35-39,American Indian/AK Native,Male,315
+2007,35-39,Asian/Pacific Islander,Female,286
+2007,35-39,Asian/Pacific Islander,Male,510
+2007,35-39,Latinx,Female,1137
+2007,35-39,Latinx,Male,2646
+2007,35-39,White,Female,6868
+2007,35-39,White,Male,12276
+2007,40-44,African American,Female,4207
+2007,40-44,African American,Male,5978
+2007,40-44,American Indian/AK Native,Female,263
+2007,40-44,American Indian/AK Native,Male,454
+2007,40-44,Asian/Pacific Islander,Female,475
+2007,40-44,Asian/Pacific Islander,Male,706
+2007,40-44,Latinx,Female,1498
+2007,40-44,Latinx,Male,3397
+2007,40-44,White,Female,11983
+2007,40-44,White,Male,19963
+2007,45-49,African American,Female,6658
+2007,45-49,African American,Male,9006
+2007,45-49,American Indian/AK Native,Female,375
+2007,45-49,American Indian/AK Native,Male,563
+2007,45-49,Asian/Pacific Islander,Female,658
+2007,45-49,Asian/Pacific Islander,Male,1029
+2007,45-49,Latinx,Female,2085
+2007,45-49,Latinx,Male,4399
+2007,45-49,White,Female,20126
+2007,45-49,White,Male,33127
+2007,5-9,African American,Female,248
+2007,5-9,African American,Male,333
+2007,5-9,American Indian/AK Native,Female,15
+2007,5-9,American Indian/AK Native,Male,25
+2007,5-9,Asian/Pacific Islander,Female,40
+2007,5-9,Asian/Pacific Islander,Male,49
+2007,5-9,Latinx,Female,249
+2007,5-9,Latinx,Male,309
+2007,5-9,White,Female,651
+2007,5-9,White,Male,813
+2007,50-54,African American,Female,8699
+2007,50-54,African American,Male,12560
+2007,50-54,American Indian/AK Native,Female,391
+2007,50-54,American Indian/AK Native,Male,632
+2007,50-54,Asian/Pacific Islander,Female,883
+2007,50-54,Asian/Pacific Islander,Male,1447
+2007,50-54,Latinx,Female,2596
+2007,50-54,Latinx,Male,5150
+2007,50-54,White,Female,27905
+2007,50-54,White,Male,47035
+2007,55-59,African American,Female,9735
+2007,55-59,African American,Male,14509
+2007,55-59,American Indian/AK Native,Female,486
+2007,55-59,American Indian/AK Native,Male,703
+2007,55-59,Asian/Pacific Islander,Female,1211
+2007,55-59,Asian/Pacific Islander,Male,1835
+2007,55-59,Latinx,Female,3100
+2007,55-59,Latinx,Male,5238
+2007,55-59,White,Female,36429
+2007,55-59,White,Male,59555
+2007,60-64,African American,Female,9852
+2007,60-64,African American,Male,13699
+2007,60-64,American Indian/AK Native,Female,509
+2007,60-64,American Indian/AK Native,Male,672
+2007,60-64,Asian/Pacific Islander,Female,1367
+2007,60-64,Asian/Pacific Islander,Male,1862
+2007,60-64,Latinx,Female,3469
+2007,60-64,Latinx,Male,5387
+2007,60-64,White,Female,47572
+2007,60-64,White,Male,70697
+2007,65-69,African American,Female,10983
+2007,65-69,African American,Male,13613
+2007,65-69,American Indian/AK Native,Female,579
+2007,65-69,American Indian/AK Native,Male,644
+2007,65-69,Asian/Pacific Islander,Female,1557
+2007,65-69,Asian/Pacific Islander,Male,2222
+2007,65-69,Latinx,Female,3993
+2007,65-69,Latinx,Male,5696
+2007,65-69,White,Female,57534
+2007,65-69,White,Male,78617
+2007,70-74,African American,Female,12756
+2007,70-74,African American,Male,14120
+2007,70-74,American Indian/AK Native,Female,602
+2007,70-74,American Indian/AK Native,Male,715
+2007,70-74,Asian/Pacific Islander,Female,2052
+2007,70-74,Asian/Pacific Islander,Male,2585
+2007,70-74,Latinx,Female,5065
+2007,70-74,Latinx,Male,6136
+2007,70-74,White,Female,76074
+2007,70-74,White,Male,94569
+2007,75-79,African American,Female,15076
+2007,75-79,African American,Male,14028
+2007,75-79,American Indian/AK Native,Female,680
+2007,75-79,American Indian/AK Native,Male,672
+2007,75-79,Asian/Pacific Islander,Female,2767
+2007,75-79,Asian/Pacific Islander,Male,2978
+2007,75-79,Latinx,Female,6797
+2007,75-79,Latinx,Male,7169
+2007,75-79,White,Female,114193
+2007,75-79,White,Male,125059
+2007,80-84,African American,Female,17119
+2007,80-84,African American,Male,12833
+2007,80-84,American Indian/AK Native,Female,653
+2007,80-84,American Indian/AK Native,Male,543
+2007,80-84,Asian/Pacific Islander,Female,3568
+2007,80-84,Asian/Pacific Islander,Male,3292
+2007,80-84,Latinx,Female,8011
+2007,80-84,Latinx,Male,7063
+2007,80-84,White,Female,163314
+2007,80-84,White,Male,147591
+2007,85+,African American,Female,33963
+2007,85+,African American,Male,15267
+2007,85+,American Indian/AK Native,Female,1104
+2007,85+,American Indian/AK Native,Male,668
+2007,85+,Asian/Pacific Islander,Female,6833
+2007,85+,Asian/Pacific Islander,Male,4946
+2007,85+,Latinx,Female,14737
+2007,85+,Latinx,Male,8628
+2007,85+,White,Female,408367
+2007,85+,White,Male,219524
+2007,Missing,African American,Female,21
+2007,Missing,African American,Male,33
+2007,Missing,American Indian/AK Native,Male,1
+2007,Missing,Asian/Pacific Islander,Female,23
+2007,Missing,Asian/Pacific Islander,Male,80
+2007,Missing,Latinx,Female,4
+2007,Missing,Latinx,Male,58
+2007,Missing,White,Female,23
+2007,Missing,White,Male,75
+2008,0,African American,Female,3807
+2008,0,African American,Male,4761
+2008,0,American Indian/AK Native,Female,169
+2008,0,American Indian/AK Native,Male,234
+2008,0,Asian/Pacific Islander,Female,448
+2008,0,Asian/Pacific Islander,Male,570
+2008,0,Latinx,Female,2494
+2008,0,Latinx,Male,3115
+2008,0,White,Female,5516
+2008,0,White,Male,7038
+2008,1-4,African American,Female,472
+2008,1-4,African American,Male,651
+2008,1-4,American Indian/AK Native,Female,50
+2008,1-4,American Indian/AK Native,Male,50
+2008,1-4,Asian/Pacific Islander,Female,90
+2008,1-4,Asian/Pacific Islander,Male,81
+2008,1-4,Latinx,Female,422
+2008,1-4,Latinx,Male,555
+2008,1-4,White,Female,1009
+2008,1-4,White,Male,1371
+2008,10-14,African American,Female,291
+2008,10-14,African American,Male,423
+2008,10-14,American Indian/AK Native,Female,26
+2008,10-14,American Indian/AK Native,Male,31
+2008,10-14,Asian/Pacific Islander,Female,35
+2008,10-14,Asian/Pacific Islander,Male,78
+2008,10-14,Latinx,Female,246
+2008,10-14,Latinx,Male,294
+2008,10-14,White,Female,683
+2008,10-14,White,Male,1073
+2008,15-19,African American,Female,682
+2008,15-19,African American,Male,2179
+2008,15-19,American Indian/AK Native,Female,90
+2008,15-19,American Indian/AK Native,Male,174
+2008,15-19,Asian/Pacific Islander,Female,84
+2008,15-19,Asian/Pacific Islander,Male,193
+2008,15-19,Latinx,Female,500
+2008,15-19,Latinx,Male,1510
+2008,15-19,White,Female,2112
+2008,15-19,White,Male,4958
+2008,20-24,African American,Female,1024
+2008,20-24,African American,Male,3347
+2008,20-24,American Indian/AK Native,Female,83
+2008,20-24,American Indian/AK Native,Male,289
+2008,20-24,Asian/Pacific Islander,Female,150
+2008,20-24,Asian/Pacific Islander,Male,327
+2008,20-24,Latinx,Female,605
+2008,20-24,Latinx,Male,2568
+2008,20-24,White,Female,2889
+2008,20-24,White,Male,8663
+2008,25-29,African American,Female,1294
+2008,25-29,African American,Male,3277
+2008,25-29,American Indian/AK Native,Female,121
+2008,25-29,American Indian/AK Native,Male,261
+2008,25-29,Asian/Pacific Islander,Female,219
+2008,25-29,Asian/Pacific Islander,Male,344
+2008,25-29,Latinx,Female,736
+2008,25-29,Latinx,Male,2493
+2008,25-29,White,Female,3446
+2008,25-29,White,Male,8740
+2008,30-34,African American,Female,1611
+2008,30-34,African American,Male,3106
+2008,30-34,American Indian/AK Native,Female,123
+2008,30-34,American Indian/AK Native,Male,269
+2008,30-34,Asian/Pacific Islander,Female,235
+2008,30-34,Asian/Pacific Islander,Male,372
+2008,30-34,Latinx,Female,815
+2008,30-34,Latinx,Male,2350
+2008,30-34,White,Female,4097
+2008,30-34,White,Male,8646
+2008,35-39,African American,Female,2488
+2008,35-39,African American,Male,3779
+2008,35-39,American Indian/AK Native,Female,210
+2008,35-39,American Indian/AK Native,Male,314
+2008,35-39,Asian/Pacific Islander,Female,297
+2008,35-39,Asian/Pacific Islander,Male,516
+2008,35-39,Latinx,Female,1098
+2008,35-39,Latinx,Male,2581
+2008,35-39,White,Female,6718
+2008,35-39,White,Male,12031
+2008,40-44,African American,Female,4121
+2008,40-44,African American,Male,5434
+2008,40-44,American Indian/AK Native,Female,279
+2008,40-44,American Indian/AK Native,Male,413
+2008,40-44,Asian/Pacific Islander,Female,404
+2008,40-44,Asian/Pacific Islander,Male,677
+2008,40-44,Latinx,Female,1576
+2008,40-44,Latinx,Male,3337
+2008,40-44,White,Female,11607
+2008,40-44,White,Male,18875
+2008,45-49,African American,Female,6561
+2008,45-49,African American,Male,8421
+2008,45-49,American Indian/AK Native,Female,346
+2008,45-49,American Indian/AK Native,Male,620
+2008,45-49,Asian/Pacific Islander,Female,629
+2008,45-49,Asian/Pacific Islander,Male,1061
+2008,45-49,Latinx,Female,2161
+2008,45-49,Latinx,Male,4312
+2008,45-49,White,Female,20438
+2008,45-49,White,Male,33146
+2008,5-9,African American,Female,230
+2008,5-9,African American,Male,349
+2008,5-9,American Indian/AK Native,Female,19
+2008,5-9,American Indian/AK Native,Male,21
+2008,5-9,Asian/Pacific Islander,Female,52
+2008,5-9,Asian/Pacific Islander,Male,53
+2008,5-9,Latinx,Female,224
+2008,5-9,Latinx,Male,246
+2008,5-9,White,Female,591
+2008,5-9,White,Male,739
+2008,50-54,African American,Female,8744
+2008,50-54,African American,Male,12334
+2008,50-54,American Indian/AK Native,Female,425
+2008,50-54,American Indian/AK Native,Male,701
+2008,50-54,Asian/Pacific Islander,Female,971
+2008,50-54,Asian/Pacific Islander,Male,1447
+2008,50-54,Latinx,Female,2663
+2008,50-54,Latinx,Male,5071
+2008,50-54,White,Female,28727
+2008,50-54,White,Male,48424
+2008,55-59,African American,Female,9814
+2008,55-59,African American,Male,14778
+2008,55-59,American Indian/AK Native,Female,470
+2008,55-59,American Indian/AK Native,Male,720
+2008,55-59,Asian/Pacific Islander,Female,1278
+2008,55-59,Asian/Pacific Islander,Male,1848
+2008,55-59,Latinx,Female,3248
+2008,55-59,Latinx,Male,5682
+2008,55-59,White,Female,36593
+2008,55-59,White,Male,60728
+2008,60-64,African American,Female,10276
+2008,60-64,African American,Male,13979
+2008,60-64,American Indian/AK Native,Female,533
+2008,60-64,American Indian/AK Native,Male,726
+2008,60-64,Asian/Pacific Islander,Female,1479
+2008,60-64,Asian/Pacific Islander,Male,2169
+2008,60-64,Latinx,Female,3720
+2008,60-64,Latinx,Male,5668
+2008,60-64,White,Female,49491
+2008,60-64,White,Male,73910
+2008,65-69,African American,Female,11157
+2008,65-69,African American,Male,14120
+2008,65-69,American Indian/AK Native,Female,557
+2008,65-69,American Indian/AK Native,Male,736
+2008,65-69,Asian/Pacific Islander,Female,1681
+2008,65-69,Asian/Pacific Islander,Male,2352
+2008,65-69,Latinx,Female,4195
+2008,65-69,Latinx,Male,5846
+2008,65-69,White,Female,60604
+2008,65-69,White,Male,82666
+2008,70-74,African American,Female,12671
+2008,70-74,African American,Male,13905
+2008,70-74,American Indian/AK Native,Female,649
+2008,70-74,American Indian/AK Native,Male,730
+2008,70-74,Asian/Pacific Islander,Female,2261
+2008,70-74,Asian/Pacific Islander,Male,2801
+2008,70-74,Latinx,Female,5237
+2008,70-74,Latinx,Male,6436
+2008,70-74,White,Female,77463
+2008,70-74,White,Male,96381
+2008,75-79,African American,Female,14957
+2008,75-79,African American,Male,14081
+2008,75-79,American Indian/AK Native,Female,638
+2008,75-79,American Indian/AK Native,Male,681
+2008,75-79,Asian/Pacific Islander,Female,3046
+2008,75-79,Asian/Pacific Islander,Male,3091
+2008,75-79,Latinx,Female,6964
+2008,75-79,Latinx,Male,7293
+2008,75-79,White,Female,112724
+2008,75-79,White,Male,124322
+2008,80-84,African American,Female,17131
+2008,80-84,African American,Male,13029
+2008,80-84,American Indian/AK Native,Female,682
+2008,80-84,American Indian/AK Native,Male,588
+2008,80-84,Asian/Pacific Islander,Female,3593
+2008,80-84,Asian/Pacific Islander,Male,3484
+2008,80-84,Latinx,Female,8199
+2008,80-84,Latinx,Male,7365
+2008,80-84,White,Female,164034
+2008,80-84,White,Male,148419
+2008,85+,African American,Female,34784
+2008,85+,African American,Male,15516
+2008,85+,American Indian/AK Native,Female,1144
+2008,85+,American Indian/AK Native,Male,622
+2008,85+,Asian/Pacific Islander,Female,7807
+2008,85+,Asian/Pacific Islander,Male,5386
+2008,85+,Latinx,Female,16286
+2008,85+,Latinx,Male,9262
+2008,85+,White,Female,423722
+2008,85+,White,Male,230601
+2008,Missing,African American,Female,14
+2008,Missing,African American,Male,31
+2008,Missing,American Indian/AK Native,Female,3
+2008,Missing,Asian/Pacific Islander,Female,27
+2008,Missing,Asian/Pacific Islander,Male,60
+2008,Missing,Latinx,Female,1
+2008,Missing,Latinx,Male,22
+2008,Missing,White,Female,28
+2008,Missing,White,Male,70
+2009,0,African American,Female,3617
+2009,0,African American,Male,4713
+2009,0,American Indian/AK Native,Female,171
+2009,0,American Indian/AK Native,Male,214
+2009,0,Asian/Pacific Islander,Female,440
+2009,0,Asian/Pacific Islander,Male,533
+2009,0,Latinx,Female,2306
+2009,0,Latinx,Male,2856
+2009,0,White,Female,5085
+2009,0,White,Male,6545
+2009,1-4,African American,Female,502
+2009,1-4,African American,Male,576
+2009,1-4,American Indian/AK Native,Female,35
+2009,1-4,American Indian/AK Native,Male,48
+2009,1-4,Asian/Pacific Islander,Female,64
+2009,1-4,Asian/Pacific Islander,Male,92
+2009,1-4,Latinx,Female,446
+2009,1-4,Latinx,Male,526
+2009,1-4,White,Female,923
+2009,1-4,White,Male,1271
+2009,10-14,African American,Female,292
+2009,10-14,African American,Male,427
+2009,10-14,American Indian/AK Native,Female,27
+2009,10-14,American Indian/AK Native,Male,36
+2009,10-14,Asian/Pacific Islander,Female,41
+2009,10-14,Asian/Pacific Islander,Male,71
+2009,10-14,Latinx,Female,261
+2009,10-14,Latinx,Male,365
+2009,10-14,White,Female,667
+2009,10-14,White,Male,970
+2009,15-19,African American,Female,635
+2009,15-19,African American,Male,1940
+2009,15-19,American Indian/AK Native,Female,81
+2009,15-19,American Indian/AK Native,Male,189
+2009,15-19,Asian/Pacific Islander,Female,102
+2009,15-19,Asian/Pacific Islander,Male,203
+2009,15-19,Latinx,Female,535
+2009,15-19,Latinx,Male,1528
+2009,15-19,White,Female,2019
+2009,15-19,White,Male,4368
+2009,20-24,African American,Female,1023
+2009,20-24,African American,Male,3157
+2009,20-24,American Indian/AK Native,Female,121
+2009,20-24,American Indian/AK Native,Male,279
+2009,20-24,Asian/Pacific Islander,Female,174
+2009,20-24,Asian/Pacific Islander,Male,361
+2009,20-24,Latinx,Female,644
+2009,20-24,Latinx,Male,2439
+2009,20-24,White,Female,2832
+2009,20-24,White,Male,7980
+2009,25-29,African American,Female,1333
+2009,25-29,African American,Male,3151
+2009,25-29,American Indian/AK Native,Female,124
+2009,25-29,American Indian/AK Native,Male,256
+2009,25-29,Asian/Pacific Islander,Female,213
+2009,25-29,Asian/Pacific Islander,Male,365
+2009,25-29,Latinx,Female,787
+2009,25-29,Latinx,Male,2371
+2009,25-29,White,Female,3619
+2009,25-29,White,Male,8532
+2009,30-34,African American,Female,1635
+2009,30-34,African American,Male,3106
+2009,30-34,American Indian/AK Native,Female,126
+2009,30-34,American Indian/AK Native,Male,249
+2009,30-34,Asian/Pacific Islander,Female,210
+2009,30-34,Asian/Pacific Islander,Male,376
+2009,30-34,Latinx,Female,884
+2009,30-34,Latinx,Male,2344
+2009,30-34,White,Female,4435
+2009,30-34,White,Male,8665
+2009,35-39,African American,Female,2407
+2009,35-39,African American,Male,3737
+2009,35-39,American Indian/AK Native,Female,206
+2009,35-39,American Indian/AK Native,Male,363
+2009,35-39,Asian/Pacific Islander,Female,330
+2009,35-39,Asian/Pacific Islander,Male,557
+2009,35-39,Latinx,Female,1145
+2009,35-39,Latinx,Male,2588
+2009,35-39,White,Female,6679
+2009,35-39,White,Male,11652
+2009,40-44,African American,Female,3818
+2009,40-44,African American,Male,5237
+2009,40-44,American Indian/AK Native,Female,274
+2009,40-44,American Indian/AK Native,Male,423
+2009,40-44,Asian/Pacific Islander,Female,450
+2009,40-44,Asian/Pacific Islander,Male,752
+2009,40-44,Latinx,Female,1638
+2009,40-44,Latinx,Male,3242
+2009,40-44,White,Female,11251
+2009,40-44,White,Male,18273
+2009,45-49,African American,Female,6346
+2009,45-49,African American,Male,8103
+2009,45-49,American Indian/AK Native,Female,423
+2009,45-49,American Indian/AK Native,Male,584
+2009,45-49,Asian/Pacific Islander,Female,670
+2009,45-49,Asian/Pacific Islander,Male,1136
+2009,45-49,Latinx,Female,2397
+2009,45-49,Latinx,Male,4408
+2009,45-49,White,Female,20258
+2009,45-49,White,Male,32325
+2009,5-9,African American,Female,254
+2009,5-9,African American,Male,329
+2009,5-9,American Indian/AK Native,Female,31
+2009,5-9,American Indian/AK Native,Male,21
+2009,5-9,Asian/Pacific Islander,Female,70
+2009,5-9,Asian/Pacific Islander,Male,54
+2009,5-9,Latinx,Female,260
+2009,5-9,Latinx,Male,280
+2009,5-9,White,Female,519
+2009,5-9,White,Male,721
+2009,50-54,African American,Female,8818
+2009,50-54,African American,Male,12276
+2009,50-54,American Indian/AK Native,Female,501
+2009,50-54,American Indian/AK Native,Male,670
+2009,50-54,Asian/Pacific Islander,Female,967
+2009,50-54,Asian/Pacific Islander,Male,1618
+2009,50-54,Latinx,Female,2809
+2009,50-54,Latinx,Male,5437
+2009,50-54,White,Female,29707
+2009,50-54,White,Male,48700
+2009,55-59,African American,Female,10093
+2009,55-59,African American,Male,15092
+2009,55-59,American Indian/AK Native,Female,507
+2009,55-59,American Indian/AK Native,Male,727
+2009,55-59,Asian/Pacific Islander,Female,1219
+2009,55-59,Asian/Pacific Islander,Male,1989
+2009,55-59,Latinx,Female,3343
+2009,55-59,Latinx,Male,5788
+2009,55-59,White,Female,37430
+2009,55-59,White,Male,61860
+2009,60-64,African American,Female,10686
+2009,60-64,African American,Male,14911
+2009,60-64,American Indian/AK Native,Female,522
+2009,60-64,American Indian/AK Native,Male,769
+2009,60-64,Asian/Pacific Islander,Female,1547
+2009,60-64,Asian/Pacific Islander,Male,2249
+2009,60-64,Latinx,Female,3884
+2009,60-64,Latinx,Male,6010
+2009,60-64,White,Female,50145
+2009,60-64,White,Male,75286
+2009,65-69,African American,Female,11220
+2009,65-69,African American,Male,14283
+2009,65-69,American Indian/AK Native,Female,616
+2009,65-69,American Indian/AK Native,Male,720
+2009,65-69,Asian/Pacific Islander,Female,1696
+2009,65-69,Asian/Pacific Islander,Male,2548
+2009,65-69,Latinx,Female,4392
+2009,65-69,Latinx,Male,5933
+2009,65-69,White,Female,60775
+2009,65-69,White,Male,83956
+2009,70-74,African American,Female,12616
+2009,70-74,African American,Male,13844
+2009,70-74,American Indian/AK Native,Female,617
+2009,70-74,American Indian/AK Native,Male,722
+2009,70-74,Asian/Pacific Islander,Female,2158
+2009,70-74,Asian/Pacific Islander,Male,2705
+2009,70-74,Latinx,Female,5266
+2009,70-74,Latinx,Male,6552
+2009,70-74,White,Female,76138
+2009,70-74,White,Male,95007
+2009,75-79,African American,Female,14477
+2009,75-79,African American,Male,13654
+2009,75-79,American Indian/AK Native,Female,670
+2009,75-79,American Indian/AK Native,Male,625
+2009,75-79,Asian/Pacific Islander,Female,2946
+2009,75-79,Asian/Pacific Islander,Male,3175
+2009,75-79,Latinx,Female,6925
+2009,75-79,Latinx,Male,7223
+2009,75-79,White,Female,106861
+2009,75-79,White,Male,118750
+2009,80-84,African American,Female,16900
+2009,80-84,African American,Male,12497
+2009,80-84,American Indian/AK Native,Female,646
+2009,80-84,American Indian/AK Native,Male,594
+2009,80-84,Asian/Pacific Islander,Female,3755
+2009,80-84,Asian/Pacific Islander,Male,3404
+2009,80-84,Latinx,Female,8404
+2009,80-84,Latinx,Male,7478
+2009,80-84,White,Female,155354
+2009,80-84,White,Male,143978
+2009,85+,African American,Female,33911
+2009,85+,African American,Male,15472
+2009,85+,American Indian/AK Native,Female,1158
+2009,85+,American Indian/AK Native,Male,627
+2009,85+,Asian/Pacific Islander,Female,8085
+2009,85+,Asian/Pacific Islander,Male,5665
+2009,85+,Latinx,Female,16025
+2009,85+,Latinx,Male,9883
+2009,85+,White,Female,411366
+2009,85+,White,Male,231269
+2009,Missing,African American,Female,19
+2009,Missing,African American,Male,30
+2009,Missing,American Indian/AK Native,Male,2
+2009,Missing,Asian/Pacific Islander,Female,46
+2009,Missing,Asian/Pacific Islander,Male,155
+2009,Missing,Latinx,Female,9
+2009,Missing,Latinx,Male,32
+2009,Missing,White,Female,35
+2009,Missing,White,Male,68
+2010,0,African American,Female,3291
+2010,0,African American,Male,4121
+2010,0,American Indian/AK Native,Female,141
+2010,0,American Indian/AK Native,Male,213
+2010,0,Asian/Pacific Islander,Female,401
+2010,0,Asian/Pacific Islander,Male,538
+2010,0,Latinx,Female,2184
+2010,0,Latinx,Male,2702
+2010,0,White,Female,4896
+2010,0,White,Male,6151
+2010,1-4,African American,Female,446
+2010,1-4,African American,Male,596
+2010,1-4,American Indian/AK Native,Female,38
+2010,1-4,American Indian/AK Native,Male,55
+2010,1-4,Asian/Pacific Islander,Female,76
+2010,1-4,Asian/Pacific Islander,Male,95
+2010,1-4,Latinx,Female,380
+2010,1-4,Latinx,Male,503
+2010,1-4,White,Female,924
+2010,1-4,White,Male,1226
+2010,10-14,African American,Female,269
+2010,10-14,African American,Male,385
+2010,10-14,American Indian/AK Native,Female,22
+2010,10-14,American Indian/AK Native,Male,40
+2010,10-14,Asian/Pacific Islander,Female,49
+2010,10-14,Asian/Pacific Islander,Male,48
+2010,10-14,Latinx,Female,227
+2010,10-14,Latinx,Male,296
+2010,10-14,White,Female,664
+2010,10-14,White,Male,973
+2010,15-19,African American,Female,568
+2010,15-19,African American,Male,1966
+2010,15-19,American Indian/AK Native,Female,66
+2010,15-19,American Indian/AK Native,Male,176
+2010,15-19,Asian/Pacific Islander,Female,94
+2010,15-19,Asian/Pacific Islander,Male,181
+2010,15-19,Latinx,Female,442
+2010,15-19,Latinx,Male,1418
+2010,15-19,White,Female,1872
+2010,15-19,White,Male,4161
+2010,20-24,African American,Female,985
+2010,20-24,African American,Male,3174
+2010,20-24,American Indian/AK Native,Female,93
+2010,20-24,American Indian/AK Native,Male,280
+2010,20-24,Asian/Pacific Islander,Female,122
+2010,20-24,Asian/Pacific Islander,Male,377
+2010,20-24,Latinx,Female,650
+2010,20-24,Latinx,Male,2234
+2010,20-24,White,Female,2916
+2010,20-24,White,Male,7943
+2010,25-29,African American,Female,1253
+2010,25-29,African American,Male,3004
+2010,25-29,American Indian/AK Native,Female,130
+2010,25-29,American Indian/AK Native,Male,247
+2010,25-29,Asian/Pacific Islander,Female,183
+2010,25-29,Asian/Pacific Islander,Male,404
+2010,25-29,Latinx,Female,716
+2010,25-29,Latinx,Male,2214
+2010,25-29,White,Female,3585
+2010,25-29,White,Male,8663
+2010,30-34,African American,Female,1601
+2010,30-34,African American,Male,3082
+2010,30-34,American Indian/AK Native,Female,140
+2010,30-34,American Indian/AK Native,Male,279
+2010,30-34,Asian/Pacific Islander,Female,247
+2010,30-34,Asian/Pacific Islander,Male,380
+2010,30-34,Latinx,Female,834
+2010,30-34,Latinx,Male,2235
+2010,30-34,White,Female,4438
+2010,30-34,White,Male,8868
+2010,35-39,African American,Female,2376
+2010,35-39,African American,Male,3454
+2010,35-39,American Indian/AK Native,Female,192
+2010,35-39,American Indian/AK Native,Male,322
+2010,35-39,Asian/Pacific Islander,Female,301
+2010,35-39,Asian/Pacific Islander,Male,493
+2010,35-39,Latinx,Female,1089
+2010,35-39,Latinx,Male,2375
+2010,35-39,White,Female,6476
+2010,35-39,White,Male,11072
+2010,40-44,African American,Female,3537
+2010,40-44,African American,Male,4687
+2010,40-44,American Indian/AK Native,Female,222
+2010,40-44,American Indian/AK Native,Male,428
+2010,40-44,Asian/Pacific Islander,Female,434
+2010,40-44,Asian/Pacific Islander,Male,701
+2010,40-44,Latinx,Female,1564
+2010,40-44,Latinx,Male,3051
+2010,40-44,White,Female,10482
+2010,40-44,White,Male,17059
+2010,45-49,African American,Female,5934
+2010,45-49,African American,Male,7697
+2010,45-49,American Indian/AK Native,Female,383
+2010,45-49,American Indian/AK Native,Male,609
+2010,45-49,Asian/Pacific Islander,Female,725
+2010,45-49,Asian/Pacific Islander,Male,1075
+2010,45-49,Latinx,Female,2291
+2010,45-49,Latinx,Male,4267
+2010,45-49,White,Female,19354
+2010,45-49,White,Male,31487
+2010,5-9,African American,Female,211
+2010,5-9,African American,Male,283
+2010,5-9,American Indian/AK Native,Female,17
+2010,5-9,American Indian/AK Native,Male,29
+2010,5-9,Asian/Pacific Islander,Female,42
+2010,5-9,Asian/Pacific Islander,Male,56
+2010,5-9,Latinx,Female,177
+2010,5-9,Latinx,Male,241
+2010,5-9,White,Female,563
+2010,5-9,White,Male,726
+2010,50-54,African American,Female,8791
+2010,50-54,African American,Male,11771
+2010,50-54,American Indian/AK Native,Female,510
+2010,50-54,American Indian/AK Native,Male,704
+2010,50-54,Asian/Pacific Islander,Female,1000
+2010,50-54,Asian/Pacific Islander,Male,1607
+2010,50-54,Latinx,Female,2895
+2010,50-54,Latinx,Male,5235
+2010,50-54,White,Female,29448
+2010,50-54,White,Male,48000
+2010,55-59,African American,Female,10320
+2010,55-59,African American,Male,14979
+2010,55-59,American Indian/AK Native,Female,543
+2010,55-59,American Indian/AK Native,Male,837
+2010,55-59,Asian/Pacific Islander,Female,1276
+2010,55-59,Asian/Pacific Islander,Male,2079
+2010,55-59,Latinx,Female,3351
+2010,55-59,Latinx,Male,6020
+2010,55-59,White,Female,37777
+2010,55-59,White,Male,63131
+2010,60-64,African American,Female,11064
+2010,60-64,African American,Male,15553
+2010,60-64,American Indian/AK Native,Female,571
+2010,60-64,American Indian/AK Native,Male,754
+2010,60-64,Asian/Pacific Islander,Female,1685
+2010,60-64,Asian/Pacific Islander,Male,2461
+2010,60-64,Latinx,Female,4097
+2010,60-64,Latinx,Male,6327
+2010,60-64,White,Female,51013
+2010,60-64,White,Male,77703
+2010,65-69,African American,Female,11516
+2010,65-69,African American,Male,14323
+2010,65-69,American Indian/AK Native,Female,611
+2010,65-69,American Indian/AK Native,Male,739
+2010,65-69,Asian/Pacific Islander,Female,1757
+2010,65-69,Asian/Pacific Islander,Male,2593
+2010,65-69,Latinx,Female,4486
+2010,65-69,Latinx,Male,6135
+2010,65-69,White,Female,62216
+2010,65-69,White,Male,86021
+2010,70-74,African American,Female,12610
+2010,70-74,African American,Male,14131
+2010,70-74,American Indian/AK Native,Female,685
+2010,70-74,American Indian/AK Native,Male,771
+2010,70-74,Asian/Pacific Islander,Female,2388
+2010,70-74,Asian/Pacific Islander,Male,2977
+2010,70-74,Latinx,Female,5322
+2010,70-74,Latinx,Male,6729
+2010,70-74,White,Female,76142
+2010,70-74,White,Male,95818
+2010,75-79,African American,Female,14349
+2010,75-79,African American,Male,13914
+2010,75-79,American Indian/AK Native,Female,685
+2010,75-79,American Indian/AK Native,Male,705
+2010,75-79,Asian/Pacific Islander,Female,3044
+2010,75-79,Asian/Pacific Islander,Male,3237
+2010,75-79,Latinx,Female,6907
+2010,75-79,Latinx,Male,7554
+2010,75-79,White,Female,105488
+2010,75-79,White,Male,117810
+2010,80-84,African American,Female,16609
+2010,80-84,African American,Male,12713
+2010,80-84,American Indian/AK Native,Female,704
+2010,80-84,American Indian/AK Native,Male,594
+2010,80-84,Asian/Pacific Islander,Female,3871
+2010,80-84,Asian/Pacific Islander,Male,3664
+2010,80-84,Latinx,Female,8533
+2010,80-84,Latinx,Male,7894
+2010,80-84,White,Female,153880
+2010,80-84,White,Male,144103
+2010,85+,African American,Female,35575
+2010,85+,African American,Male,16252
+2010,85+,American Indian/AK Native,Female,1300
+2010,85+,American Indian/AK Native,Male,743
+2010,85+,Asian/Pacific Islander,Female,8597
+2010,85+,Asian/Pacific Islander,Male,6217
+2010,85+,Latinx,Female,17617
+2010,85+,Latinx,Male,10980
+2010,85+,White,Female,426709
+2010,85+,White,Male,241830
+2010,Missing,African American,Female,13
+2010,Missing,African American,Male,31
+2010,Missing,American Indian/AK Native,Female,1
+2010,Missing,American Indian/AK Native,Male,5
+2010,Missing,Asian/Pacific Islander,Female,41
+2010,Missing,Asian/Pacific Islander,Male,156
+2010,Missing,Latinx,Female,5
+2010,Missing,Latinx,Male,12
+2010,Missing,White,Female,25
+2010,Missing,White,Male,50
+2011,0,African American,Female,3237
+2011,0,African American,Male,4064
+2011,0,American Indian/AK Native,Female,162
+2011,0,American Indian/AK Native,Male,199
+2011,0,Asian/Pacific Islander,Female,431
+2011,0,Asian/Pacific Islander,Male,529
+2011,0,Latinx,Female,2091
+2011,0,Latinx,Male,2476
+2011,0,White,Female,4773
+2011,0,White,Male,6092
+2011,1-4,African American,Female,456
+2011,1-4,African American,Male,596
+2011,1-4,American Indian/AK Native,Female,39
+2011,1-4,American Indian/AK Native,Male,46
+2011,1-4,Asian/Pacific Islander,Female,55
+2011,1-4,Asian/Pacific Islander,Male,74
+2011,1-4,Latinx,Female,416
+2011,1-4,Latinx,Male,514
+2011,1-4,White,Female,884
+2011,1-4,White,Male,1183
+2011,10-14,African American,Female,243
+2011,10-14,African American,Male,397
+2011,10-14,American Indian/AK Native,Female,24
+2011,10-14,American Indian/AK Native,Male,34
+2011,10-14,Asian/Pacific Islander,Female,42
+2011,10-14,Asian/Pacific Islander,Male,60
+2011,10-14,Latinx,Female,220
+2011,10-14,Latinx,Male,329
+2011,10-14,White,Female,628
+2011,10-14,White,Male,983
+2011,15-19,African American,Female,568
+2011,15-19,African American,Male,1816
+2011,15-19,American Indian/AK Native,Female,77
+2011,15-19,American Indian/AK Native,Male,156
+2011,15-19,Asian/Pacific Islander,Female,82
+2011,15-19,Asian/Pacific Islander,Male,172
+2011,15-19,Latinx,Female,446
+2011,15-19,Latinx,Male,1370
+2011,15-19,White,Female,1822
+2011,15-19,White,Male,4149
+2011,20-24,African American,Female,1003
+2011,20-24,African American,Male,3318
+2011,20-24,American Indian/AK Native,Female,90
+2011,20-24,American Indian/AK Native,Male,267
+2011,20-24,Asian/Pacific Islander,Female,127
+2011,20-24,Asian/Pacific Islander,Male,385
+2011,20-24,Latinx,Female,645
+2011,20-24,Latinx,Male,2329
+2011,20-24,White,Female,2937
+2011,20-24,White,Male,8095
+2011,25-29,African American,Female,1222
+2011,25-29,African American,Male,3085
+2011,25-29,American Indian/AK Native,Female,121
+2011,25-29,American Indian/AK Native,Male,287
+2011,25-29,Asian/Pacific Islander,Female,162
+2011,25-29,Asian/Pacific Islander,Male,390
+2011,25-29,Latinx,Female,702
+2011,25-29,Latinx,Male,2139
+2011,25-29,White,Female,3691
+2011,25-29,White,Male,8896
+2011,30-34,African American,Female,1750
+2011,30-34,African American,Male,3027
+2011,30-34,American Indian/AK Native,Female,162
+2011,30-34,American Indian/AK Native,Male,271
+2011,30-34,Asian/Pacific Islander,Female,244
+2011,30-34,Asian/Pacific Islander,Male,415
+2011,30-34,Latinx,Female,869
+2011,30-34,Latinx,Male,2334
+2011,30-34,White,Female,4792
+2011,30-34,White,Male,9453
+2011,35-39,African American,Female,2303
+2011,35-39,African American,Male,3328
+2011,35-39,American Indian/AK Native,Female,199
+2011,35-39,American Indian/AK Native,Male,330
+2011,35-39,Asian/Pacific Islander,Female,331
+2011,35-39,Asian/Pacific Islander,Male,495
+2011,35-39,Latinx,Female,1110
+2011,35-39,Latinx,Male,2436
+2011,35-39,White,Female,6220
+2011,35-39,White,Male,10864
+2011,40-44,African American,Female,3538
+2011,40-44,African American,Male,4647
+2011,40-44,American Indian/AK Native,Female,268
+2011,40-44,American Indian/AK Native,Male,407
+2011,40-44,Asian/Pacific Islander,Female,492
+2011,40-44,Asian/Pacific Islander,Male,724
+2011,40-44,Latinx,Female,1549
+2011,40-44,Latinx,Male,3046
+2011,40-44,White,Female,10745
+2011,40-44,White,Male,17179
+2011,45-49,African American,Female,5790
+2011,45-49,African American,Male,7428
+2011,45-49,American Indian/AK Native,Female,420
+2011,45-49,American Indian/AK Native,Male,606
+2011,45-49,Asian/Pacific Islander,Female,744
+2011,45-49,Asian/Pacific Islander,Male,1113
+2011,45-49,Latinx,Female,2248
+2011,45-49,Latinx,Male,4439
+2011,45-49,White,Female,19024
+2011,45-49,White,Male,30120
+2011,5-9,African American,Female,239
+2011,5-9,African American,Male,305
+2011,5-9,American Indian/AK Native,Female,22
+2011,5-9,American Indian/AK Native,Male,16
+2011,5-9,Asian/Pacific Islander,Female,45
+2011,5-9,Asian/Pacific Islander,Male,52
+2011,5-9,Latinx,Female,213
+2011,5-9,Latinx,Male,263
+2011,5-9,White,Female,556
+2011,5-9,White,Male,748
+2011,50-54,African American,Female,8573
+2011,50-54,African American,Male,11831
+2011,50-54,American Indian/AK Native,Female,512
+2011,50-54,American Indian/AK Native,Male,745
+2011,50-54,Asian/Pacific Islander,Female,1008
+2011,50-54,Asian/Pacific Islander,Male,1590
+2011,50-54,Latinx,Female,2958
+2011,50-54,Latinx,Male,5725
+2011,50-54,White,Female,30411
+2011,50-54,White,Male,48570
+2011,55-59,African American,Female,10494
+2011,55-59,African American,Male,15008
+2011,55-59,American Indian/AK Native,Female,537
+2011,55-59,American Indian/AK Native,Male,813
+2011,55-59,Asian/Pacific Islander,Female,1410
+2011,55-59,Asian/Pacific Islander,Male,2152
+2011,55-59,Latinx,Female,3547
+2011,55-59,Latinx,Male,6342
+2011,55-59,White,Female,39254
+2011,55-59,White,Male,65122
+2011,60-64,African American,Female,11748
+2011,60-64,African American,Male,16666
+2011,60-64,American Indian/AK Native,Female,641
+2011,60-64,American Indian/AK Native,Male,798
+2011,60-64,Asian/Pacific Islander,Female,1793
+2011,60-64,Asian/Pacific Islander,Male,2539
+2011,60-64,Latinx,Female,4186
+2011,60-64,Latinx,Male,6627
+2011,60-64,White,Female,53293
+2011,60-64,White,Male,81202
+2011,65-69,African American,Female,11645
+2011,65-69,African American,Male,14566
+2011,65-69,American Indian/AK Native,Female,607
+2011,65-69,American Indian/AK Native,Male,797
+2011,65-69,Asian/Pacific Islander,Female,1845
+2011,65-69,Asian/Pacific Islander,Male,2614
+2011,65-69,Latinx,Female,4683
+2011,65-69,Latinx,Male,6524
+2011,65-69,White,Female,63452
+2011,65-69,White,Male,87165
+2011,70-74,African American,Female,12766
+2011,70-74,African American,Male,14411
+2011,70-74,American Indian/AK Native,Female,679
+2011,70-74,American Indian/AK Native,Male,775
+2011,70-74,Asian/Pacific Islander,Female,2183
+2011,70-74,Asian/Pacific Islander,Male,2994
+2011,70-74,Latinx,Female,5629
+2011,70-74,Latinx,Male,6866
+2011,70-74,White,Female,77553
+2011,70-74,White,Male,98143
+2011,75-79,African American,Female,14768
+2011,75-79,African American,Male,13880
+2011,75-79,American Indian/AK Native,Female,715
+2011,75-79,American Indian/AK Native,Male,729
+2011,75-79,Asian/Pacific Islander,Female,3049
+2011,75-79,Asian/Pacific Islander,Male,3379
+2011,75-79,Latinx,Female,7071
+2011,75-79,Latinx,Male,7650
+2011,75-79,White,Female,104440
+2011,75-79,White,Male,116933
+2011,80-84,African American,Female,16847
+2011,80-84,African American,Male,12519
+2011,80-84,American Indian/AK Native,Female,730
+2011,80-84,American Indian/AK Native,Male,621
+2011,80-84,Asian/Pacific Islander,Female,4231
+2011,80-84,Asian/Pacific Islander,Male,3745
+2011,80-84,Latinx,Female,9248
+2011,80-84,Latinx,Male,8214
+2011,80-84,White,Female,152707
+2011,80-84,White,Male,145396
+2011,85+,African American,Female,36208
+2011,85+,African American,Male,16261
+2011,85+,American Indian/AK Native,Female,1305
+2011,85+,American Indian/AK Native,Male,754
+2011,85+,Asian/Pacific Islander,Female,9168
+2011,85+,Asian/Pacific Islander,Male,6522
+2011,85+,Latinx,Female,18778
+2011,85+,Latinx,Male,11264
+2011,85+,White,Female,439853
+2011,85+,White,Male,250774
+2011,Missing,African American,Female,10
+2011,Missing,African American,Male,32
+2011,Missing,American Indian/AK Native,Female,2
+2011,Missing,American Indian/AK Native,Male,7
+2011,Missing,Asian/Pacific Islander,Female,53
+2011,Missing,Asian/Pacific Islander,Male,156
+2011,Missing,Latinx,Female,2
+2011,Missing,Latinx,Male,16
+2011,Missing,White,Female,15
+2011,Missing,White,Male,53
+2012,0,African American,Female,3132
+2012,0,African American,Male,3986
+2012,0,American Indian/AK Native,Female,162
+2012,0,American Indian/AK Native,Male,207
+2012,0,Asian/Pacific Islander,Female,453
+2012,0,Asian/Pacific Islander,Male,560
+2012,0,Latinx,Female,2047
+2012,0,Latinx,Male,2536
+2012,0,White,Female,4726
+2012,0,White,Male,5901
+2012,1-4,African American,Female,443
+2012,1-4,African American,Male,579
+2012,1-4,American Indian/AK Native,Female,35
+2012,1-4,American Indian/AK Native,Male,54
+2012,1-4,Asian/Pacific Islander,Female,70
+2012,1-4,Asian/Pacific Islander,Male,84
+2012,1-4,Latinx,Female,390
+2012,1-4,Latinx,Male,483
+2012,1-4,White,Female,898
+2012,1-4,White,Male,1207
+2012,10-14,African American,Female,237
+2012,10-14,African American,Male,411
+2012,10-14,American Indian/AK Native,Female,20
+2012,10-14,American Indian/AK Native,Male,31
+2012,10-14,Asian/Pacific Islander,Female,44
+2012,10-14,Asian/Pacific Islander,Male,64
+2012,10-14,Latinx,Female,242
+2012,10-14,Latinx,Male,314
+2012,10-14,White,Female,617
+2012,10-14,White,Male,904
+2012,15-19,African American,Female,541
+2012,15-19,African American,Male,1778
+2012,15-19,American Indian/AK Native,Female,60
+2012,15-19,American Indian/AK Native,Male,143
+2012,15-19,Asian/Pacific Islander,Female,73
+2012,15-19,Asian/Pacific Islander,Male,188
+2012,15-19,Latinx,Female,454
+2012,15-19,Latinx,Male,1301
+2012,15-19,White,Female,1738
+2012,15-19,White,Male,3855
+2012,20-24,African American,Female,1039
+2012,20-24,African American,Male,3358
+2012,20-24,American Indian/AK Native,Female,117
+2012,20-24,American Indian/AK Native,Male,284
+2012,20-24,Asian/Pacific Islander,Female,165
+2012,20-24,Asian/Pacific Islander,Male,367
+2012,20-24,Latinx,Female,654
+2012,20-24,Latinx,Male,2324
+2012,20-24,White,Female,2925
+2012,20-24,White,Male,7999
+2012,25-29,African American,Female,1224
+2012,25-29,African American,Male,3054
+2012,25-29,American Indian/AK Native,Female,162
+2012,25-29,American Indian/AK Native,Male,307
+2012,25-29,Asian/Pacific Islander,Female,178
+2012,25-29,Asian/Pacific Islander,Male,436
+2012,25-29,Latinx,Female,707
+2012,25-29,Latinx,Male,2243
+2012,25-29,White,Female,3794
+2012,25-29,White,Male,9011
+2012,30-34,African American,Female,1622
+2012,30-34,African American,Male,3227
+2012,30-34,American Indian/AK Native,Female,159
+2012,30-34,American Indian/AK Native,Male,307
+2012,30-34,Asian/Pacific Islander,Female,227
+2012,30-34,Asian/Pacific Islander,Male,424
+2012,30-34,Latinx,Female,909
+2012,30-34,Latinx,Male,2351
+2012,30-34,White,Female,4885
+2012,30-34,White,Male,9640
+2012,35-39,African American,Female,2253
+2012,35-39,African American,Male,3401
+2012,35-39,American Indian/AK Native,Female,198
+2012,35-39,American Indian/AK Native,Male,314
+2012,35-39,Asian/Pacific Islander,Female,324
+2012,35-39,Asian/Pacific Islander,Male,557
+2012,35-39,Latinx,Female,1081
+2012,35-39,Latinx,Male,2422
+2012,35-39,White,Female,6183
+2012,35-39,White,Male,10798
+2012,40-44,African American,Female,3433
+2012,40-44,African American,Male,4644
+2012,40-44,American Indian/AK Native,Female,266
+2012,40-44,American Indian/AK Native,Male,423
+2012,40-44,Asian/Pacific Islander,Female,511
+2012,40-44,Asian/Pacific Islander,Male,853
+2012,40-44,Latinx,Female,1612
+2012,40-44,Latinx,Male,3148
+2012,40-44,White,Female,10447
+2012,40-44,White,Male,16616
+2012,45-49,African American,Female,5558
+2012,45-49,African American,Male,7232
+2012,45-49,American Indian/AK Native,Female,400
+2012,45-49,American Indian/AK Native,Male,565
+2012,45-49,Asian/Pacific Islander,Female,729
+2012,45-49,Asian/Pacific Islander,Male,1174
+2012,45-49,Latinx,Female,2338
+2012,45-49,Latinx,Male,4348
+2012,45-49,White,Female,18117
+2012,45-49,White,Male,28251
+2012,5-9,African American,Female,229
+2012,5-9,African American,Male,322
+2012,5-9,American Indian/AK Native,Female,16
+2012,5-9,American Indian/AK Native,Male,34
+2012,5-9,Asian/Pacific Islander,Female,47
+2012,5-9,Asian/Pacific Islander,Male,48
+2012,5-9,Latinx,Female,221
+2012,5-9,Latinx,Male,274
+2012,5-9,White,Female,508
+2012,5-9,White,Male,646
+2012,50-54,African American,Female,8576
+2012,50-54,African American,Male,11672
+2012,50-54,American Indian/AK Native,Female,512
+2012,50-54,American Indian/AK Native,Male,790
+2012,50-54,Asian/Pacific Islander,Female,1143
+2012,50-54,Asian/Pacific Islander,Male,1731
+2012,50-54,Latinx,Female,3150
+2012,50-54,Latinx,Male,5714
+2012,50-54,White,Female,29886
+2012,50-54,White,Male,48152
+2012,55-59,African American,Female,10945
+2012,55-59,African American,Male,15579
+2012,55-59,American Indian/AK Native,Female,578
+2012,55-59,American Indian/AK Native,Male,907
+2012,55-59,Asian/Pacific Islander,Female,1492
+2012,55-59,Asian/Pacific Islander,Male,2322
+2012,55-59,Latinx,Female,3740
+2012,55-59,Latinx,Male,6884
+2012,55-59,White,Female,40569
+2012,55-59,White,Male,66365
+2012,60-64,African American,Female,12090
+2012,60-64,African American,Male,17175
+2012,60-64,American Indian/AK Native,Female,599
+2012,60-64,American Indian/AK Native,Male,844
+2012,60-64,Asian/Pacific Islander,Female,1930
+2012,60-64,Asian/Pacific Islander,Male,2793
+2012,60-64,Latinx,Female,4475
+2012,60-64,Latinx,Male,7157
+2012,60-64,White,Female,52464
+2012,60-64,White,Male,81580
+2012,65-69,African American,Female,11924
+2012,65-69,African American,Male,15458
+2012,65-69,American Indian/AK Native,Female,694
+2012,65-69,American Indian/AK Native,Male,882
+2012,65-69,Asian/Pacific Islander,Female,2116
+2012,65-69,Asian/Pacific Islander,Male,2812
+2012,65-69,Latinx,Female,4979
+2012,65-69,Latinx,Male,6883
+2012,65-69,White,Female,67032
+2012,65-69,White,Male,93203
+2012,70-74,African American,Female,13152
+2012,70-74,African American,Male,14718
+2012,70-74,American Indian/AK Native,Female,702
+2012,70-74,American Indian/AK Native,Male,854
+2012,70-74,Asian/Pacific Islander,Female,2453
+2012,70-74,Asian/Pacific Islander,Male,3154
+2012,70-74,Latinx,Female,5636
+2012,70-74,Latinx,Male,7037
+2012,70-74,White,Female,79032
+2012,70-74,White,Male,100533
+2012,75-79,African American,Female,14620
+2012,75-79,African American,Male,14347
+2012,75-79,American Indian/AK Native,Female,720
+2012,75-79,American Indian/AK Native,Male,756
+2012,75-79,Asian/Pacific Islander,Female,3179
+2012,75-79,Asian/Pacific Islander,Male,3676
+2012,75-79,Latinx,Female,7338
+2012,75-79,Latinx,Male,7771
+2012,75-79,White,Female,103799
+2012,75-79,White,Male,116070
+2012,80-84,African American,Female,16450
+2012,80-84,African American,Male,12901
+2012,80-84,American Indian/AK Native,Female,754
+2012,80-84,American Indian/AK Native,Male,634
+2012,80-84,Asian/Pacific Islander,Female,4311
+2012,80-84,Asian/Pacific Islander,Male,3966
+2012,80-84,Latinx,Female,9487
+2012,80-84,Latinx,Male,8542
+2012,80-84,White,Female,149369
+2012,80-84,White,Male,142404
+2012,85+,African American,Female,37354
+2012,85+,African American,Male,17021
+2012,85+,American Indian/AK Native,Female,1309
+2012,85+,American Indian/AK Native,Male,749
+2012,85+,Asian/Pacific Islander,Female,10705
+2012,85+,Asian/Pacific Islander,Male,7271
+2012,85+,Latinx,Female,20428
+2012,85+,Latinx,Male,12307
+2012,85+,White,Female,441621
+2012,85+,White,Male,256908
+2012,Missing,African American,Female,29
+2012,Missing,African American,Male,55
+2012,Missing,American Indian/AK Native,Female,1
+2012,Missing,American Indian/AK Native,Male,7
+2012,Missing,Asian/Pacific Islander,Female,54
+2012,Missing,Asian/Pacific Islander,Male,171
+2012,Missing,Latinx,Female,2
+2012,Missing,Latinx,Male,18
+2012,Missing,White,Female,26
+2012,Missing,White,Male,58
+2013,0,African American,Female,3250
+2013,0,African American,Male,3886
+2013,0,American Indian/AK Native,Female,118
+2013,0,American Indian/AK Native,Male,197
+2013,0,Asian/Pacific Islander,Female,424
+2013,0,Asian/Pacific Islander,Male,547
+2013,0,Latinx,Female,2024
+2013,0,Latinx,Male,2465
+2013,0,White,Female,4529
+2013,0,White,Male,6057
+2013,1-4,African American,Female,445
+2013,1-4,African American,Male,562
+2013,1-4,American Indian/AK Native,Female,39
+2013,1-4,American Indian/AK Native,Male,65
+2013,1-4,Asian/Pacific Islander,Female,87
+2013,1-4,Asian/Pacific Islander,Male,96
+2013,1-4,Latinx,Female,348
+2013,1-4,Latinx,Male,458
+2013,1-4,White,Female,833
+2013,1-4,White,Male,1155
+2013,10-14,African American,Female,233
+2013,10-14,African American,Male,354
+2013,10-14,American Indian/AK Native,Female,17
+2013,10-14,American Indian/AK Native,Male,21
+2013,10-14,Asian/Pacific Islander,Female,52
+2013,10-14,Asian/Pacific Islander,Male,67
+2013,10-14,Latinx,Female,273
+2013,10-14,Latinx,Male,325
+2013,10-14,White,Female,650
+2013,10-14,White,Male,944
+2013,15-19,African American,Female,496
+2013,15-19,African American,Male,1688
+2013,15-19,American Indian/AK Native,Female,52
+2013,15-19,American Indian/AK Native,Male,128
+2013,15-19,Asian/Pacific Islander,Female,94
+2013,15-19,Asian/Pacific Islander,Male,181
+2013,15-19,Latinx,Female,451
+2013,15-19,Latinx,Male,1190
+2013,15-19,White,Female,1645
+2013,15-19,White,Male,3618
+2013,20-24,African American,Female,1002
+2013,20-24,African American,Male,3365
+2013,20-24,American Indian/AK Native,Female,108
+2013,20-24,American Indian/AK Native,Male,260
+2013,20-24,Asian/Pacific Islander,Female,150
+2013,20-24,Asian/Pacific Islander,Male,389
+2013,20-24,Latinx,Female,675
+2013,20-24,Latinx,Male,2317
+2013,20-24,White,Female,2997
+2013,20-24,White,Male,7874
+2013,25-29,African American,Female,1257
+2013,25-29,African American,Male,3213
+2013,25-29,American Indian/AK Native,Female,143
+2013,25-29,American Indian/AK Native,Male,305
+2013,25-29,Asian/Pacific Islander,Female,175
+2013,25-29,Asian/Pacific Islander,Male,436
+2013,25-29,Latinx,Female,717
+2013,25-29,Latinx,Male,2250
+2013,25-29,White,Female,3761
+2013,25-29,White,Male,8905
+2013,30-34,African American,Female,1683
+2013,30-34,African American,Male,3397
+2013,30-34,American Indian/AK Native,Female,165
+2013,30-34,American Indian/AK Native,Male,310
+2013,30-34,Asian/Pacific Islander,Female,257
+2013,30-34,Asian/Pacific Islander,Male,430
+2013,30-34,Latinx,Female,956
+2013,30-34,Latinx,Male,2362
+2013,30-34,White,Female,4937
+2013,30-34,White,Male,10051
+2013,35-39,African American,Female,2183
+2013,35-39,African American,Male,3534
+2013,35-39,American Indian/AK Native,Female,214
+2013,35-39,American Indian/AK Native,Male,305
+2013,35-39,Asian/Pacific Islander,Female,316
+2013,35-39,Asian/Pacific Islander,Male,530
+2013,35-39,Latinx,Female,1217
+2013,35-39,Latinx,Male,2558
+2013,35-39,White,Female,6386
+2013,35-39,White,Male,10720
+2013,40-44,African American,Female,3381
+2013,40-44,African American,Male,4698
+2013,40-44,American Indian/AK Native,Female,283
+2013,40-44,American Indian/AK Native,Male,426
+2013,40-44,Asian/Pacific Islander,Female,532
+2013,40-44,Asian/Pacific Islander,Male,817
+2013,40-44,Latinx,Female,1702
+2013,40-44,Latinx,Male,3164
+2013,40-44,White,Female,10375
+2013,40-44,White,Male,16560
+2013,45-49,African American,Female,5324
+2013,45-49,African American,Male,7167
+2013,45-49,American Indian/AK Native,Female,402
+2013,45-49,American Indian/AK Native,Male,600
+2013,45-49,Asian/Pacific Islander,Female,748
+2013,45-49,Asian/Pacific Islander,Male,1202
+2013,45-49,Latinx,Female,2377
+2013,45-49,Latinx,Male,4529
+2013,45-49,White,Female,17522
+2013,45-49,White,Male,27197
+2013,5-9,African American,Female,262
+2013,5-9,African American,Male,321
+2013,5-9,American Indian/AK Native,Female,24
+2013,5-9,American Indian/AK Native,Male,26
+2013,5-9,Asian/Pacific Islander,Female,50
+2013,5-9,Asian/Pacific Islander,Male,68
+2013,5-9,Latinx,Female,191
+2013,5-9,Latinx,Male,254
+2013,5-9,White,Female,528
+2013,5-9,White,Male,721
+2013,50-54,African American,Female,8536
+2013,50-54,African American,Male,11170
+2013,50-54,American Indian/AK Native,Female,524
+2013,50-54,American Indian/AK Native,Male,777
+2013,50-54,Asian/Pacific Islander,Female,1082
+2013,50-54,Asian/Pacific Islander,Male,1760
+2013,50-54,Latinx,Female,3249
+2013,50-54,Latinx,Male,6055
+2013,50-54,White,Female,30115
+2013,50-54,White,Male,47975
+2013,55-59,African American,Female,11238
+2013,55-59,African American,Male,16032
+2013,55-59,American Indian/AK Native,Female,643
+2013,55-59,American Indian/AK Native,Male,894
+2013,55-59,Asian/Pacific Islander,Female,1463
+2013,55-59,Asian/Pacific Islander,Male,2375
+2013,55-59,Latinx,Female,3912
+2013,55-59,Latinx,Male,6978
+2013,55-59,White,Female,41825
+2013,55-59,White,Male,68012
+2013,60-64,African American,Female,12836
+2013,60-64,African American,Male,18119
+2013,60-64,American Indian/AK Native,Female,645
+2013,60-64,American Indian/AK Native,Male,922
+2013,60-64,Asian/Pacific Islander,Female,1908
+2013,60-64,Asian/Pacific Islander,Male,3007
+2013,60-64,Latinx,Female,4582
+2013,60-64,Latinx,Male,7486
+2013,60-64,White,Female,52962
+2013,60-64,White,Male,83145
+2013,65-69,African American,Female,12734
+2013,65-69,African American,Male,16316
+2013,65-69,American Indian/AK Native,Female,707
+2013,65-69,American Indian/AK Native,Male,894
+2013,65-69,Asian/Pacific Islander,Female,2213
+2013,65-69,Asian/Pacific Islander,Male,3116
+2013,65-69,Latinx,Female,5237
+2013,65-69,Latinx,Male,7577
+2013,65-69,White,Female,69440
+2013,65-69,White,Male,96749
+2013,70-74,African American,Female,13620
+2013,70-74,African American,Male,15565
+2013,70-74,American Indian/AK Native,Female,704
+2013,70-74,American Indian/AK Native,Male,865
+2013,70-74,Asian/Pacific Islander,Female,2477
+2013,70-74,Asian/Pacific Islander,Male,3345
+2013,70-74,Latinx,Female,5942
+2013,70-74,Latinx,Male,7626
+2013,70-74,White,Female,83748
+2013,70-74,White,Male,106447
+2013,75-79,African American,Female,14959
+2013,75-79,African American,Male,14860
+2013,75-79,American Indian/AK Native,Female,790
+2013,75-79,American Indian/AK Native,Male,783
+2013,75-79,Asian/Pacific Islander,Female,3382
+2013,75-79,Asian/Pacific Islander,Male,3849
+2013,75-79,Latinx,Female,7761
+2013,75-79,Latinx,Male,8258
+2013,75-79,White,Female,104405
+2013,75-79,White,Male,118640
+2013,80-84,African American,Female,16986
+2013,80-84,African American,Male,13120
+2013,80-84,American Indian/AK Native,Female,743
+2013,80-84,American Indian/AK Native,Male,701
+2013,80-84,Asian/Pacific Islander,Female,4438
+2013,80-84,Asian/Pacific Islander,Male,4229
+2013,80-84,Latinx,Female,9603
+2013,80-84,Latinx,Male,8658
+2013,80-84,White,Female,146871
+2013,80-84,White,Male,142632
+2013,85+,African American,Female,37944
+2013,85+,African American,Male,17675
+2013,85+,American Indian/AK Native,Female,1404
+2013,85+,American Indian/AK Native,Male,856
+2013,85+,Asian/Pacific Islander,Female,11235
+2013,85+,Asian/Pacific Islander,Male,7827
+2013,85+,Latinx,Female,21800
+2013,85+,Latinx,Male,13245
+2013,85+,White,Female,448551
+2013,85+,White,Male,265020
+2013,Missing,African American,Female,17
+2013,Missing,African American,Male,33
+2013,Missing,American Indian/AK Native,Female,1
+2013,Missing,American Indian/AK Native,Male,4
+2013,Missing,Asian/Pacific Islander,Female,69
+2013,Missing,Asian/Pacific Islander,Male,148
+2013,Missing,Latinx,Female,2
+2013,Missing,Latinx,Male,14
+2013,Missing,White,Female,19
+2013,Missing,White,Male,46
+2014,0,African American,Female,3183
+2014,0,African American,Male,3908
+2014,0,American Indian/AK Native,Female,158
+2014,0,American Indian/AK Native,Male,202
+2014,0,Asian/Pacific Islander,Female,452
+2014,0,Asian/Pacific Islander,Male,553
+2014,0,Latinx,Female,2016
+2014,0,Latinx,Male,2448
+2014,0,White,Female,4554
+2014,0,White,Male,5816
+2014,1-4,African American,Female,427
+2014,1-4,African American,Male,585
+2014,1-4,American Indian/AK Native,Female,32
+2014,1-4,American Indian/AK Native,Male,64
+2014,1-4,Asian/Pacific Islander,Female,64
+2014,1-4,Asian/Pacific Islander,Male,76
+2014,1-4,Latinx,Female,328
+2014,1-4,Latinx,Male,397
+2014,1-4,White,Female,819
+2014,1-4,White,Male,1063
+2014,10-14,African American,Female,257
+2014,10-14,African American,Male,411
+2014,10-14,American Indian/AK Native,Female,24
+2014,10-14,American Indian/AK Native,Male,23
+2014,10-14,Asian/Pacific Islander,Female,40
+2014,10-14,Asian/Pacific Islander,Male,75
+2014,10-14,Latinx,Female,237
+2014,10-14,Latinx,Male,329
+2014,10-14,White,Female,570
+2014,10-14,White,Male,945
+2014,15-19,African American,Female,498
+2014,15-19,African American,Male,1670
+2014,15-19,American Indian/AK Native,Female,64
+2014,15-19,American Indian/AK Native,Male,121
+2014,15-19,Asian/Pacific Islander,Female,115
+2014,15-19,Asian/Pacific Islander,Male,178
+2014,15-19,Latinx,Female,471
+2014,15-19,Latinx,Male,1265
+2014,15-19,White,Female,1621
+2014,15-19,White,Male,3637
+2014,20-24,African American,Female,1049
+2014,20-24,African American,Male,3396
+2014,20-24,American Indian/AK Native,Female,112
+2014,20-24,American Indian/AK Native,Male,290
+2014,20-24,Asian/Pacific Islander,Female,133
+2014,20-24,Asian/Pacific Islander,Male,447
+2014,20-24,Latinx,Female,727
+2014,20-24,Latinx,Male,2353
+2014,20-24,White,Female,2927
+2014,20-24,White,Male,7896
+2014,25-29,African American,Female,1229
+2014,25-29,African American,Male,3301
+2014,25-29,American Indian/AK Native,Female,138
+2014,25-29,American Indian/AK Native,Male,322
+2014,25-29,Asian/Pacific Islander,Female,202
+2014,25-29,Asian/Pacific Islander,Male,445
+2014,25-29,Latinx,Female,824
+2014,25-29,Latinx,Male,2368
+2014,25-29,White,Female,3943
+2014,25-29,White,Male,9271
+2014,30-34,African American,Female,1712
+2014,30-34,African American,Male,3343
+2014,30-34,American Indian/AK Native,Female,157
+2014,30-34,American Indian/AK Native,Male,327
+2014,30-34,Asian/Pacific Islander,Female,260
+2014,30-34,Asian/Pacific Islander,Male,470
+2014,30-34,Latinx,Female,880
+2014,30-34,Latinx,Male,2415
+2014,30-34,White,Female,5202
+2014,30-34,White,Male,10628
+2014,35-39,African American,Female,2335
+2014,35-39,African American,Male,3637
+2014,35-39,American Indian/AK Native,Female,232
+2014,35-39,American Indian/AK Native,Male,351
+2014,35-39,Asian/Pacific Islander,Female,356
+2014,35-39,Asian/Pacific Islander,Male,523
+2014,35-39,Latinx,Female,1238
+2014,35-39,Latinx,Male,2693
+2014,35-39,White,Female,6692
+2014,35-39,White,Male,11415
+2014,40-44,African American,Female,3462
+2014,40-44,African American,Male,4594
+2014,40-44,American Indian/AK Native,Female,289
+2014,40-44,American Indian/AK Native,Male,449
+2014,40-44,Asian/Pacific Islander,Female,518
+2014,40-44,Asian/Pacific Islander,Male,849
+2014,40-44,Latinx,Female,1759
+2014,40-44,Latinx,Male,3360
+2014,40-44,White,Female,10493
+2014,40-44,White,Male,16080
+2014,45-49,African American,Female,5225
+2014,45-49,African American,Male,6909
+2014,45-49,American Indian/AK Native,Female,410
+2014,45-49,American Indian/AK Native,Male,578
+2014,45-49,Asian/Pacific Islander,Female,724
+2014,45-49,Asian/Pacific Islander,Male,1215
+2014,45-49,Latinx,Female,2383
+2014,45-49,Latinx,Male,4449
+2014,45-49,White,Female,17058
+2014,45-49,White,Male,26317
+2014,5-9,African American,Female,223
+2014,5-9,African American,Male,315
+2014,5-9,American Indian/AK Native,Female,17
+2014,5-9,American Indian/AK Native,Male,25
+2014,5-9,Asian/Pacific Islander,Female,42
+2014,5-9,Asian/Pacific Islander,Male,51
+2014,5-9,Latinx,Female,224
+2014,5-9,Latinx,Male,291
+2014,5-9,White,Female,500
+2014,5-9,White,Male,684
+2014,50-54,African American,Female,8602
+2014,50-54,African American,Male,11144
+2014,50-54,American Indian/AK Native,Female,572
+2014,50-54,American Indian/AK Native,Male,817
+2014,50-54,Asian/Pacific Islander,Female,1128
+2014,50-54,Asian/Pacific Islander,Male,1824
+2014,50-54,Latinx,Female,3305
+2014,50-54,Latinx,Male,6256
+2014,50-54,White,Female,30285
+2014,50-54,White,Male,47304
+2014,55-59,African American,Female,11707
+2014,55-59,African American,Male,16240
+2014,55-59,American Indian/AK Native,Female,637
+2014,55-59,American Indian/AK Native,Male,950
+2014,55-59,Asian/Pacific Islander,Female,1585
+2014,55-59,Asian/Pacific Islander,Male,2597
+2014,55-59,Latinx,Female,4156
+2014,55-59,Latinx,Male,7256
+2014,55-59,White,Female,43210
+2014,55-59,White,Male,69271
+2014,60-64,African American,Female,13462
+2014,60-64,African American,Male,18718
+2014,60-64,American Indian/AK Native,Female,684
+2014,60-64,American Indian/AK Native,Male,1034
+2014,60-64,Asian/Pacific Islander,Female,1966
+2014,60-64,Asian/Pacific Islander,Male,3232
+2014,60-64,Latinx,Female,4950
+2014,60-64,Latinx,Male,7867
+2014,60-64,White,Female,54523
+2014,60-64,White,Male,85734
+2014,65-69,African American,Female,13573
+2014,65-69,African American,Male,17471
+2014,65-69,American Indian/AK Native,Female,757
+2014,65-69,American Indian/AK Native,Male,972
+2014,65-69,Asian/Pacific Islander,Female,2407
+2014,65-69,Asian/Pacific Islander,Male,3438
+2014,65-69,Latinx,Female,5577
+2014,65-69,Latinx,Male,7805
+2014,65-69,White,Female,70893
+2014,65-69,White,Male,100471
+2014,70-74,African American,Female,13922
+2014,70-74,African American,Male,16085
+2014,70-74,American Indian/AK Native,Female,812
+2014,70-74,American Indian/AK Native,Male,895
+2014,70-74,Asian/Pacific Islander,Female,2789
+2014,70-74,Asian/Pacific Islander,Male,3629
+2014,70-74,Latinx,Female,6266
+2014,70-74,Latinx,Male,7868
+2014,70-74,White,Female,86223
+2014,70-74,White,Male,110691
+2014,75-79,African American,Female,15424
+2014,75-79,African American,Male,14987
+2014,75-79,American Indian/AK Native,Female,816
+2014,75-79,American Indian/AK Native,Male,860
+2014,75-79,Asian/Pacific Islander,Female,3435
+2014,75-79,Asian/Pacific Islander,Male,4043
+2014,75-79,Latinx,Female,7770
+2014,75-79,Latinx,Male,8420
+2014,75-79,White,Female,105525
+2014,75-79,White,Male,121204
+2014,80-84,African American,Female,16884
+2014,80-84,African American,Male,13215
+2014,80-84,American Indian/AK Native,Female,805
+2014,80-84,American Indian/AK Native,Male,671
+2014,80-84,Asian/Pacific Islander,Female,4548
+2014,80-84,Asian/Pacific Islander,Male,4274
+2014,80-84,Latinx,Female,9672
+2014,80-84,Latinx,Male,8809
+2014,80-84,White,Female,143500
+2014,80-84,White,Male,140385
+2014,85+,African American,Female,38241
+2014,85+,African American,Male,18107
+2014,85+,American Indian/AK Native,Female,1467
+2014,85+,American Indian/AK Native,Male,891
+2014,85+,Asian/Pacific Islander,Female,11866
+2014,85+,Asian/Pacific Islander,Male,7992
+2014,85+,Latinx,Female,22384
+2014,85+,Latinx,Male,14097
+2014,85+,White,Female,443671
+2014,85+,White,Male,267863
+2014,Missing,African American,Female,13
+2014,Missing,African American,Male,40
+2014,Missing,American Indian/AK Native,Female,2
+2014,Missing,American Indian/AK Native,Male,4
+2014,Missing,Asian/Pacific Islander,Female,49
+2014,Missing,Asian/Pacific Islander,Male,125
+2014,Missing,Latinx,Female,2
+2014,Missing,Latinx,Male,10
+2014,Missing,White,Female,40
+2014,Missing,White,Male,72
+2015,0,African American,Female,3261
+2015,0,African American,Male,4043
+2015,0,American Indian/AK Native,Female,167
+2015,0,American Indian/AK Native,Male,196
+2015,0,Asian/Pacific Islander,Female,470
+2015,0,Asian/Pacific Islander,Male,598
+2015,0,Latinx,Female,2051
+2015,0,Latinx,Male,2439
+2015,0,White,Female,4532
+2015,0,White,Male,5769
+2015,1-4,African American,Female,430
+2015,1-4,African American,Male,633
+2015,1-4,American Indian/AK Native,Female,40
+2015,1-4,American Indian/AK Native,Male,55
+2015,1-4,Asian/Pacific Islander,Female,73
+2015,1-4,Asian/Pacific Islander,Male,84
+2015,1-4,Latinx,Female,337
+2015,1-4,Latinx,Male,435
+2015,1-4,White,Female,821
+2015,1-4,White,Male,1091
+2015,10-14,African American,Female,257
+2015,10-14,African American,Male,398
+2015,10-14,American Indian/AK Native,Female,33
+2015,10-14,American Indian/AK Native,Male,28
+2015,10-14,Asian/Pacific Islander,Female,41
+2015,10-14,Asian/Pacific Islander,Male,70
+2015,10-14,Latinx,Female,230
+2015,10-14,Latinx,Male,322
+2015,10-14,White,Female,683
+2015,10-14,White,Male,967
+2015,15-19,African American,Female,555
+2015,15-19,African American,Male,1840
+2015,15-19,American Indian/AK Native,Female,66
+2015,15-19,American Indian/AK Native,Male,127
+2015,15-19,Asian/Pacific Islander,Female,107
+2015,15-19,Asian/Pacific Islander,Male,243
+2015,15-19,Latinx,Female,514
+2015,15-19,Latinx,Male,1324
+2015,15-19,White,Female,1774
+2015,15-19,White,Male,3699
+2015,20-24,African American,Female,1101
+2015,20-24,African American,Male,3794
+2015,20-24,American Indian/AK Native,Female,111
+2015,20-24,American Indian/AK Native,Male,271
+2015,20-24,Asian/Pacific Islander,Female,178
+2015,20-24,Asian/Pacific Islander,Male,449
+2015,20-24,Latinx,Female,761
+2015,20-24,Latinx,Male,2654
+2015,20-24,White,Female,3031
+2015,20-24,White,Male,8091
+2015,25-29,African American,Female,1359
+2015,25-29,African American,Male,3769
+2015,25-29,American Indian/AK Native,Female,146
+2015,25-29,American Indian/AK Native,Male,339
+2015,25-29,Asian/Pacific Islander,Female,203
+2015,25-29,Asian/Pacific Islander,Male,487
+2015,25-29,Latinx,Female,786
+2015,25-29,Latinx,Male,2560
+2015,25-29,White,Female,4260
+2015,25-29,White,Male,10121
+2015,30-34,African American,Female,1792
+2015,30-34,African American,Male,3631
+2015,30-34,American Indian/AK Native,Female,212
+2015,30-34,American Indian/AK Native,Male,364
+2015,30-34,Asian/Pacific Islander,Female,299
+2015,30-34,Asian/Pacific Islander,Male,536
+2015,30-34,Latinx,Female,1084
+2015,30-34,Latinx,Male,2647
+2015,30-34,White,Female,5659
+2015,30-34,White,Male,11540
+2015,35-39,African American,Female,2371
+2015,35-39,African American,Male,4029
+2015,35-39,American Indian/AK Native,Female,237
+2015,35-39,American Indian/AK Native,Male,393
+2015,35-39,Asian/Pacific Islander,Female,371
+2015,35-39,Asian/Pacific Islander,Male,592
+2015,35-39,Latinx,Female,1279
+2015,35-39,Latinx,Male,2859
+2015,35-39,White,Female,7012
+2015,35-39,White,Male,12432
+2015,40-44,African American,Female,3427
+2015,40-44,African American,Male,4767
+2015,40-44,American Indian/AK Native,Female,266
+2015,40-44,American Indian/AK Native,Male,472
+2015,40-44,Asian/Pacific Islander,Female,577
+2015,40-44,Asian/Pacific Islander,Male,849
+2015,40-44,Latinx,Female,1748
+2015,40-44,Latinx,Male,3456
+2015,40-44,White,Female,10226
+2015,40-44,White,Male,16095
+2015,45-49,African American,Female,5146
+2015,45-49,African American,Male,6820
+2015,45-49,American Indian/AK Native,Female,402
+2015,45-49,American Indian/AK Native,Male,644
+2015,45-49,Asian/Pacific Islander,Female,828
+2015,45-49,Asian/Pacific Islander,Male,1286
+2015,45-49,Latinx,Female,2448
+2015,45-49,Latinx,Male,4630
+2015,45-49,White,Female,16809
+2015,45-49,White,Male,25617
+2015,5-9,African American,Female,251
+2015,5-9,African American,Male,329
+2015,5-9,American Indian/AK Native,Female,19
+2015,5-9,American Indian/AK Native,Male,31
+2015,5-9,Asian/Pacific Islander,Female,53
+2015,5-9,Asian/Pacific Islander,Male,64
+2015,5-9,Latinx,Female,185
+2015,5-9,Latinx,Male,292
+2015,5-9,White,Female,525
+2015,5-9,White,Male,676
+2015,50-54,African American,Female,8399
+2015,50-54,African American,Male,11377
+2015,50-54,American Indian/AK Native,Female,581
+2015,50-54,American Indian/AK Native,Male,858
+2015,50-54,Asian/Pacific Islander,Female,1168
+2015,50-54,Asian/Pacific Islander,Male,1837
+2015,50-54,Latinx,Female,3404
+2015,50-54,Latinx,Male,6462
+2015,50-54,White,Female,29942
+2015,50-54,White,Male,46504
+2015,55-59,African American,Female,11993
+2015,55-59,African American,Male,16499
+2015,55-59,American Indian/AK Native,Female,664
+2015,55-59,American Indian/AK Native,Male,1040
+2015,55-59,Asian/Pacific Islander,Female,1637
+2015,55-59,Asian/Pacific Islander,Male,2667
+2015,55-59,Latinx,Female,4218
+2015,55-59,Latinx,Male,7740
+2015,55-59,White,Female,44041
+2015,55-59,White,Male,69675
+2015,60-64,African American,Female,13790
+2015,60-64,African American,Male,19617
+2015,60-64,American Indian/AK Native,Female,752
+2015,60-64,American Indian/AK Native,Male,1049
+2015,60-64,Asian/Pacific Islander,Female,2179
+2015,60-64,Asian/Pacific Islander,Male,3457
+2015,60-64,Latinx,Female,5226
+2015,60-64,Latinx,Male,8397
+2015,60-64,White,Female,55971
+2015,60-64,White,Male,88372
+2015,65-69,African American,Female,14291
+2015,65-69,African American,Male,18794
+2015,65-69,American Indian/AK Native,Female,812
+2015,65-69,American Indian/AK Native,Male,994
+2015,65-69,Asian/Pacific Islander,Female,2667
+2015,65-69,Asian/Pacific Islander,Male,3936
+2015,65-69,Latinx,Female,6071
+2015,65-69,Latinx,Male,8642
+2015,65-69,White,Female,74224
+2015,65-69,White,Male,105683
+2015,70-74,African American,Female,14537
+2015,70-74,African American,Male,16709
+2015,70-74,American Indian/AK Native,Female,849
+2015,70-74,American Indian/AK Native,Male,1003
+2015,70-74,Asian/Pacific Islander,Female,3067
+2015,70-74,Asian/Pacific Islander,Male,4043
+2015,70-74,Latinx,Female,6777
+2015,70-74,Latinx,Male,8361
+2015,70-74,White,Female,89759
+2015,70-74,White,Male,114968
+2015,75-79,African American,Female,15717
+2015,75-79,African American,Male,15714
+2015,75-79,American Indian/AK Native,Female,838
+2015,75-79,American Indian/AK Native,Male,923
+2015,75-79,Asian/Pacific Islander,Female,3829
+2015,75-79,Asian/Pacific Islander,Male,4555
+2015,75-79,Latinx,Female,8222
+2015,75-79,Latinx,Male,8800
+2015,75-79,White,Female,108273
+2015,75-79,White,Male,124029
+2015,80-84,African American,Female,17189
+2015,80-84,African American,Male,13687
+2015,80-84,American Indian/AK Native,Female,851
+2015,80-84,American Indian/AK Native,Male,739
+2015,80-84,Asian/Pacific Islander,Female,4971
+2015,80-84,Asian/Pacific Islander,Male,4741
+2015,80-84,Latinx,Female,10172
+2015,80-84,Latinx,Male,9422
+2015,80-84,White,Female,144021
+2015,80-84,White,Male,141733
+2015,85+,African American,Female,39770
+2015,85+,African American,Male,18617
+2015,85+,American Indian/AK Native,Female,1532
+2015,85+,American Indian/AK Native,Male,936
+2015,85+,Asian/Pacific Islander,Female,13543
+2015,85+,Asian/Pacific Islander,Male,8999
+2015,85+,Latinx,Female,24323
+2015,85+,Latinx,Male,15164
+2015,85+,White,Female,459064
+2015,85+,White,Male,278197
+2015,Missing,African American,Female,11
+2015,Missing,African American,Male,45
+2015,Missing,American Indian/AK Native,Male,1
+2015,Missing,Asian/Pacific Islander,Female,60
+2015,Missing,Asian/Pacific Islander,Male,172
+2015,Missing,Latinx,Female,1
+2015,Missing,Latinx,Male,15
+2015,Missing,White,Female,23
+2015,Missing,White,Male,45
+2016,0,African American,Female,3297
+2016,0,African American,Male,3950
+2016,0,American Indian/AK Native,Female,141
+2016,0,American Indian/AK Native,Male,206
+2016,0,Asian/Pacific Islander,Female,458
+2016,0,Asian/Pacific Islander,Male,610
+2016,0,Latinx,Female,1996
+2016,0,Latinx,Male,2505
+2016,0,White,Female,4433
+2016,0,White,Male,5640
+2016,1-4,African American,Female,457
+2016,1-4,African American,Male,604
+2016,1-4,American Indian/AK Native,Female,48
+2016,1-4,American Indian/AK Native,Male,46
+2016,1-4,Asian/Pacific Islander,Female,84
+2016,1-4,Asian/Pacific Islander,Male,87
+2016,1-4,Latinx,Female,342
+2016,1-4,Latinx,Male,412
+2016,1-4,White,Female,869
+2016,1-4,White,Male,1119
+2016,10-14,African American,Female,263
+2016,10-14,African American,Male,385
+2016,10-14,American Indian/AK Native,Female,27
+2016,10-14,American Indian/AK Native,Male,30
+2016,10-14,Asian/Pacific Islander,Female,63
+2016,10-14,Asian/Pacific Islander,Male,68
+2016,10-14,Latinx,Female,255
+2016,10-14,Latinx,Male,314
+2016,10-14,White,Female,650
+2016,10-14,White,Male,981
+2016,15-19,African American,Female,635
+2016,15-19,African American,Male,2009
+2016,15-19,American Indian/AK Native,Female,60
+2016,15-19,American Indian/AK Native,Male,149
+2016,15-19,Asian/Pacific Islander,Female,116
+2016,15-19,Asian/Pacific Islander,Male,262
+2016,15-19,Latinx,Female,558
+2016,15-19,Latinx,Male,1409
+2016,15-19,White,Female,1750
+2016,15-19,White,Male,3934
+2016,20-24,African American,Female,1204
+2016,20-24,African American,Male,4063
+2016,20-24,American Indian/AK Native,Female,143
+2016,20-24,American Indian/AK Native,Male,301
+2016,20-24,Asian/Pacific Islander,Female,188
+2016,20-24,Asian/Pacific Islander,Male,488
+2016,20-24,Latinx,Female,826
+2016,20-24,Latinx,Male,2805
+2016,20-24,White,Female,3132
+2016,20-24,White,Male,8738
+2016,25-29,African American,Female,1581
+2016,25-29,African American,Male,4257
+2016,25-29,American Indian/AK Native,Female,187
+2016,25-29,American Indian/AK Native,Male,410
+2016,25-29,Asian/Pacific Islander,Female,194
+2016,25-29,Asian/Pacific Islander,Male,502
+2016,25-29,Latinx,Female,899
+2016,25-29,Latinx,Male,2972
+2016,25-29,White,Female,4707
+2016,25-29,White,Male,11476
+2016,30-34,African American,Female,1913
+2016,30-34,African American,Male,4063
+2016,30-34,American Indian/AK Native,Female,223
+2016,30-34,American Indian/AK Native,Male,394
+2016,30-34,Asian/Pacific Islander,Female,310
+2016,30-34,Asian/Pacific Islander,Male,557
+2016,30-34,Latinx,Female,1169
+2016,30-34,Latinx,Male,2990
+2016,30-34,White,Female,6255
+2016,30-34,White,Male,12886
+2016,35-39,African American,Female,2627
+2016,35-39,African American,Male,4384
+2016,35-39,American Indian/AK Native,Female,237
+2016,35-39,American Indian/AK Native,Male,430
+2016,35-39,Asian/Pacific Islander,Female,418
+2016,35-39,Asian/Pacific Islander,Male,695
+2016,35-39,Latinx,Female,1434
+2016,35-39,Latinx,Male,3241
+2016,35-39,White,Female,7796
+2016,35-39,White,Male,14194
+2016,40-44,African American,Female,3361
+2016,40-44,African American,Male,5114
+2016,40-44,American Indian/AK Native,Female,298
+2016,40-44,American Indian/AK Native,Male,453
+2016,40-44,Asian/Pacific Islander,Female,554
+2016,40-44,Asian/Pacific Islander,Male,916
+2016,40-44,Latinx,Female,1815
+2016,40-44,Latinx,Male,3652
+2016,40-44,White,Female,10149
+2016,40-44,White,Male,16438
+2016,45-49,African American,Female,5269
+2016,45-49,African American,Male,7184
+2016,45-49,American Indian/AK Native,Female,390
+2016,45-49,American Indian/AK Native,Male,583
+2016,45-49,Asian/Pacific Islander,Female,820
+2016,45-49,Asian/Pacific Islander,Male,1262
+2016,45-49,Latinx,Female,2525
+2016,45-49,Latinx,Male,4706
+2016,45-49,White,Female,16880
+2016,45-49,White,Male,26260
+2016,5-9,African American,Female,285
+2016,5-9,African American,Male,352
+2016,5-9,American Indian/AK Native,Female,19
+2016,5-9,American Indian/AK Native,Male,28
+2016,5-9,Asian/Pacific Islander,Female,46
+2016,5-9,Asian/Pacific Islander,Male,57
+2016,5-9,Latinx,Female,257
+2016,5-9,Latinx,Male,297
+2016,5-9,White,Female,513
+2016,5-9,White,Male,653
+2016,50-54,African American,Female,8524
+2016,50-54,African American,Male,11237
+2016,50-54,American Indian/AK Native,Female,590
+2016,50-54,American Indian/AK Native,Male,875
+2016,50-54,Asian/Pacific Islander,Female,1183
+2016,50-54,Asian/Pacific Islander,Male,1859
+2016,50-54,Latinx,Female,3551
+2016,50-54,Latinx,Male,6676
+2016,50-54,White,Female,28862
+2016,50-54,White,Male,44966
+2016,55-59,African American,Female,12131
+2016,55-59,African American,Male,16747
+2016,55-59,American Indian/AK Native,Female,658
+2016,55-59,American Indian/AK Native,Male,1095
+2016,55-59,Asian/Pacific Islander,Female,1668
+2016,55-59,Asian/Pacific Islander,Male,2666
+2016,55-59,Latinx,Female,4540
+2016,55-59,Latinx,Male,8207
+2016,55-59,White,Female,44656
+2016,55-59,White,Male,70312
+2016,60-64,African American,Female,14535
+2016,60-64,African American,Male,20471
+2016,60-64,American Indian/AK Native,Female,789
+2016,60-64,American Indian/AK Native,Male,1102
+2016,60-64,Asian/Pacific Islander,Female,2306
+2016,60-64,Asian/Pacific Islander,Male,3499
+2016,60-64,Latinx,Female,5448
+2016,60-64,Latinx,Male,8925
+2016,60-64,White,Female,57647
+2016,60-64,White,Male,90226
+2016,65-69,African American,Female,15784
+2016,65-69,African American,Male,20596
+2016,65-69,American Indian/AK Native,Female,799
+2016,65-69,American Indian/AK Native,Male,1115
+2016,65-69,Asian/Pacific Islander,Female,2876
+2016,65-69,Asian/Pacific Islander,Male,4026
+2016,65-69,Latinx,Female,6249
+2016,65-69,Latinx,Male,9087
+2016,65-69,White,Female,76752
+2016,65-69,White,Male,110001
+2016,70-74,African American,Female,14931
+2016,70-74,African American,Male,17338
+2016,70-74,American Indian/AK Native,Female,856
+2016,70-74,American Indian/AK Native,Male,1035
+2016,70-74,Asian/Pacific Islander,Female,3040
+2016,70-74,Asian/Pacific Islander,Male,4072
+2016,70-74,Latinx,Female,6901
+2016,70-74,Latinx,Male,8861
+2016,70-74,White,Female,91553
+2016,70-74,White,Male,117404
+2016,75-79,African American,Female,16009
+2016,75-79,African American,Male,15919
+2016,75-79,American Indian/AK Native,Female,868
+2016,75-79,American Indian/AK Native,Male,905
+2016,75-79,Asian/Pacific Islander,Female,3738
+2016,75-79,Asian/Pacific Islander,Male,4512
+2016,75-79,Latinx,Female,8519
+2016,75-79,Latinx,Male,9189
+2016,75-79,White,Female,109065
+2016,75-79,White,Male,126620
+2016,80-84,African American,Female,17781
+2016,80-84,African American,Male,14216
+2016,80-84,American Indian/AK Native,Female,912
+2016,80-84,American Indian/AK Native,Male,800
+2016,80-84,Asian/Pacific Islander,Female,4858
+2016,80-84,Asian/Pacific Islander,Male,4761
+2016,80-84,Latinx,Female,10481
+2016,80-84,Latinx,Male,9346
+2016,80-84,White,Female,140181
+2016,80-84,White,Male,139033
+2016,85+,African American,Female,39767
+2016,85+,African American,Male,19208
+2016,85+,American Indian/AK Native,Female,1522
+2016,85+,American Indian/AK Native,Male,995
+2016,85+,Asian/Pacific Islander,Female,13821
+2016,85+,Asian/Pacific Islander,Male,9052
+2016,85+,Latinx,Female,25292
+2016,85+,Latinx,Male,16153
+2016,85+,White,Female,450927
+2016,85+,White,Male,278152
+2016,Missing,African American,Female,11
+2016,Missing,African American,Male,43
+2016,Missing,American Indian/AK Native,Male,3
+2016,Missing,Asian/Pacific Islander,Female,39
+2016,Missing,Asian/Pacific Islander,Male,197
+2016,Missing,Latinx,Female,4
+2016,Missing,Latinx,Male,19
+2016,Missing,White,Female,26
+2016,Missing,White,Male,46
+2017,0,African American,Female,3135
+2017,0,African American,Male,3980
+2017,0,American Indian/AK Native,Female,150
+2017,0,American Indian/AK Native,Male,187
+2017,0,Asian/Pacific Islander,Female,491
+2017,0,Asian/Pacific Islander,Male,604
+2017,0,Latinx,Female,2034
+2017,0,Latinx,Male,2440
+2017,0,White,Female,4091
+2017,0,White,Male,5301
+2017,1-4,African American,Female,471
+2017,1-4,African American,Male,559
+2017,1-4,American Indian/AK Native,Female,42
+2017,1-4,American Indian/AK Native,Male,37
+2017,1-4,Asian/Pacific Islander,Female,61
+2017,1-4,Asian/Pacific Islander,Male,103
+2017,1-4,Latinx,Female,328
+2017,1-4,Latinx,Male,434
+2017,1-4,White,Female,755
+2017,1-4,White,Male,1114
+2017,10-14,African American,Female,269
+2017,10-14,African American,Male,475
+2017,10-14,American Indian/AK Native,Female,29
+2017,10-14,American Indian/AK Native,Male,40
+2017,10-14,Asian/Pacific Islander,Female,52
+2017,10-14,Asian/Pacific Islander,Male,73
+2017,10-14,Latinx,Female,242
+2017,10-14,Latinx,Male,388
+2017,10-14,White,Female,664
+2017,10-14,White,Male,1011
+2017,15-19,African American,Female,557
+2017,15-19,African American,Male,2073
+2017,15-19,American Indian/AK Native,Female,63
+2017,15-19,American Indian/AK Native,Male,173
+2017,15-19,Asian/Pacific Islander,Female,113
+2017,15-19,Asian/Pacific Islander,Male,242
+2017,15-19,Latinx,Female,621
+2017,15-19,Latinx,Male,1501
+2017,15-19,White,Female,1702
+2017,15-19,White,Male,3904
+2017,20-24,African American,Female,1143
+2017,20-24,African American,Male,3795
+2017,20-24,American Indian/AK Native,Female,116
+2017,20-24,American Indian/AK Native,Male,268
+2017,20-24,Asian/Pacific Islander,Female,201
+2017,20-24,Asian/Pacific Islander,Male,486
+2017,20-24,Latinx,Female,814
+2017,20-24,Latinx,Male,2777
+2017,20-24,White,Female,3240
+2017,20-24,White,Male,8411
+2017,25-29,African American,Female,1657
+2017,25-29,African American,Male,4582
+2017,25-29,American Indian/AK Native,Female,213
+2017,25-29,American Indian/AK Native,Male,378
+2017,25-29,Asian/Pacific Islander,Female,230
+2017,25-29,Asian/Pacific Islander,Male,525
+2017,25-29,Latinx,Female,946
+2017,25-29,Latinx,Male,3120
+2017,25-29,White,Female,4887
+2017,25-29,White,Male,11903
+2017,30-34,African American,Female,1961
+2017,30-34,African American,Male,4206
+2017,30-34,American Indian/AK Native,Female,233
+2017,30-34,American Indian/AK Native,Male,455
+2017,30-34,Asian/Pacific Islander,Female,309
+2017,30-34,Asian/Pacific Islander,Male,611
+2017,30-34,Latinx,Female,1164
+2017,30-34,Latinx,Male,3087
+2017,30-34,White,Female,6547
+2017,30-34,White,Male,13541
+2017,35-39,African American,Female,2641
+2017,35-39,African American,Male,4778
+2017,35-39,American Indian/AK Native,Female,255
+2017,35-39,American Indian/AK Native,Male,469
+2017,35-39,Asian/Pacific Islander,Female,398
+2017,35-39,Asian/Pacific Islander,Male,686
+2017,35-39,Latinx,Female,1467
+2017,35-39,Latinx,Male,3466
+2017,35-39,White,Female,8089
+2017,35-39,White,Male,14863
+2017,40-44,African American,Female,3481
+2017,40-44,African American,Male,5173
+2017,40-44,American Indian/AK Native,Female,314
+2017,40-44,American Indian/AK Native,Male,467
+2017,40-44,Asian/Pacific Islander,Female,544
+2017,40-44,Asian/Pacific Islander,Male,890
+2017,40-44,Latinx,Female,1847
+2017,40-44,Latinx,Male,3805
+2017,40-44,White,Female,10077
+2017,40-44,White,Male,16522
+2017,45-49,African American,Female,5150
+2017,45-49,African American,Male,7381
+2017,45-49,American Indian/AK Native,Female,373
+2017,45-49,American Indian/AK Native,Male,649
+2017,45-49,Asian/Pacific Islander,Female,901
+2017,45-49,Asian/Pacific Islander,Male,1366
+2017,45-49,Latinx,Female,2603
+2017,45-49,Latinx,Male,5018
+2017,45-49,White,Female,16526
+2017,45-49,White,Male,26101
+2017,5-9,African American,Female,269
+2017,5-9,African American,Male,332
+2017,5-9,American Indian/AK Native,Female,21
+2017,5-9,American Indian/AK Native,Male,23
+2017,5-9,Asian/Pacific Islander,Female,54
+2017,5-9,Asian/Pacific Islander,Male,55
+2017,5-9,Latinx,Female,231
+2017,5-9,Latinx,Male,274
+2017,5-9,White,Female,496
+2017,5-9,White,Male,629
+2017,50-54,African American,Female,8097
+2017,50-54,African American,Male,11186
+2017,50-54,American Indian/AK Native,Female,598
+2017,50-54,American Indian/AK Native,Male,841
+2017,50-54,Asian/Pacific Islander,Female,1219
+2017,50-54,Asian/Pacific Islander,Male,1942
+2017,50-54,Latinx,Female,3521
+2017,50-54,Latinx,Male,6987
+2017,50-54,White,Female,27543
+2017,50-54,White,Male,42986
+2017,55-59,African American,Female,12243
+2017,55-59,African American,Male,17079
+2017,55-59,American Indian/AK Native,Female,717
+2017,55-59,American Indian/AK Native,Male,1066
+2017,55-59,Asian/Pacific Islander,Female,1697
+2017,55-59,Asian/Pacific Islander,Male,2696
+2017,55-59,Latinx,Female,4567
+2017,55-59,Latinx,Male,8268
+2017,55-59,White,Female,44640
+2017,55-59,White,Male,69753
+2017,60-64,African American,Female,15074
+2017,60-64,African American,Male,21212
+2017,60-64,American Indian/AK Native,Female,835
+2017,60-64,American Indian/AK Native,Male,1147
+2017,60-64,Asian/Pacific Islander,Female,2262
+2017,60-64,Asian/Pacific Islander,Male,3630
+2017,60-64,Latinx,Female,5800
+2017,60-64,Latinx,Male,9454
+2017,60-64,White,Female,59202
+2017,60-64,White,Male,92046
+2017,65-69,African American,Female,16407
+2017,65-69,African American,Male,21687
+2017,65-69,American Indian/AK Native,Female,844
+2017,65-69,American Indian/AK Native,Male,1149
+2017,65-69,Asian/Pacific Islander,Female,2970
+2017,65-69,Asian/Pacific Islander,Male,4312
+2017,65-69,Latinx,Female,6656
+2017,65-69,Latinx,Male,9423
+2017,65-69,White,Female,76183
+2017,65-69,White,Male,109164
+2017,70-74,African American,Female,15584
+2017,70-74,African American,Male,18387
+2017,70-74,American Indian/AK Native,Female,895
+2017,70-74,American Indian/AK Native,Male,1052
+2017,70-74,Asian/Pacific Islander,Female,3212
+2017,70-74,Asian/Pacific Islander,Male,4430
+2017,70-74,Latinx,Female,7520
+2017,70-74,Latinx,Male,9413
+2017,70-74,White,Female,97866
+2017,70-74,White,Male,125909
+2017,75-79,African American,Female,16788
+2017,75-79,African American,Male,16538
+2017,75-79,American Indian/AK Native,Female,904
+2017,75-79,American Indian/AK Native,Male,986
+2017,75-79,Asian/Pacific Islander,Female,4000
+2017,75-79,Asian/Pacific Islander,Male,4912
+2017,75-79,Latinx,Female,8759
+2017,75-79,Latinx,Male,9684
+2017,75-79,White,Female,113769
+2017,75-79,White,Male,131719
+2017,80-84,African American,Female,17975
+2017,80-84,African American,Male,14707
+2017,80-84,American Indian/AK Native,Female,943
+2017,80-84,American Indian/AK Native,Male,866
+2017,80-84,Asian/Pacific Islander,Female,5144
+2017,80-84,Asian/Pacific Islander,Male,5124
+2017,80-84,Latinx,Female,10808
+2017,80-84,Latinx,Male,10087
+2017,80-84,White,Female,142411
+2017,80-84,White,Male,142640
+2017,85+,African American,Female,40703
+2017,85+,African American,Male,19770
+2017,85+,American Indian/AK Native,Female,1611
+2017,85+,American Indian/AK Native,Male,1004
+2017,85+,Asian/Pacific Islander,Female,14833
+2017,85+,Asian/Pacific Islander,Male,9824
+2017,85+,Latinx,Female,27156
+2017,85+,Latinx,Male,17293
+2017,85+,White,Female,459126
+2017,85+,White,Male,287224
+2017,Missing,African American,Female,10
+2017,Missing,African American,Male,34
+2017,Missing,American Indian/AK Native,Female,3
+2017,Missing,American Indian/AK Native,Male,9
+2017,Missing,Asian/Pacific Islander,Female,31
+2017,Missing,Asian/Pacific Islander,Male,145
+2017,Missing,Latinx,Female,4
+2017,Missing,Latinx,Male,22
+2017,Missing,White,Female,22
+2017,Missing,White,Male,76

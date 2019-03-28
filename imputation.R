@@ -113,15 +113,7 @@ dat<-dat%>%
                   fill = list(deaths=0))%>%
   group_by(.imp, year, age, sex, race)%>%
   spread(fe_cause_of_death, deaths, fill = 0)%>%
-  ungroup()
-
-### join with national pop data
-
-pop_nat<-read_csv("./data/pop_nat.csv")
-
-dat<-left_join(dat, pop_nat)
-
-dat<-dat%>%
+  ungroup()%>%  
   mutate(race=
            case_when(
              race=="amind" ~ "American Indian/AK Native",
@@ -129,8 +121,14 @@ dat<-dat%>%
              race=="black" ~ "African American",
              race=="latino"~ "Latinx",
              race=="white" ~ "White"
-           )
-  )%>%
+           ))
+### join with national pop data
+
+pop_nat<-read_csv("./data/pop_nat.csv")
+
+dat<-left_join(dat, pop_nat)
+
+dat<-dat%>%
   mutate(age = factor(age, levels = c(
     "0", "1-4", "5-9", "10-14", "15-19",
     "20-24", "25-29", "30-34", "35-39",  

@@ -59,4 +59,15 @@ pop_nat<-pop_cnty%>%
   ungroup()%>%
   mutate(year = year + 1)
 
+### recode pop into verbose
+pop_nat<-pop_nat%>%
+  mutate(race = 
+           case_when(
+             race=="amind" ~ "American Indian/AK Native",
+             race=="black" ~ "African American",
+             race=="asian" ~ "Asian/Pacific Islander",
+             race=="latino" ~ "Latinx",
+             race=="white" ~ "White"
+           ))
+
 write_csv(pop_nat, "./data/pop_nat.csv")

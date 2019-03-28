@@ -1,372 +1,273 @@
 ### Risk of being killed by police in the U.S. by age, race/ethnicity, and sex
 ### Frank Edwards, Hedwig Lee, Michael Esposito
+### see lifetable.r for details on life table method
 rm(list=ls()); gc()
 library(tidyverse)
 library(xtable)
 library(lubridate)
+library(foreign)
 
 source("lifetable.r")
+source("lifetable_multiple.r")
+nax<-read.dta("./data/kfnax.dta")
 
 theme_set(theme_minimal())
+### convert age to numeric
+age_recode<-function(df){
+  age_recode<-df%>%
+    mutate(age = 
+      case_when(
+        age=="0" ~ "0",
+        age=="1-4" ~ "1",
+        age=="5-9" ~ "5",
+        age=="85+" ~ "85",
+        !age%in%c("0", "85+") ~ substr(age, 1, 2)
+      ),
+      age = as.numeric(age))
+      return(age_recode)
+}
 
 ### read and format data
-nvss_dat<-read_csv("./data/mort_cause.csv")
 pop<-read_csv("./data/pop_nat.csv")
-fe<-read_csv("./data/fe_pop_imputed_13_18.csv")
-tot_mort<-read_csv("./data/total_mort.csv")### filter for matching years 
+fe_imp<-read_csv("./data/fe_pop_imputed_13_18.csv")
+tot_mort<-read_csv("./data/total_mort.csv")%>%
+    filter(age!="Missing")
+fe_postpred<-readRDS("./data/post_pred_90.rds")%>%
+  ungroup()%>%
+  rename(age = age_group)%>%
+  rename(median = .prediction,
+         lower = .lower,
+         upper = .upper)%>%
+  select(age, race, sex, pop, 
+         median, lower, upper)
+### make a total race cat
+fe_postpred<-fe_postpred%>%
+  bind_rows(fe_postpred%>%
+              group_by(age, sex)%>%
+              summarise(median = sum(median), 
+                        lower = sum(lower), 
+                        upper = sum(upper), 
+                        pop = sum(pop))%>%
+              ungroup()%>%
+              mutate(race = "Total"))
 
-pop<-pop%>%
-  mutate(race = 
-           case_when(
-             race=="amind" ~ "American Indian/AK Native",
-             race=="black" ~ "African American",
-             race=="asian" ~ "Asian/Pacific Islander",
-             race=="latino" ~ "Latinx",
-             race=="white" ~ "White"
-           ))
-
-nvss_dat<-nvss_dat%>%
-  mutate(age = 
-           ifelse(
-             age == "Missing", "85+", age
-           ))%>% # 6431 deaths over period are missing age. Assigning to 85+
-  left_join(pop)
+### recode age into numeric
+pop<-age_recode(pop)
+fe_imp<-age_recode(fe_imp)
+tot_mort<-age_recode(tot_mort)
+fe_postpred<-age_recode(fe_postpred)
 
 tot_mort<-tot_mort%>%
   left_join(pop)
+### make a total race cat
+tot_mort<-tot_mort%>%
+  bind_rows(tot_mort%>%
+              group_by(year, age, sex)%>%
+              summarise(deaths = sum(deaths),
+                        pop = sum(pop))%>%
+              mutate(race = "Total")%>%
+              ungroup())
 
 #################################################
-## Model predictions
+## PERIOD LIFE TABLE, SINGE DECREMENT using NVSS
 #################################################
-fe_postpred<-readRDS("./data/post_pred_90.rds")
-fe_fit<-readRDS("./data/post_fit_90.rds")
-### format for lifetable
+## use 2017 data
+## loop over race, sex
+nvss_table_dat<-tot_mort%>%
+  filter(year==2017)
+
+race_i<-unique(nvss_table_dat$race)
+sex_i<-unique(nvss_table_dat$sex)
+nvss_lifetable<-list()
+k<-0
+
+for(i in race_i){
+  for(j in sex_i){
+    k<-k+1
+    temp<-nvss_table_dat%>%
+      filter(race==i, sex==j)%>%
+      arrange(age)
+    ### attach nAx from Keyfitz and Flieger (via Rodriguez)
+    temp<-temp%>%
+      left_join(nax)
+    nvss_lifetable[[k]]<-make_life_table(temp, temp$deaths)
+  }
+}
+
+nvss_lifetable<-bind_rows(nvss_lifetable)
+
+#################################################
+## Multiple decrement tables
+#################################################
+### Model simulations (focal table)
+## ALSO DECOMPOSE EFFECT OF POLICE ON TOTAL LIFE EXP BY RACE/GENDER
+### scale to deaths at NVSS pop - convert 
 fe_postpred<-fe_postpred%>%
-  rename(median = .prediction,
-         lower = .lower,
-         upper = .upper,
-         age = age_group)%>%
-  select(year, age, race, sex, pop, 
-         median, lower, upper)%>%
-  mutate(.imp=1)
+  rename(pop_sim = pop)%>%
+  left_join(nvss_lifetable%>%
+              select(age, race, sex, pop))%>%
+  mutate(median = median / pop_sim * pop,
+         lower = lower / pop_sim * pop,
+         upper = upper / pop_sim * pop)
 
-#### make posterior predictive lifetables
+fe_median<-list()
+fe_lower<-list()
+fe_upper<-list()
+k<-0
 
+for(i in race_i){
+  for(j in sex_i){
+    k<-k+1
+    temp<-fe_postpred%>%
+      filter(race==i, sex==j)%>%
+      arrange(age)
+    ### attach nAx from Keyfitz and Flieger (via Rodriguez)
+    fe_median[[k]]<-make_life_table_multiple(temp, temp$median, nvss_lifetable)
+    fe_lower[[k]]<-make_life_table_multiple(temp, temp$lower, nvss_lifetable)
+    fe_upper[[k]]<-make_life_table_multiple(temp, temp$upper, nvss_lifetable)
+  }
+}
 
-### make pooled cross-period tables for age specific risk
-# imp_out<-list()
-# races<-unique(dat$race)
-# sexs<-unique(dat$sex)
-# k<-0
-# for(i in 1:length(unique(dat$.imp))){
-#   for(j in 1:length(races)){
-#     for(g in 1:length(sexs)){
-#       k<-k+1
-#       imp_out[[k]]<-make_life_table(dat%>%
-#                                       filter(.imp==i)%>%
-#                                       filter(race==races[j])%>%
-#                                       filter(sex==sexs[g])%>%
-#                                       group_by(.imp, race, sex, age)%>%
-#                                       summarise(pop = sum(pop), deaths=sum(deaths)))
-#     }
-#   }
-# }
-# 
-# 
-# fe_tables<-bind_rows(imp_out)
+fe_median<-bind_rows(fe_median)%>%
+  select(age, race, sex, d_x, q_xi, d_i, ed, m)%>%
+  rename(q_med = q_xi, d_med = d_i, e_med = ed)
+fe_lower<-bind_rows(fe_lower)%>%
+  select(age, race, sex, q_xi, d_i, ed)%>%
+  rename(q_low = q_xi, d_low = d_i, e_low = ed)
+fe_upper<-bind_rows(fe_upper)%>%
+  select(age, race, sex, q_xi, d_i, ed)%>%
+  rename(q_hi = q_xi, d_hi = d_i, e_hi = ed)
 
+fe_post_tables<-fe_median%>%
+  left_join(fe_lower)%>%
+  left_join(fe_upper)
 
-dat<-fe_postpred%>%
-  rename(deaths = median)
-source("fe_lifetable.R")
-post_tab<-fe_tables%>%
-  select(race, sex, age, m, q, c)
+### create race as factor for plot order
+fe_post_tables<-fe_post_tables%>%
+  mutate(race = factor(race, 
+                       levels = c("African American",
+                                  "American Indian/AK Native",
+                                  "Asian/Pacific Islander",
+                                  "Latinx",
+                                  "White",
+                                  "Total")))
 
-dat<-fe_postpred%>%
-  rename(deaths = upper)
-source("fe_lifetable.R")
-post_tab<-post_tab%>%
-  left_join(fe_tables%>%
-  select(race, sex, age, m, q, c)%>%
-  rename(m_upper = m, q_upper = q, c_upper = c))
-
-dat<-fe_postpred%>%
-  rename(deaths = lower)
-source("fe_lifetable.R")
-post_tab<-post_tab%>%
-  left_join(fe_tables%>%
-              select(race, sex, age, m, q, c)%>%
-              rename(m_lower = m, q_lower = q, c_lower = c))
+cumulative_fe<-fe_post_tables%>%
+  group_by(race, sex)%>%
+  summarise(c_med = sum(d_med),
+            c_low = sum(d_low),
+            c_hi = sum(d_hi))
 
 #################################################
 ## Visuals
 #################################################
 
-
-
-######### mortality comparisons by age
-deaths_age<-fe%>%
-  filter(.imp==1)%>%
-  group_by(age)%>%
-  summarise(deaths = sum(officer_force + other + suicide + vehicle) / 
-              length(unique(fe$year)))
-
-nvss_age<-nvss_dat%>%
-  group_by(age)%>%
-  summarise(nvss_deaths = sum(deaths)/length(unique(nvss_dat$year)))
-
-ratio<-left_join(deaths_age, nvss_age)%>%
-  mutate(ratio = deaths / nvss_deaths * 1e2)
-
-### total deaths ratio
-ratio%>%summarise(ratio = sum(deaths) / sum(nvss_deaths) * 1e2)
-##########################################
-### Make life tables
-##########################################
-### note that lifetable scripts want a data.frame
-### called dat with .imp, race, sex, age, deaths, and pop
-######### For use of force deaths
-dat<-fe%>%
-  rename(deaths = officer_force)
-source("fe_lifetable.R")
-
-force_tables<-fe_tables%>%
-  mutate(Type = "Force")
-
-### for + vehicle
-dat<-fe%>%
-  mutate(deaths = officer_force + vehicle)
-source("fe_lifetable.R")
-
-force_vehicle_tables<-fe_tables%>%
-  mutate(Type = "Force+Vehicles")
-
-### for force + suicide deaths
-dat<-dat%>%
-  mutate(deaths = officer_force + suicide)
-
-source("fe_lifetable.R")
-
-suicide_tables<-fe_tables%>%
-  mutate(Type = "Force+Suicide")
-
-### for all deaths
-dat<-dat%>%
-  mutate(deaths = officer_force + vehicle + other + suicide)
-
-source("fe_lifetable.R")
-
-all_tables<-fe_tables%>%
-  mutate(Type = "All Deaths")
-
-fe_all_tables<-bind_rows(force_tables, 
-                         force_vehicle_tables,
-                         suicide_tables, 
-                         all_tables)
-
-fe_all_tables_c<-fe_all_tables%>%
-  filter(age=="85+")%>%
-  group_by(race, sex, Type)%>%
-  summarise(cmin=quantile(c, 0.05)*1e5, 
-            cmax=quantile(c, 0.95)*1e5, 
-            c=mean(c)*1e5)%>%
-  ungroup()
-
-fe_all_tables_c$Type<-factor(fe_all_tables_c$Type,
-                             levels = c("Force", "Force+Suicide",
-                                        "Force+Vehicles",
-                                        "All Deaths"))
-
-ggplot(data = fe_all_tables_c,
-       mapping =  aes(x = reorder(race, c),
-                      y = c,
-                      fill = Type,
-                      group = Type)) + 
-  geom_bar(stat = "identity", position = "dodge", color = 1) + 
-  # scale_y_continuous(limits = max(fe_all_tables_c$c) * c(-1,1),
-  #                   labels = abs) +
-  ylab("Estimated lifetime risk") +
-  xlab("") + 
-  coord_flip() + 
-  theme_minimal()+
-  facet_wrap(~sex, ncol = 1, scales = "free") + 
-  ggsave("./vis/death_type_c_new.pdf", width = 6, height = 6)
-
-### make lifetime cumulative risk by race, year, sex
-### for each fe data frame
-
-fe_cumul_force<-force_tables%>%
-  filter(age=="85+")%>%
-  group_by(race, sex)%>%
-  summarise(cmin=quantile(c, 0.05)*1e5, 
-            cmax=quantile(c, 0.95)*1e5, 
-            c=mean(c)*1e5)%>%
-  ungroup()
-
-### make pooled age-specific risk across imputations
-age_range<-force_tables%>%
-  group_by(race, sex, age)%>%
-  summarise(qmin=quantile(q, 0.05), 
-            qmax=quantile(q, 0.95), 
-            q = mean(q),
-            cmin = quantile(q, 0.05), 
-            cmax = quantile(c, 0.95), 
-            c = mean(c))
-
-####################################################################################
-### total mortality age/race/sex specific
-####################################################################################
-### MAIN ANALYSES USE FORCE DEATHS
-### SET UP WITH TRAFFIC / SUICIDE IN APPX
-fe_tables<-force_tables
-
-#cause_mort<-read.csv("./data/mort_cause.csv", stringsAsFactors = FALSE)
-
-
-####################################################################################
-### plots
-####################################################################################
-### transform age var for better plotting, convert to numeric with last number
-
-### MAKE AGE SPECIFIC PERIOD RISK TABLES
-
-age_period_pct<-fe%>%
-  group_by(age, sex, race, year, .imp)%>%
-  summarise(officer_force = sum(officer_force))%>%
-  left_join(tot_mort)%>%
-  filter(!(is.na(pop)))%>% # remove 2018 FE data, NVSS 2018 not yet released
-  group_by(age, sex, race, .imp)%>%
-  summarise(ratio = sum(officer_force) / sum(deaths))%>%
-  ungroup()%>%
-  group_by(age, sex, race)%>%
-  summarise(ratio_mean = mean(ratio), 
-            ratio_lwr = quantile(ratio, 0.05),
-            ratio_upr = quantile(ratio, 0.95))%>%
-  arrange(desc(ratio_mean))%>%
-  ungroup()
-
-age_period<-fe%>%
-  left_join(pop)%>%
-  group_by(age, sex, race,.imp)%>%
-  summarise(rate = sum(officer_force) / sum(pop))%>%
-  ungroup()%>%
-  group_by(age, sex, race)%>%
-  summarise(q =mean(rate),
-            q_lwr = quantile(rate, 0.05),
-            q_upr = quantile(rate, 0.95))%>%
-  ungroup()%>%
-  arrange(desc(q))
-
-age_period_pct<-age_period_pct%>%
-  mutate(age = as.character(age)) %>%
-  mutate(age = 
-           case_when(
-             age == "0" ~ "0",
-             age =="85+" ~ "85",
-             nchar(age)==3 ~ substr(age, 3, 3),
-             nchar(age)==5 ~ substr(age, 4, 5)
-           )
-  )%>%
-  mutate(age = as.numeric(age))%>%
-  arrange(race, sex, age)
-
-age_period<-age_period%>%
-  mutate(age = as.character(age)) %>%
-  mutate(age = 
-           case_when(
-             age == "0" ~ "0",
-             age =="85+" ~ "85",
-             nchar(age)==3 ~ substr(age, 3, 3),
-             nchar(age)==5 ~ substr(age, 4, 5)
-           )
-  )%>%
-  mutate(age = as.numeric(age))%>%
-  arrange(race, sex, age)
+### FOR APPX - CAUSE OF DEATH FIG BASED ON OBS LIFETABLES
 
 
 ###########################
 ## AGE SPECIFIC RISK PLOTS
 ###########################
 
-age_period %>%
-  ggplot(
-    aes(
-      x = age,
-      y = q * 1e5, 
-      ymin = q_lwr * 1e5, 
-      ymax = q_upr * 1e5,
-      color = race, 
-      fill = race,
-      group = race
-    )
-  ) +
-  #geom_ribbon(aes(fill=race), color = 'grey100', alpha = 0.15, size = 1.25) +
+ggplot(fe_post_tables%>%
+         filter(age!="85", sex=="Male"),
+       aes(x = age, y = q_med * 1e5, 
+           ymin = q_low * 1e5, 
+           ymax = q_hi * 1e5)) +
   geom_line() +
-  facet_wrap(~sex) +
+  facet_wrap(~race) +
   xlab("Age") +
-  ylab("Risk of being killed by police (per 100,000)") + 
-  theme_minimal() + 
+  ylab("Probability of being killed by police (per 100,000)") + 
   theme(legend.title = element_blank(),
         legend.position = "bottom") +
   geom_errorbar(width = 0, alpha = 0.5) +
-  geom_point(size = 0.4)+
-  guides(col = guide_legend(override.aes = list(shape = 15, size = 5)))+
-  ggsave("vis/age_spec_prob_new.pdf", width = 6, height = 3.5)
+  geom_point(size = 0.5)+
+  ggsave("vis/age_spec_prob_m.pdf", width = 6, height = 3.5)
 
-
-ggplot(age_period_pct,
-       aes(x=age, 
-           y=ratio_mean * 100, 
-           ymin = ratio_lwr * 100,
-           ymax = ratio_upr * 100,
-           color=race, 
-           group = race))+
+ggplot(fe_post_tables%>%
+         filter(age!="85", sex=="Female"),
+       aes(x = age, y = q_med * 1e5, 
+           ymin = q_low * 1e5, 
+           ymax = q_hi * 1e5)) +
   geom_line() +
-  facet_wrap(~sex)+
-  xlab("Age")+
-  ylab("Police killings as percent of all deaths") +  
-  theme_minimal() + 
+  facet_wrap(~race) +
+  xlab("Age") +
+  ylab("Probability of being killed by police (per 100,000)") + 
   theme(legend.title = element_blank(),
         legend.position = "bottom") +
   geom_errorbar(width = 0, alpha = 0.5) +
-  geom_point(size = 0.4)+
+  geom_point(size = 0.5)+
   guides(col = guide_legend(override.aes = list(shape = 15, size = 5)))+
-  ggsave("vis/age_pct_new.pdf", width = 6, height = 3.5)
+  ggsave("vis/age_spec_prob_f.pdf", width = 6, height = 3.5)
+
+ggplot(fe_post_tables%>%
+         filter(sex == "Male"),
+       aes(x=age,
+           y=d_med/d_x * 100,
+           ymin = d_low / d_x * 100,
+           ymax = d_hi / d_x * 100))+
+  geom_line() +
+  facet_wrap(~race)+
+  xlab("Age")+
+  ylab("Police killings as percent of all deaths") +
+  theme_minimal() +
+  theme(legend.title = element_blank(),
+        legend.position = "bottom") +
+  geom_point(size = 0.4)+
+  geom_errorbar(width = 0, alpha = 0.5) +
+  ggsave("vis/age_pct_m.pdf", width = 6, height = 3.5)
+
+ggplot(fe_post_tables%>%
+         filter(sex == "Female"),
+       aes(x=age,
+           y=d_med/d_x * 100,
+           ymin = d_low / d_x * 100,
+           ymax = d_hi / d_x * 100))+
+  geom_line() +
+  facet_wrap(~race)+
+  xlab("Age")+
+  ylab("Police killings as percent of all deaths") +
+  theme_minimal() +
+  theme(legend.title = element_blank(),
+        legend.position = "bottom") +
+  geom_point(size = 0.4)+
+  geom_errorbar(width = 0, alpha = 0.5) +
+  ggsave("vis/age_pct_f.pdf", width = 6, height = 3.5)
 
 #### pooled years, cumulative prob (expected deaths per 100k through 85yrs)
 
-ggplot(data = fe_cumul_force,
+ggplot(data = cumulative_fe,
        mapping =  aes(fill = sex,
-           x = reorder(race, c),
+           x = reorder(race, c_med),
            y = ifelse(sex=="Male",
-                      -c, 
-                      c),
+                      -c_med, 
+                      c_med),
            ymax = ifelse(sex=="Male",
-                      -cmax, 
-                      cmax),
+                      -c_hi, 
+                      c_hi),
            ymin = ifelse(sex=="Male",
-                         -cmin, 
-                         cmin))) + 
+                         -c_low, 
+                         c_low))) + 
   geom_bar(stat = "identity") + 
   geom_linerange(size = 1,  alpha = 0.5) + 
-  scale_y_continuous(limits = max(fe_cumul_force$cmax) * c(-1,1), 
+  scale_y_continuous(limits = max(cumulative_fe$c_hi) * c(-1,1), 
                      labels = abs) +
   labs(fill = "Sex") + 
-  ylab("People killed by police per 100,000 births") +
+  ylab("Police use of force deaths per 100,000 births") +
   xlab("") + 
   coord_flip() + 
-  theme_minimal()+
   ggsave("./vis/pooled_lifetime_new.pdf", width = 6, height = 3.5)
 
-white<-fe_cumul_force%>%
+white<-cumulative_fe%>%
   filter(race=="White")
-ineq<-fe_cumul_force%>%
-  filter(race!="White")
+ineq<-cumulative_fe%>%
+  filter(race!="White",
+         race!="Total")
 
 ineq<-ineq%>%
-  mutate(dmin = cmin / white$cmin,
-         dmax = cmax / white$cmax,
-         d = c  /white$c)
+  mutate(dmin = c_low / white$c_low,
+         dmax = c_hi / white$c_hi,
+         d = c_med  /white$c_med)
 
 ggplot(ineq,
        aes(fill = sex,
@@ -385,33 +286,32 @@ ggplot(ineq,
   ylab("Mortality rate ratio (relative to white)") + 
   xlab("") + 
   coord_flip()+
-  theme_minimal() + 
-  ggsave("./vis/lifetime_ineq_new.pdf", width = 6, height = 3.5)
+  ggsave("./vis/lifetime_ineq.pdf", width = 6, height = 3.5)
 
-write_csv(ineq, "./vis/lifetime_ineq.csv")  
+#write_csv(ineq, "./vis/lifetime_ineq.csv")  
 
-#################################################
-### FOR LEADING CAUSE COMPARISONS
-#################################################
-
-cause<-nvss_dat%>%
-  group_by(age, race, sex, cause_50)%>%
-  summarise(q = sum(deaths)/sum(pop))%>%
-  ungroup()%>%
-  select(age, race, sex, cause_50, q)
-
-#### CHECK RANKING METHOD FROM LAST PAPER
-
-fe_cause<-age_range%>%
-  mutate(cause_50 = "Police homicide")%>%
-  select(age, race, sex, cause_50, q)
-
-### makes age-specific cause of death rank order 
-cause_rank<-cause%>%
-  bind_rows(fe_cause)%>%
-  group_by(age, race, sex)%>%
-  arrange(age, race, sex, desc(q))%>%
-  mutate(rank = rank(-q))
-
-fe_rank<-cause_rank%>%
-  filter(cause_50=="Police homicide")
+# #################################################
+# ### FOR LEADING CAUSE COMPARISONS
+# #################################################
+# 
+# cause<-nvss_dat%>%
+#   group_by(age, race, sex, cause_50)%>%
+#   summarise(q = sum(deaths)/sum(pop))%>%
+#   ungroup()%>%
+#   select(age, race, sex, cause_50, q)
+# 
+# #### CHECK RANKING METHOD FROM LAST PAPER
+# 
+# fe_cause<-age_range%>%
+#   mutate(cause_50 = "Police homicide")%>%
+#   select(age, race, sex, cause_50, q)
+# 
+# ### makes age-specific cause of death rank order 
+# cause_rank<-cause%>%
+#   bind_rows(fe_cause)%>%
+#   group_by(age, race, sex)%>%
+#   arrange(age, race, sex, desc(q))%>%
+#   mutate(rank = rank(-q))
+# 
+# fe_rank<-cause_rank%>%
+#   filter(cause_50=="Police homicide")
