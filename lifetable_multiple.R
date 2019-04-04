@@ -7,13 +7,13 @@
 edit.na <- function(x, value) { x[is.na(x)] <- value; x}
 
 
-#### FOR DEBUGGING, use observed (imputed) and sims to check results
-# nat_dat<-fe_imp%>%
-#   filter(.imp==1)%>%
-#   filter(year ==2017)%>%
-#   filter(race=="African American", sex=="Male")%>%
-#   rename(deaths = officer_force)
-# 
+# #### FOR DEBUGGING, use observed (imputed) and sims to check results
+# # nat_dat<-fe_imp%>%
+# #   filter(.imp==1)%>%
+# #   filter(year ==2017)%>%
+# #   filter(race=="African American", sex=="Male")%>%
+# #   rename(deaths = officer_force)
+# # 
 # nat_dat<-fe_postpred%>%
 #   filter(race=="African American", sex=="Male")%>%
 #   rename(deaths = median)
@@ -22,11 +22,11 @@ edit.na <- function(x, value) { x[is.na(x)] <- value; x}
 #   filter(race=="African American", sex=="Male")
 #######
 
-make_life_table_multiple<-function(nat_dat, deaths, life_table){
+make_life_table_multiple<-function(nat_dat, life_table){
   nat_dat<-nat_dat%>%
     ungroup(nat_dat)%>%
     left_join(life_table%>%
-                select(age, race, sex, deaths, d, lx, q, nax, m, n, e)%>%
+                select(age, race, sex, deaths, d, lx, q, nax, m, n, e, L)%>%
                 rename(D = deaths,
                        d_x = d,
                        q_x = q,
@@ -34,7 +34,8 @@ make_life_table_multiple<-function(nat_dat, deaths, life_table){
   
   nat_dat<-nat_dat%>%
     mutate(q_xi = q_x * (deaths / D),
-           d_i = q_xi * lx)
+           d_i = q_xi * lx,
+           m_i = d_i / L)
   
   ### cause deleted decomposition
   nat_dat<-nat_dat%>%

@@ -7,7 +7,6 @@ library(mice)
 
 set.seed(1)
 ######## read in police mort data
-setwd("~/Dropbox/data_analysis/police-mort-age-spec")
 # ... attach and configure mortality file
 fe <- read_csv("./data/fe_1_25_19.csv")
 

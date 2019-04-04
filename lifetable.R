@@ -21,7 +21,7 @@ make_life_table<-function(nat_dat, deaths){
     mutate(n = case_when(
       age==0 ~ 1,
       age==1 ~ 4,
-      age==85 ~ 10,
+      age==85 ~ 0,
       ! age %in% c(1, 4, 85) ~ 5
     ))
   
