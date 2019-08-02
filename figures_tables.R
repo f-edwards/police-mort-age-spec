@@ -183,6 +183,10 @@ cumulative_fe<-fe_post_tables%>%
             c_low = sum(d_low),
             c_hi = sum(d_hi))
 
+cumulative_fe%>%
+  mutate(odds = 1e5/c_med)%>%
+  select(race, sex, odds)
+
 
 ### life expectancy decomposition
 ed<-fe_post_tables%>%

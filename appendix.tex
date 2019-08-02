@@ -1,11 +1,9 @@
-\documentclass[9pt,twoside,lineno]{pnas-new}
-\usepackage{longtable}
+\documentclass{article}
+\usepackage[affil-it]{authblk}
 \usepackage{graphicx}
+\usepackage{longtable}
 \usepackage{float} 
 \usepackage{amsmath}
-
-\templatetype{pnassupportinginfo}
-% \readytosubmit %% Uncomment this line before submitting, so that the instruction page is removed.
 
 \title{Risk of being killed by police use-of-force in the U.S. by age, race/ethnicity, and sex}
 \author{Frank Edwards, Hedwig Lee, and Michael Esposito}
@@ -15,41 +13,22 @@
 
 \maketitle
 
-%% Adds the main heading for the SI text. Comment out this line if you do not have any supporting information text.
-\SItext
 
 \section*{Introduction: Rare events and unofficial data}
 
 The analyses in this paper seek to simultaneously address two significant methodological challenges. The first is the relative rarity of police-involved killings for many age-sex-race specific subgroups with small national populations. The second is the absence of valid official data. 
 
-First, Police killings are a relatively rare event for many race-age-sex specific subgroups. For example, we estimate that Asian/Pacific Islander women between the ages of 50 and 54 are killed by police at a rate of about $0.04$ per $100000$ person-years. In 2017, the American Community Survey reports a population of Asian/Pacific-Islander women between the ages of 50 and 54 of $666102$. At that rate, we expect to observe an average of about 0.3 deaths per year in this age group. Between 2013 and 2017, we observe only one death in this age-race-sex group. Relying on any single year for life table estimates would produce a misleading estimate for age-specific risk, with a single-year estimated rate varying between zero and $0.15$ per $100000$ depending on the presence or absence of a death in that year. By including multiple years of valid data, we are able to incorporate dramatically more information to estimate risk. However, by doing so, we assume that differences in risk across groups over time remain relatively stable. Temporal trends can be directly modeled as a source of uncertainty. We rely on multilevel models and Bayesian simulation to directly incorporate multiple sources of uncertainty to more accurately estimate mortality risk. We describe these methods in more detail below.
+First, Police killings are a relatively rare event for many race-age-sex specific subgroups. For example, we estimate that Asian/Pacific Islander women between the ages of 50 and 54 are killed by police at a rate of about $0.04$ per $100000$ person-years. In 2017, the American Community Survey reports a population of Asian/Pacific-Islander women between the ages of 50 and 54 of $666102$. At our estimated rate of police use-of-force killings, we expect to observe an average of about 0.3 deaths per year in this age group. Between 2013 and 2017, we observe only one death in this age-race-sex group. Relying on any single year for life table estimates would produce a misleading estimate for age-specific risk, with a single-year estimated rate varying between zero and $0.15$ per $100000$ depending on the presence or absence of a death in that year. By including multiple years of valid data and using statistical models, we are able to incorporate dramatically more information to estimate risk. However, by doing so, we assume that differences in risk across groups over time remain relatively stable. Temporal trends can be directly modeled as a source of uncertainty. We rely on multilevel models and Bayesian simulation to directly incorporate multiple sources of uncertainty to more accurately estimate mortality risk. We describe these methods in more detail below.
 
-Second, there are currently no nationally comprehensive official sources of data on police-involved killings. The Bureau of Justice Statistics acknowledged the limitations of their Arrest-Related Deaths data collection effort, and ceased data collection in 2014 \cite{banks2016arrest}. The National Vital Statistics System (NVSS), the nation's key source of mortality data is known to undercount law enforcement related deaths \cite{Feldman2017Quantifying}. The National Violent Death Reporting System (NVDRS) has far better coverage of police-involved deaths than does NVSS \cite{conner2019validating}, but currently lacks the geographic and temporal coverage needed to generate national risk estimates. Despite calls for better data on police-involved deaths \cite{Krieger2015Police}, government agencies have systematically failed to design and implement such a system to track officer-involved killings, or more generally, officer use-of-force. Journalists and independent researchers have stepped into this gap. Following the rise of the Black Lives Matter movement and increasing attention paid to police killings of people of color in the mid 2010s, multiple projects emerged to use public records and media reports to systematically document police violence. Desipte the novelty of these unofficial data, they have important limitations. We describe these limitations and assess the validity of the data relative to the partial data available from the NVSS below.
+Second, there are currently no nationally comprehensive official sources of data on police-involved killings. The Bureau of Justice Statistics acknowledged the limitations of their Arrest-Related Deaths data collection effort, and ceased data collection in 2014 \cite{banks2016arrest}. The National Vital Statistics System (NVSS), the nation's key source of mortality data is known to undercount law enforcement related deaths \cite{Feldman2017Quantifying}. The National Violent Death Reporting System (NVDRS) has far better coverage of police-involved deaths than does NVSS \cite{conner2019validating}, but currently lacks the geographic and temporal coverage needed to generate national risk estimates. Despite calls for better data on police-involved deaths \cite{Krieger2015Police}, government agencies have systematically failed to design and implement such a system to track officer-involved killings, or more generally, officer use-of-force. Journalists and independent researchers have stepped into this gap. Following the rise of the Black Lives Matter movement and increasing attention paid to police killings of people of color in the mid 2010s, multiple projects emerged to use public records and media reports to systematically document police violence. However, these unofficial data have important limitations. We describe these limitations and assess the validity of the data relative to the partial data available from the NVSS below.
 
 \section*{Assessing the validity of unofficial data on police-involved deaths}
 
 Among these novel data collection efforts, Fatal Encounters has the broadest temporal scope and inclusion criteria for police-involved deaths. Where other efforts have focused exclusively on shootings or a narrow subset of years, Fatal Encounters seeks to include all cases in which police were in any way involved in a death of a civilian between January 1, 2000 and the present, with the exception of deaths occurring in custody (that is after an arrestee has been formally booked into a jail or other detention facility). Below, we consider the validity of counts derived from Fatal Encounters over time, and evaluate the validity of individual variables in FE. To do so, we largely rely on comparisons to deaths recorded as police-involved in the NVSS. While NVSS is known to significantly undercount these cases \cite{Feldman2017Quantifying}, it provides some information about trends over time and the racial composition of deaths that we can use to inspect any serious deviations from the patterns we observe in Fatal Encounters.
 
-% \subsection*{Internet news and undercounts of cases}
-
-% Fatal Encounters data is available for cases between 2000 and 2019, with new cases being added to the dataset on an ongoing basis. Here, we consider whether Fatal Encounters provides reliable data on counts of deaths involving police across the full period included in the dataset. 
-
-% We suspect that the data undercount police-involved deaths in periods prior to 2007. The primary collector of the Fatal Encounters data, D. Brian Burghart, believes that the lack of local online news publication as well as the routine practice of purging archived internet content prior to the advent of inexpensive cloud storage has led to a significant undercount of cases between 2000 and 2007.
-
-% Given Burghart's suspicion that the source data (searchable internet news coverage) is censored prior to 2007 as a function of the spread and accessibility of web news production and inexpensive storage, we suspect that data on general internet usage among the US population should correlate with an unobserved undercount of events recorded in Fatal Encounters. We obtain time series data on the rates of internet usage among US adults from the St. Louis Federal Reserve (World Bank, Internet users for the United States [ITNETUSERP2USA], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/ITNETUSERP2USA, February 15, 2019.), and compare this data to counts of police-involved deaths derived from Fatal Encounters by year in Figure \ref{fig:internet}.
-
-% \begin{figure}
-% 	\centering
-% 	\includegraphics[width=\linewidth]{vis/internet_use_ts.pdf}
-% 	\caption{Deaths recorded in Fatal Encounters and Internet users per 1,000 persons, 2000 to 2016.}
-% 	\label{fig:internet}
-% \end{figure}
-
-% Figure \ref{fig:internet} shows a close correlation between the increasing use of the internet among Americans and the counts of deaths recorded in Fatal Encounters for the years 2000 through 2007. The trends appear to decouple after 2007. This is consistent with a censorship hypothesis. In earlier years of the data, there is likely a larger unobserved set of cases that are not accessible to Fatal Encounters researchers using their web-based search methodology than there is in later years of the data.
-
 \subsection*{Comparing trends in NVSS and Fatal Encounters}
 
-The National Vital Statistics System provides a potential source for evaluating the external validity of Fatal Encounters data. ``Legal intervention'' is included among the ICD-10 codes for causes of death in NVSS. Prior research has established that NVSS systematically undercounts officer-involved deaths \cite{Feldman2017Quantifying}. However, if we assume that there has been no change in the probability that officer-involved deaths are coded as ``legal intervention'' in NVSS over time, the observable time series trends in NVSS should be correlated with the true unobserved time series of police-involved deaths. With this assumption, we evaluate the time series of NVSS police-involved deaths and Fatal Encounters officer use-of-force deaths to explore whether FE consistently tracks the NVSS trened over time and gain insight into temporal trends in the risk of police-involved death. We display this time series in Figure \ref{fig:countTS}. Because NVSS counts are significantly lower than FE counts, we provide a time series transformed to a proportional change in counts of deaths relative to the count of deaths in 2000 in each dataset in Figure \ref{fig:pctTS} to enable direct comparison of the two trends on a common scale. 
+The National Vital Statistics System provides a potential source for evaluating the external validity of Fatal Encounters data. ``Legal intervention'' is included among the ICD-10 codes for causes of death in NVSS. Prior research has established that NVSS systematically undercounts officer-involved deaths \cite{Feldman2017Quantifying}. However, if we assume that there has been no change in the probability that officer-involved deaths are coded as ``legal intervention'' in NVSS over time, the observable time series trends in NVSS should be correlated with the true unobserved time series of police-involved deaths. With this assumption, we evaluate the time series of NVSS police-involved deaths and Fatal Encounters officer use-of-force deaths to explore whether FE consistently tracks the NVSS trend over time and gain insight into temporal trends in the risk of police-involved death. We display this time series in Figure \ref{fig:countTS}. Because NVSS counts are significantly lower than FE counts, we provide a time series transformed to a proportional change in counts of deaths relative to the count of deaths in 2000 in each dataset in Figure \ref{fig:pctTS} to enable direct comparison of the two trends on a common scale. 
 
 \begin{figure}
 	\centering
@@ -69,27 +48,29 @@ Figures \ref{fig:countTS} and \ref{fig:pctTS} show that counts of deaths reporte
 
 Fatal Encounters exhibits a relatively stable positive trend between 2000 and 2018. The magnitude of growth in cases recorded in FE over time is higher than for NVSS; for 2018, FE records about 2.3 times more deaths than it records for 2000. While this evidence is far from definitive, trends in the proliferation of internet access and the NVSS time series suggest that undercounts in Fatal Encounters due to unavailable online news records of officer-involved deaths likely decreased over time until approximately 2007. The shape of trends in Fatal Encounters and NVSS become more tightly linked between 2008 and 2017. 
 
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics[width = \linewidth]{vis/nvss_fe_pct_08.pdf}
 	\caption{Proportional change in reported deaths in NVSS and Fatal Encounters since 2008}
 	\label{fig:pct_08}
 \end{figure}
 
-Figure \ref{fig:pct_08} rescales both time series to display proportional changes in case counts relative to the observed counts for 2008. This figure strongly suggests that the trends in NVSS and Fatal Encounters converge after 2008. It may be fruitful in future research to estimate the magnitude of undercoverage in FE using secondary data like NVSS. Based on this analysis, in this paper we assume that undercoverage in Fatal Encounters becomes less pronounced after 2007, and focus our analyses on cases after 2008. 
+Figure \ref{fig:pct_08} rescales both time series to display proportional changes in case counts relative to the observed counts for 2008. This figure strongly suggests that the trends in NVSS and Fatal Encounters converge after 2008. It may be fruitful in future research to estimate the magnitude of undercoverage in FE using secondary data like NVSS. Based on this analysis, we assume that undercoverage in Fatal Encounters becomes less pronounced after 2007, and focus our analyses on cases after 2008. Because of the quality of race / ethnicity data in FE, we further restrict the time series to 2013 - 2018, discussed in more detail below.
 
 \section*{Race/ethnicity data in Fatal Encounters}
 
-Fatal Encounters codes decedent race with the mutually exclusive values: African American / Black; Asian / Pacific Islander; European-American / White; Hispanic / Latino; Middle Easter; Native American / Alaskan; and Race unspecified. Ethnicity is not coded separately from race, so no distinctions among ethnic groups (i.e. Black and non-Black Latinx people) are possible using these data. We preserve these categories in all analyses, with the exception of Middle Eastern, which we recode to "White" based on census racial classifications to match population data. 
+Fatal Encounters codes decedent race with the mutually exclusive values: African American / Black; Asian / Pacific Islander; European-American / White; Hispanic / Latino; Middle Eastern; Native American / Alaskan; and Race unspecified. Ethnicity is not coded separately from race, so no distinctions among ethnic groups (i.e. Black and non-Black Latinx people) are possible using these data. We preserve these categories in all analyses, with the exception of Middle Eastern, which we recode to "White" based on census racial classifications to match population data. 
 
 Fatal Encounters codes race/ethnicity opportunistically based on a series of potential data sources. When available, official records or news reports that explicitly identify a victim's race or ethnicity are used. However, such identifications are rare in news reports, which typically adhere to style guidelines limiting the use of racial or ethnic categories in their reporting. When explicit identifications are unavailable, Fatal Encounters researchers combine information and photos from original news reports, obituaries, or social media profiles to make qualitative assessments of a victim's race and ethnicity. 
 
-Like overall counts of cases in Fatal Encounters, earlier years recorded in the data are likely subject to diminished quality due to the gradual development of internet news coverage, the timing of the development of major social media platforms, and the development of online obituary services, that made photos of individuals not directly included in news stories more widely available. We show a time series of the proportion of cases missing race/ethnicity data in FE in Figure \ref{fig:missing_race_ts}.
+While researcher perceived race based on cues such as skin tone, name, and manner of dress is informative, it has distinct limits. Researcher perceived race may correlate with the perception of a victim's race held by the officer involved in the focal fatal encounter. Perceptions of an individual's racial or ethnic identity, rather than an individual's self-identification, may activate biases or scripts that structure the officer's interaction with the victim. However, the social and cultural background and information available to either the officer or researcher may differ in ways that lead to different appraisals of victim race/ethnicity. An individual's self-identified race/ethnicity may also differ in important ways from an officer or researcher's perception of their race/ethnicity. This is particularly relevant for multi-racial or multi-ethnic victims, for American Indian / Alaska Native victims, and for Latinx victims. 
+
+Like overall counts of cases in Fatal Encounters, earlier years recorded in the data are likely subject to diminished quality due to the gradual development of internet news coverage, the timing of the development of major social media platforms, and the development of online obituary services, all of which made photos of individuals more widely available. We show a time series of the proportion of cases missing race/ethnicity data in FE in Figure \ref{fig:missing_race_ts}.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{vis/prop_missing_race.pdf}
-	\caption{Proportion of use-of-force cases missing data on race/ethnicity in Fatal Encoutners, 2000 - 2018}
+	\caption{Proportion of use-of-force cases missing data on race/ethnicity in Fatal Encounters, 2000 - 2018}
 	\label{fig:missing_race_ts}
 \end{figure}
 
@@ -108,15 +89,15 @@ To evaluate the validity of Fatal Encounters race / ethnicity data, we again tur
 
 Figure \ref{fig:compare_missing_na_rm} shows the case composition by race/ethnicity excluding cases missing race/ethnicity data from the total case count in the proportion denominator. Note that there are no ``legal intervention'' cases missing race/ethnicity data in the NVSS. Both Fatal Encounters and NVSS record similar proportions of Asian / Pacific Islander victims. Until 2010, FE and NVSS record similar shares of American Indian victims, but NVSS records a greater share of American Indian / Alaska Native cases than does FE after 2010. Latinx victims made up a greater share of Fatal Encounters cases prior to 2008, but Latinx compositions appear similar across the datasets between 2008 and 2017. African Americans make up a consistently larger share of the case composition in Fatal Encounters than in NVSS. Among non-missing cases, Black victims composed between 40 and 28 percent of the caseload between 2000 and 2018. White victims ranged between 30 and 50 percent of the cases in Fatal Encounters, while NVSS consistently reports a white case composition of between 45 and 60 percent. The difference in case compositions between FE and NVSS for both white and Black victims diminishes between 2010 and 2017.
 
-Fatal Encounters researchers note that they have most confidence in their race/ethnicity data for data years after 2013. Between 2013 and 2017 (the latest available NVSS data), Fatal Encounters African American case composition was between 8 and 28 percent higher than NVSS, the American Indian / Alaska Native case composition was between 6 and 44 percent lower than NVSS, the Asian Pacific Islander case composition was between 12 and 46 percent lower than NVSS, the Latinx caseload was between 5 percent lower and 12 percent higher than NVSS, and the white case composition was between 1 and 9 percent lower than NVSS. 
+Fatal Encounters researchers note that they have most confidence in their race/ethnicity data for data years after 2013. Between 2013 and 2017 (the latest available NVSS data), Fatal Encounters' African American case composition was between 8 and 28 percent higher than NVSS, the American Indian / Alaska Native case composition was between 6 and 44 percent lower than NVSS, the Asian Pacific Islander case composition was between 12 and 46 percent lower than NVSS, the Latinx caseload was between 5 percent lower and 12 percent higher than NVSS, and the white case composition was between 1 and 9 percent lower than NVSS. 
 
-It is important to note that FE records as many or more deaths than NVSS for nearly all racial / ethnic groups during this time period. Between 2013 and 2017, FE records $2549$ more cases than does NVSS (excluding the $364$ cases missing race ethnicity data during this period). Between 2008 and 2012, FE records more cases than does NVSS for all groups other than American Indian / Alaska Natives. In 2008, 2010, and 2011, FE records 3 fewer American Indian / Alaska Native deaths than does NVSS. In 2009 and 2012, FE records 2 more deaths than does NVSS. In other periods, counts are identical.
+It is important to note that FE records as many or more deaths than NVSS for nearly all racial / ethnic groups during this time period. Between 2013 and 2017, FE records $2549$ more cases than does NVSS (excluding $364$ cases missing race ethnicity data). Between 2008 and 2012, FE records more cases than does NVSS for all groups other than American Indian / Alaska Natives. In 2008, 2010, and 2011, FE records 3 fewer American Indian / Alaska Native deaths than does NVSS. In 2009 and 2012, FE records 2 more deaths than does NVSS. 
 
-This comparison shows that FE racial/ethnic case compositions have some divergence from NVSS case compositions, and that these differences ar most pronounced for African Americans, American Indians, and Asian / Pacific Islanders. Despite these divergences, FE is generally recording dramatically more cases for each subgroup than is NVSS. Relative to NVSS, observed counts in Fatal Encounters are not negatively biased for any subgroup, with the potential exception of American Indian / Alaska Natives. Mortality rate ratios based solely on the observed data may be downwardly biased for African Americans when relying on FE data. Future researchers may consider conducting a systematic audit of FE race/ethnicity coding to evaluate the interrater reliability of FE coding decisions. 
+This comparison shows that FE racial/ethnic case compositions have some divergence from NVSS case compositions, and that these differences ar most pronounced for African Americans, American Indians, and Asian / Pacific Islanders. Despite these divergences, FE is generally recording dramatically more cases for each subgroup than is NVSS. Relative to NVSS, observed counts in Fatal Encounters are not negatively biased for any subgroup, with the potential exception of American Indian / Alaska Natives in years prior to 2012. Mortality rate ratios based solely on the observed data may be biased when relying on FE data if NVSS race data is unbiased. Future researchers may consider conducting a systematic audit of FE race/ethnicity coding to evaluate the interrater reliability of FE coding decisions for race / ethnicity. 
 
 \section*{Multiple imputation of missing data in Fatal Encounters}
 
-Table \ref{tab:pct_var} shows the percent of cases missing data on each variable in Fatal Encounters between 2013 and 2018 for all causes of death, including suicides and non-use-of-force related deaths. Because we have reason to believe that case counts are censored in earlier years of the data and because FE reports low confidence in race / ethnicity data prior to 2012, we exclude observations from 2000 to 2013 in imputation models. About 1.8 percent of cases are missing data on victim age, about 0.1 percent are missing data on victim sex, and about 9 percent are missing data on victim race. 
+Table \ref{tab:pct_var} shows the percent of cases missing data on each variable in Fatal Encounters between 2013 and 2018 for all causes of death, including suicides and non-use-of-force related deaths. Because we have reason to believe that case counts are censored in earlier years of the data and because FE reports low confidence in race / ethnicity data prior to 2012, we exclude observations from 2000 to 2012 in imputation models. About 1.8 percent of cases are missing data on victim age, about 0.1 percent are missing data on victim sex, and about 9 percent are missing data on victim race. 
 
 Our approach to missing data seeks to accurately describe uncertainty in mortality estimates by directly accounting for error driven by missing data, as well as providing rate estimates that are not negatively biased through the list-wise deletion of cases missing data on particular variables.
 
@@ -124,17 +105,12 @@ Our approach to missing data seeks to accurately describe uncertainty in mortali
 
 To address missing data, we draw multiple imputations of missing values based on models including information on the year of death, victim age, victim sex, victim race, the cause of death, the racial composition of the county in which the victim was killed, and the probability of a victim's race/ethnicity conditional on victim surname compiled from Census surname lists by Imai and Khana \cite{imai2016improving}. Sensitivity analyses exploring the predictive validity of county, tract and block-group-level demographics suggested that county-level demographics maximized model classification validity. This is perhaps due to the fact that geodata recorded in Fatal Encounters records the location of death, and many victims recorded in Fatal Encounters did not die at home. 
 
-Multiple imputation enables us to model uncertainty in the composition of cases in Fatal Encounters driven by missing data through the construction of uncertainty intervals derived from samples from our missing data models. These count estimates are by definition equal to or greater than those directly estimated from the observed data. However, by making the assumption that values are missing at random conditional on model predictors, we are able to provide additional precision in estimating the range within which actual mortality risk lies for each subgroup. 
-
-Model predictions are generated using multiple imputation through chained equations \cite{buuren2010mice}. We construct 10 imputed datasets to ensure adequate coverage of uncertainty intervals for the race variable, which has a high number of missing cases in late years of the data. 
-
-Figure \ref{fig:traceplot} shows the estimated mean and standard deviation of each imputed dataset (color) by variable across iterations, using an MCMC based approach to imputing predicted values in resulting datasets. The traceplots indicate model convergence, and appear free of any trends. 
+Multiple imputation enables us to model uncertainty in the composition of cases in Fatal Encounters driven by missing data through the construction of uncertainty intervals derived from samples from our missing data models. These count estimates are by definition equal to or greater than those directly estimated from the observed data. However, by making the assumption that values are missing at random conditional on model predictors, we are able to provide additional precision in estimating the range within which actual mortality risk likely lies for each subgroup. We show the impacts of imputation on mortality risk estimates in Figure \ref{fig:na_rm}. For all groups, risk estimates based solely on imputed and observed data (not model predictions) yield estimates greater than or equal to values based on estimates from the observed data in which cases missing values are deleted. Lower bounds on our estimates after imputation are generally close to these list-wise deletion estimates. However, our imputation procedure enables a more realistic examination of uncertainty in risk by incorporating missing data as a source of measurement error.
 
 \begin{figure}
-	\centering
-	\includegraphics[width = \linewidth]{vis/imp_trace.pdf}
-	\caption{Traceplot of mean and standard deviation of imputed variables}
-	\label{fig:traceplot}
+	\includegraphics[width=\linewidth]{vis/imp_period_sensitivity.pdf}
+	\caption{Sensitivity of risk estimates to missing data. Points indicate cumulative risk from Fatal Encounters 2013-2018 use of force deaths, excluding cases missing race/ethnicity data. Error bars indicate full interval of risk estimates using imputed values (not model simulations)}
+	\label{fig:na_rm}
 \end{figure}
 
 \begin{figure}
@@ -143,6 +119,17 @@ Figure \ref{fig:traceplot} shows the estimated mean and standard deviation of ea
 	\caption{Proportion of cases in observed Fatal Encounters and NVSS data (point) and range of imputed data (bar), 2013 - 2018}
 	\label{fig:race_impute_pct}
 \end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width = \linewidth]{vis/imp_trace.pdf}
+	\caption{Traceplot of mean and standard deviation of imputed variables}
+	\label{fig:traceplot}
+\end{figure}
+
+Model predictions are generated using multiple imputation through chained equations \cite{buuren2010mice}. We construct 10 imputed datasets to ensure adequate coverage of uncertainty intervals for the race variable, which has a high number of missing cases in late years of the data. 
+
+Figure \ref{fig:traceplot} shows the estimated mean and standard deviation of each imputed dataset (color) by variable across iterations, using an MCMC based approach to imputing predicted values in resulting datasets. The traceplots indicate model convergence, and appear free of any trends. 
 
 We show the distribution of the imputed race/ethnicity variable relative to the observed data in Figure \ref{fig:race_impute_pct}. The solid points in this figure represent the observed proportion of cases in each group, and the bars represent the range of the imputed values. For American Indian, Asian, and Black people, the proportion of the observed FE data in each group is within the range of the imputed values. The distribution of the imputed data do not greatly differ than the distribution of the observed data for these groups. There is a greater share of Latinx victims in the observed data than there are in the imputed data, and there is a greater share of white victims in the imputed data than there are in the observed data. 
 
@@ -154,13 +141,7 @@ To evaluate whether these predictors are correlated with missingness, we model t
 
 \input{vis/missing_reg}
 
-Cases are less likely to be missing data when they are in counties with large Hispanic populations than when they occur in counties with smaller Hispanic populations. A surname with a high conditional probability of being Hispanic based on census records is also associated with a a lower probability of being missing. These relationships suggest that names and locations of death are associated with a higher likelihood of positive ethnic identification in Fatal Encounters, either through identifying features in initial reports, or through coder inference based on surname or other contextual information. Because Latinx victims are less likely to be missing in the observed data, their share of total reports in imputed data is somewhat lower. 
-
-\begin{figure}[H]
-	\includegraphics[width=\linewidth]{vis/imp_period_sensitivity.pdf}
-	\caption{Sensitivity of risk estimates to missing data. Points indicate cumulative risk from Fatal Encounters 2013-2018 use of force deaths, excluding cases missing race/ethnicity data. Error bars indicate full interval of risk estimates using imputed values (not model simulations)}
-\end{figure}
-
+Cases are less likely to be missing data when they are in counties with large Hispanic populations than when they occur in counties with smaller Hispanic populations. A surname with a high conditional probability of being Hispanic based on census records is also associated with a a lower probability of being missing. These relationships suggest that names and locations of death are associated with a higher likelihood of positive ethnic identification in Fatal Encounters, either through identifying features in initial reports, or through coder inference based on surname or other contextual information. Because Latinx victims are less likely to be missing in the observed data, their share of total reports in imputed data is somewhat lower.
 
 \section*{Models of temporal variation in group-specific risk}
 
@@ -168,34 +149,30 @@ To systematically combine multiple years of FE data, we build Bayesian negative 
 
 We assume -- and confirm, later, via model comparison tests -- that police-homicide risk varies jointly by age, sex and race. To appropriately incorporate time, which has a more ambiguous functional relationship with homicide risk, into our models, we first examine how police-homicides vary across years in the observed data.  
 
-Figure \ref{fig:a1} displays the count of police-involved deaths for each sex and race group as a function of time: 
+Figure \ref{fig:a1} displays the count of police-involved deaths for each sex and race group as a function of time. For most groups, the observed count of police involved deaths stays stable from 2013-2018. Mortality counts vary most notably among Latinas, with counts falling to lows in 2015 and 2016.
 
-\begin{figure}[H]
+\begin{figure}
 \center
 \includegraphics[width = \linewidth]{vis/fig_a1.pdf}
 \caption{Observed count of police-involved deaths by race and sex, 2013-2018 with loess smooth}
 \label{fig:a1}
 \end{figure}
 
-For most groups, the observed count of police involved deaths stays stable from 2013-2018. (Mortality counts vary most notably among Latinas, with counts falling to lows in 2015 and 2016.)  
+Next, Figures \ref{fig:a2} and \ref{fig:a3} display the observed relationship among age, race, sex and count of police-homicides within each year of the data. Among males, the age-specific risk of being killed by police is stable across years for all racial groups. Small, year based shifts in total deaths are apparent. For Black males, for example, the count of mortalities in 2013 is slightly higher the count of mortalities in 2017, but the age at which Black men are at most risk of being killed by police appears consistent across time. Patterns among females are somewhat more variable across years. However, the small counts among these groups makes it difficult to determine whether this variation is simply due to noise. 
 
-Next, Figures \ref{fig:a2} and \ref{fig:a3} display the observed relationship among age, race, sex and count of police-homicides within each year of the data:
-
-\begin{figure}[H]
+\begin{figure}
 \center
 \includegraphics[width = \linewidth]{vis/fig_a2.pdf}
 \caption{Males: Observed count of police-involved deaths by age, race, sex, and year with loess smooth}
 \label{fig:a2}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}
 \center
 \includegraphics[width = \linewidth]{vis/fig_a3.pdf}
 \caption{Females: Observed count of police-involved deaths, by age, race, sex, and year. Note: curves are produced via a loess smooth of the observed data.}
 \label{fig:a3}
 \end{figure}
-
-Among males, the age-specific risk of being killed by police is stable across years for all racial groups. Small, year based shifts in total deaths are apparent. For Black males, for example, the count of mortalities in 2013 is slightly higher the count of mortalities in 2017, but the age at which Black men are at most risk of being killed by police appears consistent across time. Patterns among females are somewhat more variable across years. However, the small counts among these groups makes it difficult to determine whether this variation is simply due to noise. 
 
 Taken together, the observed data suggests that a model allowing intercepts to vary by year could help improve predictions. The observed data also suggest that age, race and sex effects are largely independent of year. While the total count of deaths vary among years, the age, race, and sex patterns observed within each group remains relatively stable across time. 
 
@@ -205,19 +182,18 @@ Results from our stratified models largely confirm the patterns observed in the 
 
 \subsection*{Simulation models}  
 
-With a better understanding of how time factors into our mortality estimates, we move to build the models that underline our life-table estimates. We fit and compare four specifications of how race, sex, age and year might predict risk of police-involved mortality. These specification are as follows: 
+With a better understanding of how time factors into our mortality estimates, we move to build the models that underlie our life-table estimates. We fit and compare four specifications of how race, sex, age and year might predict risk of police-involved mortality. These specification are as follows: 
 	\begin{align*}
 		M_0\text{:} & \text{ death count} = f(\text{\text{race} + \text{sex} + age} + \text{year}) \\
 		M_1\text{:} & \text{ death count} = f([\text{race}*\text{sex}] + \text{age} + \text{year}) \\
     M_2\text{:} & \text{ death count} = f([\text{race}*\text{sex}*\text{age}] + \text{year})   \\
 		M_3\text{:} & \text{ death count} = f(\text{age} + [\text{race}*\text{sex}*\text{year}])   
 	\end{align*}
-Model 0 ($M_0$) assumes that race, sex, age and time have independent effects on mortality risk. Model 1 ($M_1$) allows for race and sex to jointly predict mortality, Model 2 ($M_2$) allows for race and sex effects to vary by age, and Model 3 ($M_3$) allows for race and gender effects to vary by year. All models are multilevel, with race and sex fixed-effects and age-group and year-specific random intercepts specified throughout. Log population size is used as an offset in each model as well.  
+Model 0 ($M_0$) assumes that race, sex, age and time have independent effects on mortality risk. Model 1 ($M_1$) allows for race and sex to jointly predict mortality, Model 2 ($M_2$) allows for race and sex effects to vary by age, and Model 3 ($M_3$) allows for race and gender effects to vary by year. All models are multilevel, with race and sex fixed-effects and age-group and year-specific random intercepts specified throughout. Log population size is used as an offset in each model.  
 
-To determine which model best describes the data, we use leave-one-out-cross-validation information criterion (LOO-IC) estimates \cite{vehtari2016bayesian}. LOO-IC estimates are calculated from approximate leave one out cross-validation tests and broadly summarize a model's accuracy in predicting new data relative to other model specifications. Like other information criterion measures, lower LOO-IC values indicate better fitting models. Table \ref{tab:a1} gives LOO-IC for each of the models described above: 
+To determine which model best describes the data, we use leave-one-out-cross-validation information criterion (LOO-IC) estimates \cite{vehtari2016bayesian}. LOO-IC estimates are calculated from approximate leave one out cross-validation tests and broadly summarize a model's accuracy in predicting new data relative to other model specifications. Like other information criterion measures, lower LOO-IC values indicate better fitting models. 
 
-\begin{table}[H]
-\center
+\begin{center}
   \begin{tabular}{ccc}
     model & $\text{LOO-IC}$ \\ 
   \hline
@@ -227,21 +203,21 @@ To determine which model best describes the data, we use leave-one-out-cross-val
     $M_3$ & 2715.5 \\
   \hline
   \end{tabular}
-  \caption{Model LOO-ICs}
-  \label{tab:a1}
-\end{table}
+  \end{center}
+  % \caption{Model LOO-ICs}
+  % \label{tab:a1}
 
-Among the model specifications tested, M2 appears to fit the data the best. As such, we simulate from this. We estimate this model over each imputed dataset, then pool posterior predictions frmo each model for 4000 hypothetical death counts with each subpopulation held constant at 100,000,000 persons. This method ensures that we generate stable mortality estimates with reasonable uncertainty intervals, even for sub-groups with few observed events over the period in which Fatal Encounters data is valid. 
+Among the model specifications tested, M2 appears to fit the data the best. As such, we simulate from M2. We estimate this model over each imputed dataset, then pool posterior predictions from each model for 4000 hypothetical death counts with each subpopulation held constant at 100,000,000 persons. This method ensures that we generate stable mortality estimates with reasonable uncertainty intervals, even for sub-groups with few observed events or small populations over the period in which Fatal Encounters data is valid. 
 
-\section*{Lifetable methodology}
+\section*{Life table methods}
 
-All estimates mortality risk and rate estimates in the paper are calculated from multiple decrement period life tables \cite{preston_demography:_2000}. These tables take two inputs: 1) counts of age-race-sex specific deaths from the US population in 2017 derived from the NVSS public mortality files and 2) age-race-sex specific predictions of police use-of-force deaths simulated from the regression models described above at the 5th and 95th percentile of the distribution of predicted counts.  
+All estimates mortality risk and rate estimates in the paper are calculated from multiple decrement period life tables \cite{preston_demography:_2000}. These tables take two inputs: 1) counts of age-race-sex specific deaths from the US population in 2017 derived from the NVSS public mortality files and 2) age-race-sex specific predictions of police use-of-force deaths simulated from the regression models described above.  
 
 This method creates a synthetic cohort of 100,000 individuals for each race-sex group, then evaluates how mortality risk would affect the risk of death over the life course if the age-race-sex specific death rates observed in the 2013 - 2018 Fatal Encounters data and overall mortality rates observed in the 2017 NVSS remained constant. 
 
 \input{vis/lifetable_sample}
 
-Table \ref{tab:life_samp} shows an excerpt of the full life tables we use in the main analysis. It includes a subset of columns in our calculation of white male police use-of-force mortality risk. Using NVSS 2017 total mortality rates, we separately estimate a single decrement period life-table to obtain age-specific mortality rates and estimate overall cohort mortality. Using this period life table, we estimate both age-specific and cumulative rates of police use-of-force deaths, after adjusting for both cross and within age-period mortality within groups. 
+Table \ref{tab:life_samp} shows an excerpt of the full life tables we use in the main analysis. It includes a subset of columns in our calculation of white male police use-of-force mortality risk. Using NVSS 2017 total mortality rates, we separately estimate a single decrement period life-table to obtain age-specific mortality rates and estimate overall cohort mortality. Using this period life table, we estimate both age-specific and cumulative rates of police use-of-force deaths, after adjusting for both cross and within age-period mortality by age group. 
 
 We estimate three sets of tables using our model predictions. One at the 5th percentile of the distribution of posterior predictions, one at the median of posterior predictions, and one at the 95th percentile of the distribution of our posterior predictions. All uncertainty intervals reported in the paper reflect these 90 percent uncertainty intervals. 
 
@@ -251,7 +227,7 @@ We emphasize deaths caused by police use-of-force to ensure we capture only thos
 
 All suicides and other causes of death are excluded from our main analysis. In addition to suicides, these causes include: burned / smoke inhalation; drowned; drug overdose; fell from a height; other; stabbed; undetermined; and vehicle. Vehicle deaths account for nearly all of the non-suicide excluded deaths. Use-of-force deaths account for about two-thirds of all deaths reported in FE. 
 
-\begin{figure}[H]
+\begin{figure}
 	\includegraphics[width=\linewidth]{vis/death_type_c_new.pdf}
 	\caption{Cumulative risk of dying during interactions with law enforcement by race, sex, and cause of death}
 	\label{fig:death_type}
