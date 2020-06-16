@@ -18,6 +18,7 @@ names(fe)<-c("id", "name", "age", "sex", "race", "URL", "death_date",
                  "news_url", "mental_illness", "video", "dateanddesc", 
                  "id_formula", "id2", "year")
 
+
 ### work on age unique(fe$age) is character
 ### when a range, set in middle, round down
 fe<-fe%>%
@@ -66,8 +67,8 @@ fe <- fe %>%
 ## by year table: fe%>%group_by(year)%>%summarise(sum(is.na(race))/n())
 
 ## by year table: 
-missing_yr<-fe%>%group_by(year)%>%summarise(pct_missing = sum(is.na(race))/n())
-ggplot(missing_yr, aes(x=year, y = pct_missing)) + geom_line()
+# missing_yr<-fe%>%group_by(year)%>%summarise(pct_missing = sum(is.na(race))/n())
+# ggplot(missing_yr, aes(x=year, y = pct_missing)) + geom_line()
 ## super clear pattern - missingness is function of time - 
 ## very high % missing (>0.5 until 2008)
 ## missing dips below 0.2 between 2012 and 2017
@@ -104,3 +105,25 @@ fe<-fe%>%
 
 fe<-fe%>%
   filter(year<2019)
+
+# for asc 2019 pres
+fe_ca<-fe %>%
+  filter(year<2019, year>=2013,
+         loc_state == "CA",
+         loc_city == "San Francisco" |
+         loc_city == "Oakland" |
+         loc_city == "Berkeley" |
+         loc_city == "San Jose",
+         fe_cause_of_death=="officer_force") %>%
+  select(death_date, name, age, sex, race, loc_city) %>%
+  mutate(race = str_to_title(race)) %>% 
+  mutate(race = ifelse(race=="Latino", "Latinx", race)) %>% 
+  mutate(race = ifelse(is.na(race), "-", race)) %>% 
+  rename(Date = death_date,
+         Name = name,
+         Age = age,
+         Sex = sex,
+         `Race/Ethnicity` = race,
+         City = loc_city) %>%
+  write_csv("asc_ca.csv")
+

@@ -23,7 +23,7 @@ cols = c(
 )
 
 # ... attach imputed data 
-dat = read_csv('./data/fe_pop_imputed_08_18.csv') 
+dat = read_csv('./data/fe_pop_imputed_13_18.csv') 
 
 dat <- dat%>%
   rename(deaths = officer_force)

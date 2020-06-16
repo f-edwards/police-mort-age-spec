@@ -5,7 +5,7 @@
 
 make_life_table<-function(nat_dat, deaths){
   nat_dat<-nat_dat%>%
-    ungroup(nat_dat)
+    ungroup()
   ### create proportions of pop with outcome by age/year
   nat_dat<-nat_dat%>%
     mutate(m = deaths / pop)

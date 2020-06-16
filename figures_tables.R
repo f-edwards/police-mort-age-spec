@@ -154,6 +154,16 @@ sample<-fe_post_tables%>%
          `Use-of-force deaths` = d_med,
          `Survivors in cohort` = lx)
 
+full_tab<-fe_post_tables%>%
+  select(age, race, sex, d_x, d_med, lx)%>%
+  mutate(age = as.integer(age))%>%
+  rename(Age = age, Race = race, Sex = sex,
+         `Total deaths` = d_x, 
+         `Use-of-force deaths` = d_med,
+         `Survivors in cohort` = lx)
+
+write_csv(full_tab, "./vis/full_tab.csv")
+
 library(xtable)
 sample_out<-xtable(sample,
                    caption = 
@@ -318,6 +328,21 @@ ggplot(fe_post_tables%>%
   geom_point(size = 0.5)+
   ggsave("vis/age_spec_prob_m.pdf", width = 6, height = 3.5)
 
+### output table
+fe_post_tables%>%
+  filter(age!="85", sex=="Male")%>%
+  select(age, race, sex, m_med)%>%
+  mutate(deaths_per_100k = m_med*1e5)%>%
+  select(-m_med)%>%
+  write.csv("./vis/conv_age_spec_male.csv", row.names = FALSE)
+
+fe_post_tables%>%
+  filter(age!="85", sex=="Female")%>%
+  select(age, race, sex, m_med)%>%
+  mutate(deaths_per_100k = m_med*1e5)%>%
+  select(-m_med)%>%
+  write.csv("./vis/conv_age_spec_female.csv", row.names = FALSE)
+
 ggplot(fe_post_tables%>%
          filter(age!="85", sex=="Female"),
        aes(x = age, y = m_med * 1e5, 
@@ -347,6 +372,11 @@ ggplot(fe_post_tables,
         legend.position = "bottom") +
   geom_point(size = 0.4)+
   ggsave("vis/age_pct.pdf", width = 6, height = 3.5)
+
+fe_post_tables%>%
+  mutate(pct_deaths = d_med/d_x * 100)%>%
+  select(age, race, sex, pct_deaths)%>%
+  write.csv("./vis/conv_pctdeaths.csv", row.names = FALSE)
 
 ggplot(fe_post_tables%>%
          filter(sex == "Female"),
@@ -389,6 +419,11 @@ ggplot(data = cumulative_fe,
   coord_flip() + 
   ggsave("./vis/pooled_lifetime_new.pdf", width = 6, height = 3.5)
 
+cumulative_fe%>%
+  select(race, race, c_med)%>%
+  rename(lifetime_risk = c_med)%>%
+  write.csv("./vis/conv_lifetime_risk.csv", row.names = FALSE)
+
 white<-cumulative_fe%>%
   filter(race=="White")
 ineq<-cumulative_fe%>%
@@ -418,6 +453,8 @@ ggplot(ineq,
   xlab("") + 
   coord_flip()+
   ggsave("./vis/lifetime_ineq.pdf", width = 6, height = 3.5)
+
+
 
 saveRDS(nvss_lifetable, file = "nvss_lifetable.rds")
 
